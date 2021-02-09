@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Consumer_Survey_System
 {
-    public partial class frmConsumerMain : Form
+    public partial class frmSurvey : Form
     {
-        public frmConsumerMain()
+        public frmSurvey()
         {
             InitializeComponent();
-        }
-
-        private void frmConsumerMain_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

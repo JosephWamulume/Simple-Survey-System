@@ -210,6 +210,7 @@
             this.Controls.Add(this.pnlSideMenu);
             this.Name = "frmConsumerMain";
             this.Text = "Consumer Survey System";
+            this.Load += new System.EventHandler(this.frmConsumerMain_Load);
             this.pnlSideMenu.ResumeLayout(false);
             this.pnlSideMenu.PerformLayout();
             this.panel1.ResumeLayout(false);
