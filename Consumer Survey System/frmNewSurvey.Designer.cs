@@ -958,7 +958,7 @@
             this.btnCreateSurvey.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateSurvey.Location = new System.Drawing.Point(0, 2158);
             this.btnCreateSurvey.Name = "btnCreateSurvey";
-            this.btnCreateSurvey.Size = new System.Drawing.Size(675, 30);
+            this.btnCreateSurvey.Size = new System.Drawing.Size(692, 30);
             this.btnCreateSurvey.TabIndex = 68;
             this.btnCreateSurvey.Text = "Create Survey";
             this.btnCreateSurvey.UseVisualStyleBackColor = true;
@@ -969,7 +969,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 2128);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(675, 30);
+            this.panel1.Size = new System.Drawing.Size(692, 30);
             this.panel1.TabIndex = 69;
             // 
             // frmNewSurvey
@@ -977,7 +977,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(692, 450);
+            this.ClientSize = new System.Drawing.Size(709, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCreateSurvey);
             this.Controls.Add(this.gbxSurveyName);

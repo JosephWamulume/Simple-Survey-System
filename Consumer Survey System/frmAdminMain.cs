@@ -28,28 +28,25 @@ namespace Consumer_Survey_System
 
         private Form activeForm = null;
 
+        public static int surveyID;
+
         public DataTable BindSource()
         {
-            // Open connection
             con.Open();
-            // Select all rows from the 'survey' table
             cmd = new SqlCommand("SELECT * FROM survey", con);
             da = new SqlDataAdapter(cmd);
             ds.Clear();
             da.Fill(ds);
             dt = ds.Tables[0];
-            // Close connection
             con.Close();
             return dt;
         }
 
         private void frmAdminMain_Load(object sender, EventArgs e)
         {
-            /* Display data from 'survey' table
             dgvSurveys.DataSource = BindSource();
-            // Change datagridview header text for columns
             dgvSurveys.Columns["id"].HeaderText = "No.";
-            dgvSurveys.Columns["survey"].HeaderText = "Survey";*/
+            dgvSurveys.Columns["name"].HeaderText = "Survey";
         }
 
         private void openChildForm(Form childForm)
@@ -80,18 +77,44 @@ namespace Consumer_Survey_System
 
         private void btnDeleteSurvey_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Are you sure you want to delete this survey?",
+                               "Consumer Survey System",
+                                MessageBoxButtons.OKCancel,
+                                MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                int surveyID = Convert.ToInt32(dgvSurveys.CurrentRow.Cells["id"].Value);
 
+                cmd = new SqlCommand("DELETE FROM question WHERE survey_id = '" + surveyID + "'", con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                cmd = new SqlCommand("DELETE FROM survey WHERE id = '" + surveyID + "'", con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                dgvSurveys.DataSource = BindSource();
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void btnEditSurvey_Click(object sender, EventArgs e)
         {
-
+            surveyID = Convert.ToInt32(dgvSurveys.CurrentRow.Cells["id"].Value);
+            openChildForm(new frmEditSurvey());
         }
 
         private void btnSurveys_Click(object sender, EventArgs e)
         {
-
+            if (activeForm != null)
+                activeForm.Close();
         }
 
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            dgvSurveys.DataSource = BindSource();
+        }
     }
 }

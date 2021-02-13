@@ -372,73 +372,77 @@ namespace Consumer_Survey_System
                     cmd = new SqlCommand("INSERT INTO survey (name) VALUES ('" + txtSurveyName.Text + "'); SELECT SCOPE_IDENTITY()", con);
                     con.Open();
                     int surveyID = Convert.ToInt32(cmd.ExecuteScalar());
-                    cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format) VALUES ('" + surveyID.ToString() + "', '" + txtDescription1.Text + "', '" + cbxFormat1.Text + "')", con);
+                    cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format, question_number) VALUES ('" + surveyID.ToString() + "', '" + txtDescription1.Text + "', '" + cbxFormat1.Text + "', '" + 1 +"')", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
 
                     if (gbxQuestion2.Visible == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format) VALUES ('" + surveyID.ToString() + "', '" + txtDescription2.Text + "', '" +cbxFormat2.Text+ "')",con);
+                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format, question_number) VALUES ('" + surveyID.ToString() + "', '" + txtDescription2.Text + "', '" +cbxFormat2.Text+ "', '" + 2 + "')", con);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     if (gbxQuestion3.Visible == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format) VALUES ('" + surveyID.ToString() + "', '" + txtDescription3.Text + "', '" + cbxFormat3.Text + "')", con);
+                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format, question_number) VALUES ('" + surveyID.ToString() + "', '" + txtDescription3.Text + "', '" + cbxFormat3.Text + "', '" + 3 + "')", con);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     if (gbxQuestion4.Visible == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format) VALUES ('" + surveyID.ToString() + "', '" + txtDescription4.Text + "', '" + cbxFormat4.Text + "')", con);
+                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format, question_number) VALUES ('" + surveyID.ToString() + "', '" + txtDescription4.Text + "', '" + cbxFormat4.Text + "', '" + 4 + "')", con);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     if (gbxQuestion5.Visible == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format) VALUES ('" + surveyID.ToString() + "', '" + txtDescription5.Text + "', '" + cbxFormat5.Text + "')", con);
+                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format, question_number) VALUES ('" + surveyID.ToString() + "', '" + txtDescription5.Text + "', '" + cbxFormat5.Text + "', '" + 5 + "')", con);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     if (gbxQuestion6.Visible == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format) VALUES ('" + surveyID.ToString() + "', '" + txtDescription6.Text + "', '" + cbxFormat6.Text + "')", con);
+                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format, question_number) VALUES ('" + surveyID.ToString() + "', '" + txtDescription6.Text + "', '" + cbxFormat6.Text + "', '" + 6 + "')", con);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     if (gbxQuestion7.Visible == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format) VALUES ('" + surveyID.ToString() + "', '" + txtDescription7.Text + "', '" + cbxFormat7.Text + "')", con);
+                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format, question_number) VALUES ('" + surveyID.ToString() + "', '" + txtDescription7.Text + "', '" + cbxFormat7.Text + "', '" + 7 + "')", con);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     if (gbxQuestion8.Visible == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format) VALUES ('" + surveyID.ToString() + "', '" + txtDescription8.Text + "', '" + cbxFormat8.Text + "')", con);
+                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format, question_number) VALUES ('" + surveyID.ToString() + "', '" + txtDescription8.Text + "', '" + cbxFormat8.Text + "', '" + 8 + "')", con);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     if (gbxQuestion9.Visible == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format) VALUES ('" + surveyID.ToString() + "', '" + txtDescription9.Text + "', '" + cbxFormat9.Text + "')", con);
+                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format, question_number) VALUES ('" + surveyID.ToString() + "', '" + txtDescription9.Text + "', '" + cbxFormat9.Text + "', '" + 9 + "')", con);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     if (gbxQuestion10.Visible == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format) VALUES ('" + surveyID.ToString() + "', '" + txtDescription10.Text + "', '" + cbxFormat10.Text + "')", con);
+                        cmd = new SqlCommand("INSERT INTO question (survey_id, description, question_format, question_number) VALUES ('" + surveyID.ToString() + "', '" + txtDescription10.Text + "', '" + cbxFormat10.Text + "', '" + 10 + "')", con);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
+
+                    MessageBox.Show("The survey has been created succesfully. Click the 'Refresh' button to update the data.", "Consumer Survey System", MessageBoxButtons.OK);
+                    this.Close();
+
                 }
             }
         }
