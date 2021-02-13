@@ -113,6 +113,26 @@ namespace Consumer_Survey_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_minus_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-minus-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_plus_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-plus-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_show_password_16 {
             get {
                 object obj = ResourceManager.GetObject("icons8-show-password-16", resourceCulture);
@@ -136,6 +156,36 @@ namespace Consumer_Survey_System.Properties {
         internal static System.Drawing.Bitmap My_Post {
             get {
                 object obj = ResourceManager.GetObject("My Post", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap My_Post__1_ {
+            get {
+                object obj = ResourceManager.GetObject("My Post (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap My_Post__2_ {
+            get {
+                object obj = ResourceManager.GetObject("My Post (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap My_Post__3_ {
+            get {
+                object obj = ResourceManager.GetObject("My Post (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
