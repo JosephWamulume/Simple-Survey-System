@@ -307,7 +307,7 @@ namespace Consumer_Survey_System
                 txtDescription7.Focus();
                 return;
             }
-            else if (gbxQuestion7.Visible = true & String.IsNullOrEmpty(cbxFormat7.Text))
+            else if (gbxQuestion7.Visible == true & String.IsNullOrEmpty(cbxFormat7.Text))
             {
                 MessageBox.Show("Please select a question format for Question 7", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cbxFormat7.Focus();
