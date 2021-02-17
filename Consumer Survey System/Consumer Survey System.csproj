@@ -205,6 +205,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\My Post %284%29.png" />
+    <None Include="Resources\icons8-return-20.png" />
+    <None Include="Resources\icons8-bar-chart-16.png" />
     <None Include="Resources\icons8-refresh-16.png" />
     <None Include="Resources\icons8-minus-20.png" />
     <None Include="Resources\icons8-plus-20.png" />

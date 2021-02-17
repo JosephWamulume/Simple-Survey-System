@@ -100,12 +100,6 @@
             this.pnlYesNo4 = new System.Windows.Forms.Panel();
             this.rbtnNo4 = new System.Windows.Forms.RadioButton();
             this.rbtnYes4 = new System.Windows.Forms.RadioButton();
-            this.pnlFivePointLikert4 = new System.Windows.Forms.Panel();
-            this.rbtnStronglyAgree4 = new System.Windows.Forms.RadioButton();
-            this.rbtnAgree4 = new System.Windows.Forms.RadioButton();
-            this.rbtnNeutral4 = new System.Windows.Forms.RadioButton();
-            this.rbtnStronglyDisagree4 = new System.Windows.Forms.RadioButton();
-            this.rbtnDisagree4 = new System.Windows.Forms.RadioButton();
             this.pnlRatingScale4 = new System.Windows.Forms.Panel();
             this.lblScore10Q4 = new System.Windows.Forms.Label();
             this.lblScore9Q4 = new System.Windows.Forms.Label();
@@ -117,16 +111,16 @@
             this.lblScore4Q4 = new System.Windows.Forms.Label();
             this.lblScore3Q4 = new System.Windows.Forms.Label();
             this.lblScore2Q4 = new System.Windows.Forms.Label();
+            this.pnlFivePointLikert4 = new System.Windows.Forms.Panel();
+            this.rbtnStronglyAgree4 = new System.Windows.Forms.RadioButton();
+            this.rbtnAgree4 = new System.Windows.Forms.RadioButton();
+            this.rbtnNeutral4 = new System.Windows.Forms.RadioButton();
+            this.rbtnStronglyDisagree4 = new System.Windows.Forms.RadioButton();
+            this.rbtnDisagree4 = new System.Windows.Forms.RadioButton();
             this.gbxQuestion5 = new System.Windows.Forms.GroupBox();
             this.pnlYesNo5 = new System.Windows.Forms.Panel();
             this.rbtnNo5 = new System.Windows.Forms.RadioButton();
             this.rbtnYes5 = new System.Windows.Forms.RadioButton();
-            this.pnlFivePointLikert5 = new System.Windows.Forms.Panel();
-            this.rbtnStronglyAgree5 = new System.Windows.Forms.RadioButton();
-            this.rbtnAgree5 = new System.Windows.Forms.RadioButton();
-            this.rbtnNeutral5 = new System.Windows.Forms.RadioButton();
-            this.rbtnStronglyDisagree5 = new System.Windows.Forms.RadioButton();
-            this.rbtnDisagree5 = new System.Windows.Forms.RadioButton();
             this.lblDescription5 = new System.Windows.Forms.Label();
             this.pnlRatingScale5 = new System.Windows.Forms.Panel();
             this.lblScore10Q5 = new System.Windows.Forms.Label();
@@ -139,16 +133,16 @@
             this.lblScore4Q5 = new System.Windows.Forms.Label();
             this.lblScore3Q5 = new System.Windows.Forms.Label();
             this.lblScore2Q5 = new System.Windows.Forms.Label();
+            this.pnlFivePointLikert5 = new System.Windows.Forms.Panel();
+            this.rbtnStronglyAgree5 = new System.Windows.Forms.RadioButton();
+            this.rbtnAgree5 = new System.Windows.Forms.RadioButton();
+            this.rbtnNeutral5 = new System.Windows.Forms.RadioButton();
+            this.rbtnStronglyDisagree5 = new System.Windows.Forms.RadioButton();
+            this.rbtnDisagree5 = new System.Windows.Forms.RadioButton();
             this.gbxQuestion6 = new System.Windows.Forms.GroupBox();
             this.pnlYesNo6 = new System.Windows.Forms.Panel();
             this.rbtnNo6 = new System.Windows.Forms.RadioButton();
             this.rbtnYes6 = new System.Windows.Forms.RadioButton();
-            this.pnlFivePointLikert6 = new System.Windows.Forms.Panel();
-            this.rbtnStronglyAgree6 = new System.Windows.Forms.RadioButton();
-            this.rbtnAgree6 = new System.Windows.Forms.RadioButton();
-            this.rbtnNeutral6 = new System.Windows.Forms.RadioButton();
-            this.rbtnStronglyDisagree6 = new System.Windows.Forms.RadioButton();
-            this.rbtnDisagree6 = new System.Windows.Forms.RadioButton();
             this.lblDescription6 = new System.Windows.Forms.Label();
             this.pnlRatingScale6 = new System.Windows.Forms.Panel();
             this.lblScore10Q6 = new System.Windows.Forms.Label();
@@ -161,6 +155,12 @@
             this.lblScore4Q6 = new System.Windows.Forms.Label();
             this.lblScore3Q6 = new System.Windows.Forms.Label();
             this.lblScore2Q6 = new System.Windows.Forms.Label();
+            this.pnlFivePointLikert6 = new System.Windows.Forms.Panel();
+            this.rbtnStronglyAgree6 = new System.Windows.Forms.RadioButton();
+            this.rbtnAgree6 = new System.Windows.Forms.RadioButton();
+            this.rbtnNeutral6 = new System.Windows.Forms.RadioButton();
+            this.rbtnStronglyDisagree6 = new System.Windows.Forms.RadioButton();
+            this.rbtnDisagree6 = new System.Windows.Forms.RadioButton();
             this.gbxQuestion7 = new System.Windows.Forms.GroupBox();
             this.pnlRatingScale7 = new System.Windows.Forms.Panel();
             this.lblScore10Q7 = new System.Windows.Forms.Label();
@@ -251,6 +251,7 @@
             this.rbtnDisagree10 = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSubmitSurvey = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.gbxQuestion1.SuspendLayout();
             this.pnlRatingScale1.SuspendLayout();
             this.pnlYesNo1.SuspendLayout();
@@ -265,16 +266,16 @@
             this.pnlFivePointLikert3.SuspendLayout();
             this.gbxQuestion4.SuspendLayout();
             this.pnlYesNo4.SuspendLayout();
-            this.pnlFivePointLikert4.SuspendLayout();
             this.pnlRatingScale4.SuspendLayout();
+            this.pnlFivePointLikert4.SuspendLayout();
             this.gbxQuestion5.SuspendLayout();
             this.pnlYesNo5.SuspendLayout();
-            this.pnlFivePointLikert5.SuspendLayout();
             this.pnlRatingScale5.SuspendLayout();
+            this.pnlFivePointLikert5.SuspendLayout();
             this.gbxQuestion6.SuspendLayout();
             this.pnlYesNo6.SuspendLayout();
-            this.pnlFivePointLikert6.SuspendLayout();
             this.pnlRatingScale6.SuspendLayout();
+            this.pnlFivePointLikert6.SuspendLayout();
             this.gbxQuestion7.SuspendLayout();
             this.pnlRatingScale7.SuspendLayout();
             this.pnlYesNo7.SuspendLayout();
@@ -297,7 +298,7 @@
             // 
             this.lblSurveyName.AutoSize = true;
             this.lblSurveyName.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSurveyName.Location = new System.Drawing.Point(12, 19);
+            this.lblSurveyName.Location = new System.Drawing.Point(287, 18);
             this.lblSurveyName.Name = "lblSurveyName";
             this.lblSurveyName.Size = new System.Drawing.Size(124, 23);
             this.lblSurveyName.TabIndex = 0;
@@ -1171,79 +1172,6 @@
             this.rbtnYes4.Text = "Yes";
             this.rbtnYes4.UseVisualStyleBackColor = true;
             // 
-            // pnlFivePointLikert4
-            // 
-            this.pnlFivePointLikert4.Controls.Add(this.rbtnStronglyAgree4);
-            this.pnlFivePointLikert4.Controls.Add(this.rbtnAgree4);
-            this.pnlFivePointLikert4.Controls.Add(this.rbtnNeutral4);
-            this.pnlFivePointLikert4.Controls.Add(this.rbtnStronglyDisagree4);
-            this.pnlFivePointLikert4.Controls.Add(this.rbtnDisagree4);
-            this.pnlFivePointLikert4.Location = new System.Drawing.Point(117, 89);
-            this.pnlFivePointLikert4.Name = "pnlFivePointLikert4";
-            this.pnlFivePointLikert4.Size = new System.Drawing.Size(463, 32);
-            this.pnlFivePointLikert4.TabIndex = 12;
-            this.pnlFivePointLikert4.Visible = false;
-            // 
-            // rbtnStronglyAgree4
-            // 
-            this.rbtnStronglyAgree4.AutoSize = true;
-            this.rbtnStronglyAgree4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnStronglyAgree4.Location = new System.Drawing.Point(362, 8);
-            this.rbtnStronglyAgree4.Name = "rbtnStronglyAgree4";
-            this.rbtnStronglyAgree4.Size = new System.Drawing.Size(98, 17);
-            this.rbtnStronglyAgree4.TabIndex = 3;
-            this.rbtnStronglyAgree4.TabStop = true;
-            this.rbtnStronglyAgree4.Text = "Strongly Agree";
-            this.rbtnStronglyAgree4.UseVisualStyleBackColor = true;
-            // 
-            // rbtnAgree4
-            // 
-            this.rbtnAgree4.AutoSize = true;
-            this.rbtnAgree4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnAgree4.Location = new System.Drawing.Point(293, 8);
-            this.rbtnAgree4.Name = "rbtnAgree4";
-            this.rbtnAgree4.Size = new System.Drawing.Size(54, 17);
-            this.rbtnAgree4.TabIndex = 3;
-            this.rbtnAgree4.TabStop = true;
-            this.rbtnAgree4.Text = "Agree";
-            this.rbtnAgree4.UseVisualStyleBackColor = true;
-            // 
-            // rbtnNeutral4
-            // 
-            this.rbtnNeutral4.AutoSize = true;
-            this.rbtnNeutral4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnNeutral4.Location = new System.Drawing.Point(216, 8);
-            this.rbtnNeutral4.Name = "rbtnNeutral4";
-            this.rbtnNeutral4.Size = new System.Drawing.Size(62, 17);
-            this.rbtnNeutral4.TabIndex = 2;
-            this.rbtnNeutral4.TabStop = true;
-            this.rbtnNeutral4.Text = "Neutral";
-            this.rbtnNeutral4.UseVisualStyleBackColor = true;
-            // 
-            // rbtnStronglyDisagree4
-            // 
-            this.rbtnStronglyDisagree4.AutoSize = true;
-            this.rbtnStronglyDisagree4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnStronglyDisagree4.Location = new System.Drawing.Point(3, 8);
-            this.rbtnStronglyDisagree4.Name = "rbtnStronglyDisagree4";
-            this.rbtnStronglyDisagree4.Size = new System.Drawing.Size(113, 17);
-            this.rbtnStronglyDisagree4.TabIndex = 1;
-            this.rbtnStronglyDisagree4.TabStop = true;
-            this.rbtnStronglyDisagree4.Text = "Strongly Disagree";
-            this.rbtnStronglyDisagree4.UseVisualStyleBackColor = true;
-            // 
-            // rbtnDisagree4
-            // 
-            this.rbtnDisagree4.AutoSize = true;
-            this.rbtnDisagree4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnDisagree4.Location = new System.Drawing.Point(131, 8);
-            this.rbtnDisagree4.Name = "rbtnDisagree4";
-            this.rbtnDisagree4.Size = new System.Drawing.Size(69, 17);
-            this.rbtnDisagree4.TabIndex = 0;
-            this.rbtnDisagree4.TabStop = true;
-            this.rbtnDisagree4.Text = "Disagree";
-            this.rbtnDisagree4.UseVisualStyleBackColor = true;
-            // 
             // pnlRatingScale4
             // 
             this.pnlRatingScale4.Controls.Add(this.lblScore10Q4);
@@ -1382,6 +1310,79 @@
             this.lblScore2Q4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblScore2Q4.Click += new System.EventHandler(this.lblScore2Q4_Click);
             // 
+            // pnlFivePointLikert4
+            // 
+            this.pnlFivePointLikert4.Controls.Add(this.rbtnStronglyAgree4);
+            this.pnlFivePointLikert4.Controls.Add(this.rbtnAgree4);
+            this.pnlFivePointLikert4.Controls.Add(this.rbtnNeutral4);
+            this.pnlFivePointLikert4.Controls.Add(this.rbtnStronglyDisagree4);
+            this.pnlFivePointLikert4.Controls.Add(this.rbtnDisagree4);
+            this.pnlFivePointLikert4.Location = new System.Drawing.Point(117, 89);
+            this.pnlFivePointLikert4.Name = "pnlFivePointLikert4";
+            this.pnlFivePointLikert4.Size = new System.Drawing.Size(463, 32);
+            this.pnlFivePointLikert4.TabIndex = 12;
+            this.pnlFivePointLikert4.Visible = false;
+            // 
+            // rbtnStronglyAgree4
+            // 
+            this.rbtnStronglyAgree4.AutoSize = true;
+            this.rbtnStronglyAgree4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnStronglyAgree4.Location = new System.Drawing.Point(362, 8);
+            this.rbtnStronglyAgree4.Name = "rbtnStronglyAgree4";
+            this.rbtnStronglyAgree4.Size = new System.Drawing.Size(98, 17);
+            this.rbtnStronglyAgree4.TabIndex = 3;
+            this.rbtnStronglyAgree4.TabStop = true;
+            this.rbtnStronglyAgree4.Text = "Strongly Agree";
+            this.rbtnStronglyAgree4.UseVisualStyleBackColor = true;
+            // 
+            // rbtnAgree4
+            // 
+            this.rbtnAgree4.AutoSize = true;
+            this.rbtnAgree4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAgree4.Location = new System.Drawing.Point(293, 8);
+            this.rbtnAgree4.Name = "rbtnAgree4";
+            this.rbtnAgree4.Size = new System.Drawing.Size(54, 17);
+            this.rbtnAgree4.TabIndex = 3;
+            this.rbtnAgree4.TabStop = true;
+            this.rbtnAgree4.Text = "Agree";
+            this.rbtnAgree4.UseVisualStyleBackColor = true;
+            // 
+            // rbtnNeutral4
+            // 
+            this.rbtnNeutral4.AutoSize = true;
+            this.rbtnNeutral4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnNeutral4.Location = new System.Drawing.Point(216, 8);
+            this.rbtnNeutral4.Name = "rbtnNeutral4";
+            this.rbtnNeutral4.Size = new System.Drawing.Size(62, 17);
+            this.rbtnNeutral4.TabIndex = 2;
+            this.rbtnNeutral4.TabStop = true;
+            this.rbtnNeutral4.Text = "Neutral";
+            this.rbtnNeutral4.UseVisualStyleBackColor = true;
+            // 
+            // rbtnStronglyDisagree4
+            // 
+            this.rbtnStronglyDisagree4.AutoSize = true;
+            this.rbtnStronglyDisagree4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnStronglyDisagree4.Location = new System.Drawing.Point(3, 8);
+            this.rbtnStronglyDisagree4.Name = "rbtnStronglyDisagree4";
+            this.rbtnStronglyDisagree4.Size = new System.Drawing.Size(113, 17);
+            this.rbtnStronglyDisagree4.TabIndex = 1;
+            this.rbtnStronglyDisagree4.TabStop = true;
+            this.rbtnStronglyDisagree4.Text = "Strongly Disagree";
+            this.rbtnStronglyDisagree4.UseVisualStyleBackColor = true;
+            // 
+            // rbtnDisagree4
+            // 
+            this.rbtnDisagree4.AutoSize = true;
+            this.rbtnDisagree4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnDisagree4.Location = new System.Drawing.Point(131, 8);
+            this.rbtnDisagree4.Name = "rbtnDisagree4";
+            this.rbtnDisagree4.Size = new System.Drawing.Size(69, 17);
+            this.rbtnDisagree4.TabIndex = 0;
+            this.rbtnDisagree4.TabStop = true;
+            this.rbtnDisagree4.Text = "Disagree";
+            this.rbtnDisagree4.UseVisualStyleBackColor = true;
+            // 
             // gbxQuestion5
             // 
             this.gbxQuestion5.Controls.Add(this.pnlYesNo5);
@@ -1430,79 +1431,6 @@
             this.rbtnYes5.TabStop = true;
             this.rbtnYes5.Text = "Yes";
             this.rbtnYes5.UseVisualStyleBackColor = true;
-            // 
-            // pnlFivePointLikert5
-            // 
-            this.pnlFivePointLikert5.Controls.Add(this.rbtnStronglyAgree5);
-            this.pnlFivePointLikert5.Controls.Add(this.rbtnAgree5);
-            this.pnlFivePointLikert5.Controls.Add(this.rbtnNeutral5);
-            this.pnlFivePointLikert5.Controls.Add(this.rbtnStronglyDisagree5);
-            this.pnlFivePointLikert5.Controls.Add(this.rbtnDisagree5);
-            this.pnlFivePointLikert5.Location = new System.Drawing.Point(117, 89);
-            this.pnlFivePointLikert5.Name = "pnlFivePointLikert5";
-            this.pnlFivePointLikert5.Size = new System.Drawing.Size(463, 32);
-            this.pnlFivePointLikert5.TabIndex = 12;
-            this.pnlFivePointLikert5.Visible = false;
-            // 
-            // rbtnStronglyAgree5
-            // 
-            this.rbtnStronglyAgree5.AutoSize = true;
-            this.rbtnStronglyAgree5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnStronglyAgree5.Location = new System.Drawing.Point(362, 8);
-            this.rbtnStronglyAgree5.Name = "rbtnStronglyAgree5";
-            this.rbtnStronglyAgree5.Size = new System.Drawing.Size(98, 17);
-            this.rbtnStronglyAgree5.TabIndex = 3;
-            this.rbtnStronglyAgree5.TabStop = true;
-            this.rbtnStronglyAgree5.Text = "Strongly Agree";
-            this.rbtnStronglyAgree5.UseVisualStyleBackColor = true;
-            // 
-            // rbtnAgree5
-            // 
-            this.rbtnAgree5.AutoSize = true;
-            this.rbtnAgree5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnAgree5.Location = new System.Drawing.Point(293, 8);
-            this.rbtnAgree5.Name = "rbtnAgree5";
-            this.rbtnAgree5.Size = new System.Drawing.Size(54, 17);
-            this.rbtnAgree5.TabIndex = 3;
-            this.rbtnAgree5.TabStop = true;
-            this.rbtnAgree5.Text = "Agree";
-            this.rbtnAgree5.UseVisualStyleBackColor = true;
-            // 
-            // rbtnNeutral5
-            // 
-            this.rbtnNeutral5.AutoSize = true;
-            this.rbtnNeutral5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnNeutral5.Location = new System.Drawing.Point(216, 8);
-            this.rbtnNeutral5.Name = "rbtnNeutral5";
-            this.rbtnNeutral5.Size = new System.Drawing.Size(62, 17);
-            this.rbtnNeutral5.TabIndex = 2;
-            this.rbtnNeutral5.TabStop = true;
-            this.rbtnNeutral5.Text = "Neutral";
-            this.rbtnNeutral5.UseVisualStyleBackColor = true;
-            // 
-            // rbtnStronglyDisagree5
-            // 
-            this.rbtnStronglyDisagree5.AutoSize = true;
-            this.rbtnStronglyDisagree5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnStronglyDisagree5.Location = new System.Drawing.Point(3, 8);
-            this.rbtnStronglyDisagree5.Name = "rbtnStronglyDisagree5";
-            this.rbtnStronglyDisagree5.Size = new System.Drawing.Size(113, 17);
-            this.rbtnStronglyDisagree5.TabIndex = 1;
-            this.rbtnStronglyDisagree5.TabStop = true;
-            this.rbtnStronglyDisagree5.Text = "Strongly Disagree";
-            this.rbtnStronglyDisagree5.UseVisualStyleBackColor = true;
-            // 
-            // rbtnDisagree5
-            // 
-            this.rbtnDisagree5.AutoSize = true;
-            this.rbtnDisagree5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnDisagree5.Location = new System.Drawing.Point(131, 8);
-            this.rbtnDisagree5.Name = "rbtnDisagree5";
-            this.rbtnDisagree5.Size = new System.Drawing.Size(69, 17);
-            this.rbtnDisagree5.TabIndex = 0;
-            this.rbtnDisagree5.TabStop = true;
-            this.rbtnDisagree5.Text = "Disagree";
-            this.rbtnDisagree5.UseVisualStyleBackColor = true;
             // 
             // lblDescription5
             // 
@@ -1652,6 +1580,79 @@
             this.lblScore2Q5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblScore2Q5.Click += new System.EventHandler(this.lblScore2Q5_Click);
             // 
+            // pnlFivePointLikert5
+            // 
+            this.pnlFivePointLikert5.Controls.Add(this.rbtnStronglyAgree5);
+            this.pnlFivePointLikert5.Controls.Add(this.rbtnAgree5);
+            this.pnlFivePointLikert5.Controls.Add(this.rbtnNeutral5);
+            this.pnlFivePointLikert5.Controls.Add(this.rbtnStronglyDisagree5);
+            this.pnlFivePointLikert5.Controls.Add(this.rbtnDisagree5);
+            this.pnlFivePointLikert5.Location = new System.Drawing.Point(117, 89);
+            this.pnlFivePointLikert5.Name = "pnlFivePointLikert5";
+            this.pnlFivePointLikert5.Size = new System.Drawing.Size(463, 32);
+            this.pnlFivePointLikert5.TabIndex = 12;
+            this.pnlFivePointLikert5.Visible = false;
+            // 
+            // rbtnStronglyAgree5
+            // 
+            this.rbtnStronglyAgree5.AutoSize = true;
+            this.rbtnStronglyAgree5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnStronglyAgree5.Location = new System.Drawing.Point(362, 8);
+            this.rbtnStronglyAgree5.Name = "rbtnStronglyAgree5";
+            this.rbtnStronglyAgree5.Size = new System.Drawing.Size(98, 17);
+            this.rbtnStronglyAgree5.TabIndex = 3;
+            this.rbtnStronglyAgree5.TabStop = true;
+            this.rbtnStronglyAgree5.Text = "Strongly Agree";
+            this.rbtnStronglyAgree5.UseVisualStyleBackColor = true;
+            // 
+            // rbtnAgree5
+            // 
+            this.rbtnAgree5.AutoSize = true;
+            this.rbtnAgree5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAgree5.Location = new System.Drawing.Point(293, 8);
+            this.rbtnAgree5.Name = "rbtnAgree5";
+            this.rbtnAgree5.Size = new System.Drawing.Size(54, 17);
+            this.rbtnAgree5.TabIndex = 3;
+            this.rbtnAgree5.TabStop = true;
+            this.rbtnAgree5.Text = "Agree";
+            this.rbtnAgree5.UseVisualStyleBackColor = true;
+            // 
+            // rbtnNeutral5
+            // 
+            this.rbtnNeutral5.AutoSize = true;
+            this.rbtnNeutral5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnNeutral5.Location = new System.Drawing.Point(216, 8);
+            this.rbtnNeutral5.Name = "rbtnNeutral5";
+            this.rbtnNeutral5.Size = new System.Drawing.Size(62, 17);
+            this.rbtnNeutral5.TabIndex = 2;
+            this.rbtnNeutral5.TabStop = true;
+            this.rbtnNeutral5.Text = "Neutral";
+            this.rbtnNeutral5.UseVisualStyleBackColor = true;
+            // 
+            // rbtnStronglyDisagree5
+            // 
+            this.rbtnStronglyDisagree5.AutoSize = true;
+            this.rbtnStronglyDisagree5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnStronglyDisagree5.Location = new System.Drawing.Point(3, 8);
+            this.rbtnStronglyDisagree5.Name = "rbtnStronglyDisagree5";
+            this.rbtnStronglyDisagree5.Size = new System.Drawing.Size(113, 17);
+            this.rbtnStronglyDisagree5.TabIndex = 1;
+            this.rbtnStronglyDisagree5.TabStop = true;
+            this.rbtnStronglyDisagree5.Text = "Strongly Disagree";
+            this.rbtnStronglyDisagree5.UseVisualStyleBackColor = true;
+            // 
+            // rbtnDisagree5
+            // 
+            this.rbtnDisagree5.AutoSize = true;
+            this.rbtnDisagree5.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnDisagree5.Location = new System.Drawing.Point(131, 8);
+            this.rbtnDisagree5.Name = "rbtnDisagree5";
+            this.rbtnDisagree5.Size = new System.Drawing.Size(69, 17);
+            this.rbtnDisagree5.TabIndex = 0;
+            this.rbtnDisagree5.TabStop = true;
+            this.rbtnDisagree5.Text = "Disagree";
+            this.rbtnDisagree5.UseVisualStyleBackColor = true;
+            // 
             // gbxQuestion6
             // 
             this.gbxQuestion6.Controls.Add(this.pnlYesNo6);
@@ -1700,79 +1701,6 @@
             this.rbtnYes6.TabStop = true;
             this.rbtnYes6.Text = "Yes";
             this.rbtnYes6.UseVisualStyleBackColor = true;
-            // 
-            // pnlFivePointLikert6
-            // 
-            this.pnlFivePointLikert6.Controls.Add(this.rbtnStronglyAgree6);
-            this.pnlFivePointLikert6.Controls.Add(this.rbtnAgree6);
-            this.pnlFivePointLikert6.Controls.Add(this.rbtnNeutral6);
-            this.pnlFivePointLikert6.Controls.Add(this.rbtnStronglyDisagree6);
-            this.pnlFivePointLikert6.Controls.Add(this.rbtnDisagree6);
-            this.pnlFivePointLikert6.Location = new System.Drawing.Point(117, 89);
-            this.pnlFivePointLikert6.Name = "pnlFivePointLikert6";
-            this.pnlFivePointLikert6.Size = new System.Drawing.Size(463, 32);
-            this.pnlFivePointLikert6.TabIndex = 12;
-            this.pnlFivePointLikert6.Visible = false;
-            // 
-            // rbtnStronglyAgree6
-            // 
-            this.rbtnStronglyAgree6.AutoSize = true;
-            this.rbtnStronglyAgree6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnStronglyAgree6.Location = new System.Drawing.Point(362, 8);
-            this.rbtnStronglyAgree6.Name = "rbtnStronglyAgree6";
-            this.rbtnStronglyAgree6.Size = new System.Drawing.Size(98, 17);
-            this.rbtnStronglyAgree6.TabIndex = 3;
-            this.rbtnStronglyAgree6.TabStop = true;
-            this.rbtnStronglyAgree6.Text = "Strongly Agree";
-            this.rbtnStronglyAgree6.UseVisualStyleBackColor = true;
-            // 
-            // rbtnAgree6
-            // 
-            this.rbtnAgree6.AutoSize = true;
-            this.rbtnAgree6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnAgree6.Location = new System.Drawing.Point(293, 8);
-            this.rbtnAgree6.Name = "rbtnAgree6";
-            this.rbtnAgree6.Size = new System.Drawing.Size(54, 17);
-            this.rbtnAgree6.TabIndex = 3;
-            this.rbtnAgree6.TabStop = true;
-            this.rbtnAgree6.Text = "Agree";
-            this.rbtnAgree6.UseVisualStyleBackColor = true;
-            // 
-            // rbtnNeutral6
-            // 
-            this.rbtnNeutral6.AutoSize = true;
-            this.rbtnNeutral6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnNeutral6.Location = new System.Drawing.Point(216, 8);
-            this.rbtnNeutral6.Name = "rbtnNeutral6";
-            this.rbtnNeutral6.Size = new System.Drawing.Size(62, 17);
-            this.rbtnNeutral6.TabIndex = 2;
-            this.rbtnNeutral6.TabStop = true;
-            this.rbtnNeutral6.Text = "Neutral";
-            this.rbtnNeutral6.UseVisualStyleBackColor = true;
-            // 
-            // rbtnStronglyDisagree6
-            // 
-            this.rbtnStronglyDisagree6.AutoSize = true;
-            this.rbtnStronglyDisagree6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnStronglyDisagree6.Location = new System.Drawing.Point(3, 8);
-            this.rbtnStronglyDisagree6.Name = "rbtnStronglyDisagree6";
-            this.rbtnStronglyDisagree6.Size = new System.Drawing.Size(113, 17);
-            this.rbtnStronglyDisagree6.TabIndex = 1;
-            this.rbtnStronglyDisagree6.TabStop = true;
-            this.rbtnStronglyDisagree6.Text = "Strongly Disagree";
-            this.rbtnStronglyDisagree6.UseVisualStyleBackColor = true;
-            // 
-            // rbtnDisagree6
-            // 
-            this.rbtnDisagree6.AutoSize = true;
-            this.rbtnDisagree6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnDisagree6.Location = new System.Drawing.Point(131, 8);
-            this.rbtnDisagree6.Name = "rbtnDisagree6";
-            this.rbtnDisagree6.Size = new System.Drawing.Size(69, 17);
-            this.rbtnDisagree6.TabIndex = 0;
-            this.rbtnDisagree6.TabStop = true;
-            this.rbtnDisagree6.Text = "Disagree";
-            this.rbtnDisagree6.UseVisualStyleBackColor = true;
             // 
             // lblDescription6
             // 
@@ -1921,6 +1849,79 @@
             this.lblScore2Q6.Text = "2";
             this.lblScore2Q6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblScore2Q6.Click += new System.EventHandler(this.lblScore2Q6_Click);
+            // 
+            // pnlFivePointLikert6
+            // 
+            this.pnlFivePointLikert6.Controls.Add(this.rbtnStronglyAgree6);
+            this.pnlFivePointLikert6.Controls.Add(this.rbtnAgree6);
+            this.pnlFivePointLikert6.Controls.Add(this.rbtnNeutral6);
+            this.pnlFivePointLikert6.Controls.Add(this.rbtnStronglyDisagree6);
+            this.pnlFivePointLikert6.Controls.Add(this.rbtnDisagree6);
+            this.pnlFivePointLikert6.Location = new System.Drawing.Point(117, 89);
+            this.pnlFivePointLikert6.Name = "pnlFivePointLikert6";
+            this.pnlFivePointLikert6.Size = new System.Drawing.Size(463, 32);
+            this.pnlFivePointLikert6.TabIndex = 12;
+            this.pnlFivePointLikert6.Visible = false;
+            // 
+            // rbtnStronglyAgree6
+            // 
+            this.rbtnStronglyAgree6.AutoSize = true;
+            this.rbtnStronglyAgree6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnStronglyAgree6.Location = new System.Drawing.Point(362, 8);
+            this.rbtnStronglyAgree6.Name = "rbtnStronglyAgree6";
+            this.rbtnStronglyAgree6.Size = new System.Drawing.Size(98, 17);
+            this.rbtnStronglyAgree6.TabIndex = 3;
+            this.rbtnStronglyAgree6.TabStop = true;
+            this.rbtnStronglyAgree6.Text = "Strongly Agree";
+            this.rbtnStronglyAgree6.UseVisualStyleBackColor = true;
+            // 
+            // rbtnAgree6
+            // 
+            this.rbtnAgree6.AutoSize = true;
+            this.rbtnAgree6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAgree6.Location = new System.Drawing.Point(293, 8);
+            this.rbtnAgree6.Name = "rbtnAgree6";
+            this.rbtnAgree6.Size = new System.Drawing.Size(54, 17);
+            this.rbtnAgree6.TabIndex = 3;
+            this.rbtnAgree6.TabStop = true;
+            this.rbtnAgree6.Text = "Agree";
+            this.rbtnAgree6.UseVisualStyleBackColor = true;
+            // 
+            // rbtnNeutral6
+            // 
+            this.rbtnNeutral6.AutoSize = true;
+            this.rbtnNeutral6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnNeutral6.Location = new System.Drawing.Point(216, 8);
+            this.rbtnNeutral6.Name = "rbtnNeutral6";
+            this.rbtnNeutral6.Size = new System.Drawing.Size(62, 17);
+            this.rbtnNeutral6.TabIndex = 2;
+            this.rbtnNeutral6.TabStop = true;
+            this.rbtnNeutral6.Text = "Neutral";
+            this.rbtnNeutral6.UseVisualStyleBackColor = true;
+            // 
+            // rbtnStronglyDisagree6
+            // 
+            this.rbtnStronglyDisagree6.AutoSize = true;
+            this.rbtnStronglyDisagree6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnStronglyDisagree6.Location = new System.Drawing.Point(3, 8);
+            this.rbtnStronglyDisagree6.Name = "rbtnStronglyDisagree6";
+            this.rbtnStronglyDisagree6.Size = new System.Drawing.Size(113, 17);
+            this.rbtnStronglyDisagree6.TabIndex = 1;
+            this.rbtnStronglyDisagree6.TabStop = true;
+            this.rbtnStronglyDisagree6.Text = "Strongly Disagree";
+            this.rbtnStronglyDisagree6.UseVisualStyleBackColor = true;
+            // 
+            // rbtnDisagree6
+            // 
+            this.rbtnDisagree6.AutoSize = true;
+            this.rbtnDisagree6.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnDisagree6.Location = new System.Drawing.Point(131, 8);
+            this.rbtnDisagree6.Name = "rbtnDisagree6";
+            this.rbtnDisagree6.Size = new System.Drawing.Size(69, 17);
+            this.rbtnDisagree6.TabIndex = 0;
+            this.rbtnDisagree6.TabStop = true;
+            this.rbtnDisagree6.Text = "Disagree";
+            this.rbtnDisagree6.UseVisualStyleBackColor = true;
             // 
             // gbxQuestion7
             // 
@@ -3022,12 +3023,26 @@
             this.btnSubmitSurvey.UseVisualStyleBackColor = true;
             this.btnSubmitSurvey.Click += new System.EventHandler(this.btnSubmitSurvey_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Image = global::Consumer_Survey_System.Properties.Resources.icons8_return_20;
+            this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBack.Location = new System.Drawing.Point(16, 15);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(105, 30);
+            this.btnBack.TabIndex = 89;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // frmSurvey
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(709, 550);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSubmitSurvey);
             this.Controls.Add(this.gbxQuestion10);
@@ -3069,23 +3084,23 @@
             this.gbxQuestion4.PerformLayout();
             this.pnlYesNo4.ResumeLayout(false);
             this.pnlYesNo4.PerformLayout();
+            this.pnlRatingScale4.ResumeLayout(false);
             this.pnlFivePointLikert4.ResumeLayout(false);
             this.pnlFivePointLikert4.PerformLayout();
-            this.pnlRatingScale4.ResumeLayout(false);
             this.gbxQuestion5.ResumeLayout(false);
             this.gbxQuestion5.PerformLayout();
             this.pnlYesNo5.ResumeLayout(false);
             this.pnlYesNo5.PerformLayout();
+            this.pnlRatingScale5.ResumeLayout(false);
             this.pnlFivePointLikert5.ResumeLayout(false);
             this.pnlFivePointLikert5.PerformLayout();
-            this.pnlRatingScale5.ResumeLayout(false);
             this.gbxQuestion6.ResumeLayout(false);
             this.gbxQuestion6.PerformLayout();
             this.pnlYesNo6.ResumeLayout(false);
             this.pnlYesNo6.PerformLayout();
+            this.pnlRatingScale6.ResumeLayout(false);
             this.pnlFivePointLikert6.ResumeLayout(false);
             this.pnlFivePointLikert6.PerformLayout();
-            this.pnlRatingScale6.ResumeLayout(false);
             this.gbxQuestion7.ResumeLayout(false);
             this.gbxQuestion7.PerformLayout();
             this.pnlRatingScale7.ResumeLayout(false);
@@ -3344,5 +3359,6 @@
         private System.Windows.Forms.RadioButton rbtnDisagree10;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSubmitSurvey;
+        private System.Windows.Forms.Button btnBack;
     }
 }

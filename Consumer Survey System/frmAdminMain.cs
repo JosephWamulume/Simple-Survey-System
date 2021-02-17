@@ -29,6 +29,7 @@ namespace Consumer_Survey_System
         private Form activeForm = null;
 
         public static int surveyID;
+        public static string surveyName;
 
         public DataTable BindSource()
         {
@@ -44,9 +45,26 @@ namespace Consumer_Survey_System
 
         private void frmAdminMain_Load(object sender, EventArgs e)
         {
-            dgvSurveys.DataSource = BindSource();
-            dgvSurveys.Columns["id"].HeaderText = "No.";
-            dgvSurveys.Columns["name"].HeaderText = "Survey";
+            con.Open();
+            cmd = new SqlCommand("SELECT * FROM survey", con);
+            da = new SqlDataAdapter(cmd);
+            ds.Clear();
+            da.Fill(ds);
+            dt = ds.Tables[0];
+            con.Close();
+            if (dt.Rows.Count > 0)
+            {
+                dgvSurveys.DataSource = dt;
+                dgvSurveys.Columns["id"].HeaderText = "No.";
+                dgvSurveys.Columns["name"].HeaderText = "Survey";
+                btnDeleteSurvey.Enabled = true;
+                btnResults.Enabled = true;
+            }
+            else
+            {
+                btnDeleteSurvey.Enabled = false;
+                btnResults.Enabled = false;
+            }         
         }
 
         private void openChildForm(Form childForm)
@@ -67,12 +85,7 @@ namespace Consumer_Survey_System
         {
             // Call the 'openChildForm' function and pass the form 'frmNewSurvey' as a parameter
             openChildForm(new frmNewSurvey());
-            /*btnSurveys.BackColor = Color.FromArgb(0, 0, 40);
-            btnSurveys.BackColor = Color.FromArgb(0, 0, 40);
-            btnMyAccount.BackColor = Color.FromArgb(0, 0, 64);
-            btnMyAccount.BackColor = Color.FromArgb(0, 0, 64);
-            btnLogout.BackColor = Color.FromArgb(0, 0, 64);
-            btnLogout.BackColor = Color.FromArgb(0, 0, 64);*/
+            btnSurveys.BackColor = Color.FromArgb(0, 24, 74);
         }
 
         private void btnDeleteSurvey_Click(object sender, EventArgs e)
@@ -84,6 +97,10 @@ namespace Consumer_Survey_System
             {
                 int surveyID = Convert.ToInt32(dgvSurveys.CurrentRow.Cells["id"].Value);
 
+                cmd = new SqlCommand("DELETE FROM result WHERE survey_id = '" + surveyID + "'", con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
                 cmd = new SqlCommand("DELETE FROM question WHERE survey_id = '" + surveyID + "'", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -92,7 +109,27 @@ namespace Consumer_Survey_System
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
-                dgvSurveys.DataSource = BindSource();
+
+                con.Open();
+                cmd = new SqlCommand("SELECT * FROM survey", con);
+                da = new SqlDataAdapter(cmd);
+                ds.Clear();
+                da.Fill(ds);
+                dt = ds.Tables[0];
+                con.Close();
+                if (dt.Rows.Count > 0)
+                {
+                    dgvSurveys.DataSource = dt;
+                    dgvSurveys.Columns["id"].HeaderText = "No.";
+                    dgvSurveys.Columns["name"].HeaderText = "Survey";
+                    btnDeleteSurvey.Enabled = true;
+                    btnResults.Enabled = true;
+                }
+                else
+                {
+                    btnDeleteSurvey.Enabled = false;
+                    btnResults.Enabled = false;
+                }
             }
             else
             {
@@ -110,11 +147,71 @@ namespace Consumer_Survey_System
         {
             if (activeForm != null)
                 activeForm.Close();
+            btnSurveys.BackColor = Color.FromArgb(0, 13, 49);
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            dgvSurveys.DataSource = BindSource();
+            con.Open();
+            cmd = new SqlCommand("SELECT * FROM survey", con);
+            da = new SqlDataAdapter(cmd);
+            ds.Clear();
+            da.Fill(ds);
+            dt = ds.Tables[0];
+            con.Close();
+            if (dt.Rows.Count > 0)
+            {
+                dgvSurveys.DataSource = dt;
+                dgvSurveys.Columns["id"].HeaderText = "No.";
+                dgvSurveys.Columns["name"].HeaderText = "Survey";
+                btnDeleteSurvey.Enabled = true;
+                btnResults.Enabled = true;
+            }
+            else
+            {
+                btnDeleteSurvey.Enabled = false;
+                btnResults.Enabled = false;
+            }
+        }
+
+        private void btnResults_Click(object sender, EventArgs e)
+        {
+            surveyID = Convert.ToInt32(dgvSurveys.CurrentRow.Cells["id"].Value);
+            surveyName = Convert.ToString(dgvSurveys.CurrentRow.Cells["name"].Value);
+            btnSurveys.BackColor = Color.FromArgb(0, 24, 74);
+            openChildForm(new frmResult());
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure want to logout?",
+                               "Consumer Survey System",
+                                MessageBoxButtons.OKCancel,
+                                MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                frmLogin fl = new frmLogin();
+                fl.Show();
+                this.Hide();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void frmAdminMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure want to exit?",
+                   "Consumer Survey System",
+                    MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

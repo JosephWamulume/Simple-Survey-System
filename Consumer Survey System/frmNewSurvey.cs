@@ -440,12 +440,16 @@ namespace Consumer_Survey_System
                         con.Close();
                     }
 
-                    MessageBox.Show("The survey has been created succesfully. Click the 'Refresh' button to update the data.", "Consumer Survey System", MessageBoxButtons.OK);
+                    MessageBox.Show("The survey has been created succesfully. Click the 'Refresh' button to update the data.", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
 
                 }
             }
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

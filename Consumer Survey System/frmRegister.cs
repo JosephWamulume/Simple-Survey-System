@@ -182,5 +182,10 @@ namespace Consumer_Survey_System
                 e.Cancel = true;
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

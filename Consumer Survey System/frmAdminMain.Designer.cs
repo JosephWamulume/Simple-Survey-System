@@ -28,27 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminMain));
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlSurveys = new System.Windows.Forms.Panel();
             this.dgvSurveys = new System.Windows.Forms.DataGridView();
             this.btnSurveys = new System.Windows.Forms.Button();
-            this.btnMyAccount = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.pnlSideMenu = new System.Windows.Forms.Panel();
+            this.btnResults = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnDeleteSurvey = new System.Windows.Forms.Button();
             this.btnNewSurvey = new System.Windows.Forms.Button();
-            this.pbxCart = new System.Windows.Forms.PictureBox();
-            this.pbxSearch = new System.Windows.Forms.PictureBox();
-            this.pbxCategories = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnlContainer.SuspendLayout();
             this.pnlSurveys.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSurveys)).BeginInit();
             this.pnlSideMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCategories)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +59,7 @@
             // pnlSurveys
             // 
             this.pnlSurveys.AutoScroll = true;
+            this.pnlSurveys.Controls.Add(this.btnResults);
             this.pnlSurveys.Controls.Add(this.btnRefresh);
             this.pnlSurveys.Controls.Add(this.dgvSurveys);
             this.pnlSurveys.Controls.Add(this.btnDeleteSurvey);
@@ -89,7 +85,7 @@
             this.btnSurveys.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnSurveys.FlatAppearance.BorderSize = 0;
             this.btnSurveys.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSurveys.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSurveys.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSurveys.ForeColor = System.Drawing.Color.White;
             this.btnSurveys.Location = new System.Drawing.Point(0, 96);
             this.btnSurveys.Name = "btnSurveys";
@@ -99,43 +95,26 @@
             this.btnSurveys.UseVisualStyleBackColor = false;
             this.btnSurveys.Click += new System.EventHandler(this.btnSurveys_Click);
             // 
-            // btnMyAccount
-            // 
-            this.btnMyAccount.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnMyAccount.FlatAppearance.BorderSize = 0;
-            this.btnMyAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyAccount.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyAccount.ForeColor = System.Drawing.Color.White;
-            this.btnMyAccount.Location = new System.Drawing.Point(0, 144);
-            this.btnMyAccount.Name = "btnMyAccount";
-            this.btnMyAccount.Size = new System.Drawing.Size(254, 48);
-            this.btnMyAccount.TabIndex = 2;
-            this.btnMyAccount.Text = "Results";
-            this.btnMyAccount.UseVisualStyleBackColor = true;
-            // 
             // btnLogout
             // 
             this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(0, 192);
+            this.btnLogout.Location = new System.Drawing.Point(0, 145);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(254, 48);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // pnlSideMenu
             // 
             this.pnlSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
-            this.pnlSideMenu.Controls.Add(this.pbxCart);
-            this.pnlSideMenu.Controls.Add(this.pbxSearch);
-            this.pnlSideMenu.Controls.Add(this.pbxCategories);
             this.pnlSideMenu.Controls.Add(this.pictureBox3);
             this.pnlSideMenu.Controls.Add(this.btnLogout);
-            this.pnlSideMenu.Controls.Add(this.btnMyAccount);
             this.pnlSideMenu.Controls.Add(this.btnSurveys);
             this.pnlSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSideMenu.Location = new System.Drawing.Point(0, 0);
@@ -143,11 +122,24 @@
             this.pnlSideMenu.Size = new System.Drawing.Size(254, 550);
             this.pnlSideMenu.TabIndex = 1;
             // 
+            // btnResults
+            // 
+            this.btnResults.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResults.Image = global::Consumer_Survey_System.Properties.Resources.icons8_bar_chart_16;
+            this.btnResults.Location = new System.Drawing.Point(150, 12);
+            this.btnResults.Name = "btnResults";
+            this.btnResults.Size = new System.Drawing.Size(122, 27);
+            this.btnResults.TabIndex = 18;
+            this.btnResults.Text = "View Results";
+            this.btnResults.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnResults.UseVisualStyleBackColor = true;
+            this.btnResults.Click += new System.EventHandler(this.btnResults_Click);
+            // 
             // btnRefresh
             // 
-            this.btnRefresh.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Image = global::Consumer_Survey_System.Properties.Resources.icons8_refresh_16;
-            this.btnRefresh.Location = new System.Drawing.Point(285, 12);
+            this.btnRefresh.Location = new System.Drawing.Point(423, 12);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(122, 27);
             this.btnRefresh.TabIndex = 17;
@@ -158,9 +150,9 @@
             // 
             // btnDeleteSurvey
             // 
-            this.btnDeleteSurvey.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteSurvey.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteSurvey.Image = global::Consumer_Survey_System.Properties.Resources.icons8_delete_file_16;
-            this.btnDeleteSurvey.Location = new System.Drawing.Point(148, 12);
+            this.btnDeleteSurvey.Location = new System.Drawing.Point(286, 12);
             this.btnDeleteSurvey.Name = "btnDeleteSurvey";
             this.btnDeleteSurvey.Size = new System.Drawing.Size(122, 27);
             this.btnDeleteSurvey.TabIndex = 14;
@@ -171,7 +163,7 @@
             // 
             // btnNewSurvey
             // 
-            this.btnNewSurvey.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewSurvey.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewSurvey.Image = global::Consumer_Survey_System.Properties.Resources.icons8_add_file_16;
             this.btnNewSurvey.Location = new System.Drawing.Point(13, 12);
             this.btnNewSurvey.Name = "btnNewSurvey";
@@ -181,34 +173,6 @@
             this.btnNewSurvey.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnNewSurvey.UseVisualStyleBackColor = true;
             this.btnNewSurvey.Click += new System.EventHandler(this.btnNewSurvey_Click);
-            // 
-            // pbxCart
-            // 
-            this.pbxCart.Location = new System.Drawing.Point(33, 198);
-            this.pbxCart.Name = "pbxCart";
-            this.pbxCart.Size = new System.Drawing.Size(36, 36);
-            this.pbxCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbxCart.TabIndex = 12;
-            this.pbxCart.TabStop = false;
-            // 
-            // pbxSearch
-            // 
-            this.pbxSearch.Location = new System.Drawing.Point(23, 150);
-            this.pbxSearch.Name = "pbxSearch";
-            this.pbxSearch.Size = new System.Drawing.Size(36, 36);
-            this.pbxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbxSearch.TabIndex = 11;
-            this.pbxSearch.TabStop = false;
-            // 
-            // pbxCategories
-            // 
-            this.pbxCategories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(13)))), ((int)(((byte)(49)))));
-            this.pbxCategories.Location = new System.Drawing.Point(35, 102);
-            this.pbxCategories.Name = "pbxCategories";
-            this.pbxCategories.Size = new System.Drawing.Size(36, 36);
-            this.pbxCategories.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbxCategories.TabIndex = 0;
-            this.pbxCategories.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -227,17 +191,16 @@
             this.ClientSize = new System.Drawing.Size(947, 550);
             this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.pnlSideMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdminMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consumer Survey System (Admin)";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAdminMain_FormClosing);
             this.Load += new System.EventHandler(this.frmAdminMain_Load);
             this.pnlContainer.ResumeLayout(false);
             this.pnlSurveys.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSurveys)).EndInit();
             this.pnlSideMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCategories)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
@@ -250,13 +213,10 @@
         private System.Windows.Forms.Button btnDeleteSurvey;
         private System.Windows.Forms.Button btnNewSurvey;
         private System.Windows.Forms.Button btnSurveys;
-        private System.Windows.Forms.Button btnMyAccount;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pbxCategories;
-        private System.Windows.Forms.PictureBox pbxSearch;
-        private System.Windows.Forms.PictureBox pbxCart;
         private System.Windows.Forms.Panel pnlSideMenu;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnResults;
     }
 }

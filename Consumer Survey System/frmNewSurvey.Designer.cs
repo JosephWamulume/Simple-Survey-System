@@ -100,6 +100,7 @@
             this.txtSurveyName = new System.Windows.Forms.TextBox();
             this.btnCreateSurvey = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.gbxQuestion4.SuspendLayout();
             this.gbxQuestion1.SuspendLayout();
             this.gbxQuestion2.SuspendLayout();
@@ -937,9 +938,9 @@
             // 
             this.gbxSurveyName.Controls.Add(this.txtSurveyName);
             this.gbxSurveyName.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxSurveyName.Location = new System.Drawing.Point(13, 12);
+            this.gbxSurveyName.Location = new System.Drawing.Point(167, 12);
             this.gbxSurveyName.Name = "gbxSurveyName";
-            this.gbxSurveyName.Size = new System.Drawing.Size(606, 54);
+            this.gbxSurveyName.Size = new System.Drawing.Size(452, 54);
             this.gbxSurveyName.TabIndex = 67;
             this.gbxSurveyName.TabStop = false;
             this.gbxSurveyName.Text = "Survey Name";
@@ -947,9 +948,9 @@
             // txtSurveyName
             // 
             this.txtSurveyName.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSurveyName.Location = new System.Drawing.Point(6, 19);
+            this.txtSurveyName.Location = new System.Drawing.Point(6, 22);
             this.txtSurveyName.Name = "txtSurveyName";
-            this.txtSurveyName.Size = new System.Drawing.Size(594, 21);
+            this.txtSurveyName.Size = new System.Drawing.Size(440, 21);
             this.txtSurveyName.TabIndex = 0;
             // 
             // btnCreateSurvey
@@ -972,12 +973,26 @@
             this.panel1.Size = new System.Drawing.Size(692, 30);
             this.panel1.TabIndex = 69;
             // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Image = global::Consumer_Survey_System.Properties.Resources.icons8_return_20;
+            this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBack.Location = new System.Drawing.Point(13, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(105, 30);
+            this.btnBack.TabIndex = 88;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // frmNewSurvey
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(709, 450);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCreateSurvey);
             this.Controls.Add(this.gbxSurveyName);
@@ -1113,5 +1128,6 @@
         private System.Windows.Forms.TextBox txtSurveyName;
         private System.Windows.Forms.Button btnCreateSurvey;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnBack;
     }
 }
