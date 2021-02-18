@@ -37,7 +37,7 @@ namespace Consumer_Survey_System
 
                 tmrLogin.Enabled = true;
                 btnLogin.Enabled = false;
-                txtEmail.Enabled = false;
+                txtUsername.Enabled = false;
                 txtPassword.Enabled = false;
             }
         }
@@ -46,12 +46,12 @@ namespace Consumer_Survey_System
         {
             /* VALIDATE FOR EMPTY FIELDS */
 
-            if (String.IsNullOrEmpty(txtEmail.Text))
+            if (String.IsNullOrEmpty(txtUsername.Text))
             {
-                // Display error message if user leaves the email text field empty
-                MessageBox.Show("Please enter your email address", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                // Set focus back the email text field so that the user can type the input
-                txtEmail.Focus();
+                // Display error message if user leaves the username text field empty
+                MessageBox.Show("Please enter your username address", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Set focus back the username text field so that the user can type the input
+                txtUsername.Focus();
                 // Terminate the event handler
                 return;
             }
@@ -64,24 +64,12 @@ namespace Consumer_Survey_System
                 // Terminate the event handler
                 return;
             }
-
-            /* VALIDATE FOR INVALID INPUTS */
-
-            else if (!Regex.Match(txtEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
-            {
-                // Display an error message if the user enters an invalid last name
-                MessageBox.Show("The email address you entered is invalid. Please make sure to include an @ symbol.", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                // Set focus back the last name text field so that the user can retype the input
-                txtEmail.Focus();
-                // Terminate the event handler
-                return;
-            }
             else
             {
                 // Open database connection
                 con.Open();
-                // Select all 'users' with an email address and password that matches the user inputs
-                cmd = new SqlCommand("SELECT * FROM users WHERE email_address='" + txtEmail.Text + "' and password='" + txtPassword.Text + "'", con);
+                // Select all 'users' with an username and password that matches the user inputs
+                cmd = new SqlCommand("SELECT * FROM users WHERE username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", con);
                 da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -90,7 +78,7 @@ namespace Consumer_Survey_System
                 if (i == 1)
                 {
                     // Display a success message
-                    MessageBox.Show("Login successful. Welcome!", "Consumer Survey System", MessageBoxButtons.OK);
+                    MessageBox.Show("Login successful. Welcome!", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // If the user is a consumer, open the consumer form
                     if (dt.Rows[0]["user_type"].ToString() == "consumer")
                     {
@@ -117,11 +105,11 @@ namespace Consumer_Survey_System
                 else
                 {
                     // If the records search is negative, display an error message
-                    MessageBox.Show("The email address or password you entered is incorrect. Please try again.", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The username or password you entered is incorrect. Please try again.", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     // Close database connection
                     con.Close();
-                    // Clear the email address field
-                    txtEmail.Clear();
+                    // Clear the username address field
+                    txtUsername.Clear();
                     // Clear the password field
                     txtPassword.Clear();
                     // Increment the number of login attempts by 1
@@ -156,6 +144,36 @@ namespace Consumer_Survey_System
             txtPassword.PasswordChar = '\0';
             pbxViewPassword.Visible = false;
             pbxHidePassword.Visible = true;
+        }
+
+        private void tmrLogin_Tick(object sender, EventArgs e)
+        {
+            if (count == 0)
+            {
+                tmrLogin.Enabled = false;
+                btnLogin.Enabled = true;
+                txtUsername.Enabled = true;
+                txtPassword.Enabled = true;
+                btnLogin.Text = "Login";
+                txtUsername.Focus();
+            }
+            else
+            {
+                btnLogin.Text = "Log in " + count;
+                count = count - 1;
+            }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            attempt = 0;
+        }
+
+        private void linklblRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var registerform = new frmRegister();
+            registerform.Show();
+            this.Hide();
         }
 
         private void pbxHidePassword_Click(object sender, EventArgs e)

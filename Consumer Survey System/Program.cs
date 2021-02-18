@@ -16,7 +16,7 @@ namespace Consumer_Survey_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmConsumerMain());
+            Application.Run(new frmLogin());
         }
     }
 }

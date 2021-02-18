@@ -54,14 +54,31 @@ namespace Consumer_Survey_System
             if (dt.Rows.Count > 0)
             {
                 dgvSurveys.DataSource = dt;
-                dgvSurveys.Columns["id"].HeaderText = "No.";
+                dgvSurveys.Columns["id"].Visible = false;
                 dgvSurveys.Columns["name"].HeaderText = "Survey";
                 btnAnswerSurvey.Enabled = true;
+                autosize();
             }
             else
             {
                 btnAnswerSurvey.Enabled = false;
                 MessageBox.Show("There are currently no surveys available. Please check again later.", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void autosize()
+        {
+            for (int i = 0; i < dgvSurveys.Columns.Count - 1; i++)
+            {
+                dgvSurveys.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+            dgvSurveys.Columns[dgvSurveys.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            for (int i = 0; i < dgvSurveys.Columns.Count; i++)
+            {
+                int colw = dgvSurveys.Columns[i].Width;
+                dgvSurveys.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                dgvSurveys.Columns[i].Width = colw;
             }
         }
 

@@ -36,8 +36,8 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.tmrLogin = new System.Windows.Forms.Timer(this.components);
             this.pbxViewPassword = new System.Windows.Forms.PictureBox();
             this.pbxHidePassword = new System.Windows.Forms.PictureBox();
@@ -56,6 +56,7 @@
             linklblRegister.TabIndex = 17;
             linklblRegister.TabStop = true;
             linklblRegister.Text = "Register";
+            linklblRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblRegister_LinkClicked);
             // 
             // lblLoginHeader
             // 
@@ -107,27 +108,28 @@
             this.txtPassword.Size = new System.Drawing.Size(243, 26);
             this.txtPassword.TabIndex = 15;
             // 
-            // lblEmail
+            // lblUsername
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(38, 61);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(46, 18);
-            this.lblEmail.TabIndex = 12;
-            this.lblEmail.Text = "Email";
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(38, 61);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(76, 18);
+            this.lblUsername.TabIndex = 12;
+            this.lblUsername.Text = "Username";
             // 
-            // txtEmail
+            // txtUsername
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(41, 81);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(243, 26);
-            this.txtEmail.TabIndex = 13;
+            this.txtUsername.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(41, 81);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(243, 26);
+            this.txtUsername.TabIndex = 13;
             // 
             // tmrLogin
             // 
             this.tmrLogin.Interval = 1000;
+            this.tmrLogin.Tick += new System.EventHandler(this.tmrLogin_Tick);
             // 
             // pbxViewPassword
             // 
@@ -165,13 +167,14 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.txtUsername);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consumer Survey System";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxViewPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxHidePassword)).EndInit();
             this.ResumeLayout(false);
@@ -188,8 +191,8 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Timer tmrLogin;
     }
 }

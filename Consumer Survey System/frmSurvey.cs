@@ -813,21 +813,21 @@ namespace Consumer_Survey_System
                     }
                     else if (rbtnNeutral4.Checked == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, neutral) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription4.Text + "', '" + question_format_4 + "', '" + question_id_4 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, neutral) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription4.Text + "', '" + question_format_4 + "',  '" + question_id_4 + "', '" + 1 + "')", con);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (rbtnAgree4.Checked == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, agree) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription4.Text + "', '" + question_format_4 + "', '" + question_id_4 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, agree) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription4.Text + "', '" + question_format_4 + "',  '" + question_id_4 + "', '" + 1 + "')", con);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (rbtnStronglyAgree4.Checked == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, strongly_agree) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription4.Text + "', '" + question_format_4 + "', '" + question_id_4 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, strongly_agree) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription4.Text + "', '" + question_format_4 + "',  '" + question_id_4 + "', '" + 1 + "')", con);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
@@ -923,21 +923,31 @@ namespace Consumer_Survey_System
                 {
                     if (rbtnYes5.Checked == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, yes) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, yes) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (rbtnNo5.Checked == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, no) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, no) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Please select an option for Question 5", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please select an option for Question 3", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
@@ -945,42 +955,67 @@ namespace Consumer_Survey_System
                 {
                     if (rbtnStronglyDisagree5.Checked == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, strongly_disagree) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, strongly_disagree) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (rbtnDisagree5.Checked == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, disagree) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, disagree) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (rbtnNeutral5.Checked == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, neutral) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, neutral) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (rbtnAgree5.Checked == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, agree) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, agree) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (rbtnStronglyAgree5.Checked == true)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, strongly_agree) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, strongly_agree) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Please select an option for Question 5", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please select an option for Question 3", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
@@ -988,70 +1023,120 @@ namespace Consumer_Survey_System
                 {
                     if (lblScore1Q5.BackColor == Color.Black)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, one) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, one) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (lblScore2Q5.BackColor == Color.Black)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, two) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, two) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (lblScore3Q5.BackColor == Color.Black)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, three) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, three) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (lblScore4Q5.BackColor == Color.Black)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, four) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, four) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (lblScore5Q5.BackColor == Color.Black)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, five) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, five) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (lblScore6Q5.BackColor == Color.Black)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, six) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, six) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (lblScore7Q5.BackColor == Color.Black)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, seven) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, seven) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (lblScore8Q5.BackColor == Color.Black)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, eight) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, eight) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (lblScore9Q5.BackColor == Color.Black)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, nine) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, nine) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
                     else if (lblScore10Q5.BackColor == Color.Black)
                     {
-                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, ten) VALUES ('" + frmConsumerMain.surveyID.ToString() + "','" + lblDescription5.Text + "', '" + question_format_5 + "', '" + question_id_5 + "', '" + 1 + "')", con);
+                        cmd = new SqlCommand("INSERT INTO result (survey_id, description, question_format, question_id, ten) " + " VALUES (@surveyID, @description, @questionFormat, @questionID, @value)", con);
+                        cmd.Parameters.AddWithValue("@surveyID", frmConsumerMain.surveyID.ToString());
+                        cmd.Parameters.AddWithValue("@description", lblDescription5.Text);
+                        cmd.Parameters.AddWithValue("@questionFormat", question_format_5);
+                        cmd.Parameters.AddWithValue("@questionID", question_id_5);
+                        cmd.Parameters.AddWithValue("@value", 1);
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
@@ -1793,7 +1878,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
-                MessageBox.Show("Thank for participating in this survey.", "Consumer Survey System", MessageBoxButtons.OK);
+                MessageBox.Show("Thank for participating in this survey.", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else

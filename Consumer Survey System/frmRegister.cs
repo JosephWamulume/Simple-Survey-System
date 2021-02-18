@@ -27,10 +27,8 @@ namespace Consumer_Survey_System
 
         private void linklblLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Display login form
             var loginform = new frmLogin();
             loginform.Show();
-            // Hide registration form
             this.Hide();
         }
 
@@ -38,28 +36,19 @@ namespace Consumer_Survey_System
         {
             /* VALIDATE FOR EMPTY FIELDS */
 
-            if (String.IsNullOrEmpty(txtEmail.Text))
+            if (String.IsNullOrEmpty(txtUsername.Text))
             {
-                // Display error message if user leaves the email text field empty
-                MessageBox.Show("Please enter your email address", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                // Set focus back the email text field so that the user can type their input
-                txtEmail.Focus();
-                // Terminate the event handler
-                return;
-            }
-            else if (String.IsNullOrEmpty(txtPhoneNumber.Text))
-            {
-                // Display error message if user leaves the phone number text field empty
-                MessageBox.Show("Please enter your phone number", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                // Set focus back the phone number text field so that the user can type their input
-                txtPhoneNumber.Focus();
+                // Display error message if user leaves the username text field empty
+                MessageBox.Show("Please enter a username.", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Set focus back the username text field so that the user can type their input
+                txtUsername.Focus();
                 // Terminate the event handler
                 return;
             }
             else if (String.IsNullOrEmpty(txtPassword.Text))
             {
                 // Display error message if user leaves the password text field empty
-                MessageBox.Show("Please enter a password", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a password.", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 // Set focus back the password text field so that the user can type their input
                 txtPassword.Focus();
                 // Terminate the event handler
@@ -68,7 +57,7 @@ namespace Consumer_Survey_System
             else if (String.IsNullOrEmpty(txtRepeatPassword.Text))
             {
                 // Display error message if user leaves the repeat password text field empty
-                MessageBox.Show("Please repeat your password", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please repeat your password.", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 // Set focus back the repeat password text field so that the user can type their input
                 txtRepeatPassword.Focus();
                 // Terminate the event handler
@@ -77,15 +66,6 @@ namespace Consumer_Survey_System
 
             /* VALIDATE FOR INVALID INPUTS */
 
-            else if (!Regex.Match(txtEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
-            {
-                // Display an error message if the user enters an invalid last name
-                MessageBox.Show("The email address you entered is invalid. Please make sure to include an @ symbol.", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                // Set focus back the last name text field so that the user can retype their input
-                txtEmail.Focus();
-                // Terminate the event handler
-                return;
-            }
             else if (!Regex.Match(txtPassword.Text, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,32}$").Success)
             {
                 // Display an error message if the user enters a password that is less than 8 characters long
@@ -109,12 +89,12 @@ namespace Consumer_Survey_System
             }
             else
             {
-                /* CHECK IF EMAIL ADDRESS ALREADY EXISTS IN USERS TABLE */
+                /* CHECK IF USERNAME ALREADY EXISTS IN USERS TABLE */
 
                 // Open database connection
                 con.Open();
-                // Select all users with an email address that matches the user inputs
-                cmd = new SqlCommand("SELECT * FROM users WHERE email_address='" + txtEmail.Text + "'", con);
+                // Select all users with a username that matches the user's input
+                cmd = new SqlCommand("SELECT * FROM users WHERE username='" + txtUsername.Text + "'", con);
                 da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -125,16 +105,16 @@ namespace Consumer_Survey_System
                 if (i > 0)
                 {
                     // If the record search is positive, display an error message
-                    MessageBox.Show("This email address is already taken.", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    // Set focus back the email text field so that the user can retype their input
-                    txtEmail.Focus();
+                    MessageBox.Show("This username address is already taken.", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Set focus back the username text field so that the user can retype their input
+                    txtUsername.Focus();
                     // Terminate the event handler
                     return;
                 }
                 else
                 {
                     // Insert consumer information into 'users' table
-                    cmd = new SqlCommand("INSERT INTO users (email_address, phone_number, user_type, password) VALUES ('" + txtEmail.Text + "', '" + txtPhoneNumber.Text + "', 'consumer', '" + txtPassword.Text + "')", con);
+                    cmd = new SqlCommand("INSERT INTO users (username, user_type, password) VALUES ('" + txtUsername.Text + "', 'consumer', '" + txtPassword.Text + "')", con);
                     // Open database connection
                     con.Open();
                     // Execute query
@@ -142,7 +122,7 @@ namespace Consumer_Survey_System
                     // Close database connection
                     con.Close();
                     // Display success message
-                    MessageBox.Show("Registration Successful!", "Consumer Survey System", MessageBoxButtons.OK);
+                    MessageBox.Show("Registration Successful!", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // Hide registration form
                     this.Hide();
                     // Display login form

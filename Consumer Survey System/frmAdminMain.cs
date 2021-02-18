@@ -59,12 +59,29 @@ namespace Consumer_Survey_System
                 dgvSurveys.Columns["name"].HeaderText = "Survey";
                 btnDeleteSurvey.Enabled = true;
                 btnResults.Enabled = true;
+                autosize();
             }
             else
             {
                 btnDeleteSurvey.Enabled = false;
                 btnResults.Enabled = false;
             }         
+        }
+
+        private void autosize()
+        {
+            for (int i = 0; i < dgvSurveys.Columns.Count - 1; i++)
+            {
+                dgvSurveys.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+            dgvSurveys.Columns[dgvSurveys.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            for (int i = 0; i < dgvSurveys.Columns.Count; i++)
+            {
+                int colw = dgvSurveys.Columns[i].Width;
+                dgvSurveys.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                dgvSurveys.Columns[i].Width = colw;
+            }
         }
 
         private void openChildForm(Form childForm)

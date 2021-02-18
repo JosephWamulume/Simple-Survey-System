@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSaveData = new System.Windows.Forms.Button();
             this.gbxQuestion1 = new System.Windows.Forms.GroupBox();
             this.pnlRatingScale1 = new System.Windows.Forms.Panel();
             this.lblScore2Q1 = new System.Windows.Forms.Label();
@@ -311,18 +310,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(726, 30);
             this.panel1.TabIndex = 84;
-            // 
-            // btnSaveData
-            // 
-            this.btnSaveData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSaveData.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveData.Location = new System.Drawing.Point(0, 2544);
-            this.btnSaveData.Name = "btnSaveData";
-            this.btnSaveData.Size = new System.Drawing.Size(726, 30);
-            this.btnSaveData.TabIndex = 83;
-            this.btnSaveData.Text = "Save to text file";
-            this.btnSaveData.UseVisualStyleBackColor = true;
-            this.btnSaveData.Click += new System.EventHandler(this.btnSaveData_Click);
             // 
             // gbxQuestion1
             // 
@@ -2933,7 +2920,6 @@
             this.Controls.Add(this.gbxQuestion3);
             this.Controls.Add(this.gbxQuestion2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnSaveData);
             this.Controls.Add(this.gbxQuestion1);
             this.Controls.Add(this.lblSurveyName);
             this.Name = "frmResult";
@@ -3026,7 +3012,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnSaveData;
         private System.Windows.Forms.GroupBox gbxQuestion1;
         private System.Windows.Forms.Label lblDescription1;
         private System.Windows.Forms.Label lblSurveyName;
