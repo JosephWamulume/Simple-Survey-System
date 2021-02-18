@@ -141,6 +141,7 @@ namespace Consumer_Survey_System
                     dgvSurveys.Columns["name"].HeaderText = "Survey";
                     btnDeleteSurvey.Enabled = true;
                     btnResults.Enabled = true;
+                    autosize();
                 }
                 else
                 {
@@ -183,6 +184,7 @@ namespace Consumer_Survey_System
                 dgvSurveys.Columns["name"].HeaderText = "Survey";
                 btnDeleteSurvey.Enabled = true;
                 btnResults.Enabled = true;
+                autosize();
             }
             else
             {
