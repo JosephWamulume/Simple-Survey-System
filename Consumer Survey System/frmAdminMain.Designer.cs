@@ -81,7 +81,7 @@
             // 
             // btnSurveys
             // 
-            this.btnSurveys.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(13)))), ((int)(((byte)(49)))));
+            this.btnSurveys.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(9)))), ((int)(((byte)(61)))));
             this.btnSurveys.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnSurveys.FlatAppearance.BorderSize = 0;
             this.btnSurveys.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -112,7 +112,7 @@
             // 
             // pnlSideMenu
             // 
-            this.pnlSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(74)))));
+            this.pnlSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(29)))), ((int)(((byte)(94)))));
             this.pnlSideMenu.Controls.Add(this.pictureBox3);
             this.pnlSideMenu.Controls.Add(this.btnLogout);
             this.pnlSideMenu.Controls.Add(this.btnSurveys);
@@ -124,60 +124,72 @@
             // 
             // btnResults
             // 
-            this.btnResults.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResults.Image = global::Consumer_Survey_System.Properties.Resources.icons8_bar_chart_16;
-            this.btnResults.Location = new System.Drawing.Point(150, 12);
+            this.btnResults.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnResults.FlatAppearance.BorderSize = 0;
+            this.btnResults.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResults.Font = new System.Drawing.Font("Raleway", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResults.ForeColor = System.Drawing.Color.White;
+            this.btnResults.Location = new System.Drawing.Point(284, 12);
             this.btnResults.Name = "btnResults";
             this.btnResults.Size = new System.Drawing.Size(122, 27);
             this.btnResults.TabIndex = 18;
             this.btnResults.Text = "View Results";
             this.btnResults.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnResults.UseVisualStyleBackColor = true;
+            this.btnResults.UseVisualStyleBackColor = false;
             this.btnResults.Click += new System.EventHandler(this.btnResults_Click);
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Image = global::Consumer_Survey_System.Properties.Resources.icons8_refresh_16;
-            this.btnRefresh.Location = new System.Drawing.Point(423, 12);
+            this.btnRefresh.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Raleway", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(557, 12);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(122, 27);
             this.btnRefresh.TabIndex = 17;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnDeleteSurvey
             // 
-            this.btnDeleteSurvey.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteSurvey.Image = global::Consumer_Survey_System.Properties.Resources.icons8_delete_file_16;
-            this.btnDeleteSurvey.Location = new System.Drawing.Point(286, 12);
+            this.btnDeleteSurvey.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnDeleteSurvey.FlatAppearance.BorderSize = 0;
+            this.btnDeleteSurvey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteSurvey.Font = new System.Drawing.Font("Raleway", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteSurvey.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteSurvey.Location = new System.Drawing.Point(420, 12);
             this.btnDeleteSurvey.Name = "btnDeleteSurvey";
             this.btnDeleteSurvey.Size = new System.Drawing.Size(122, 27);
             this.btnDeleteSurvey.TabIndex = 14;
             this.btnDeleteSurvey.Text = "Delete Survey";
             this.btnDeleteSurvey.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnDeleteSurvey.UseVisualStyleBackColor = true;
+            this.btnDeleteSurvey.UseVisualStyleBackColor = false;
             this.btnDeleteSurvey.Click += new System.EventHandler(this.btnDeleteSurvey_Click);
             // 
             // btnNewSurvey
             // 
-            this.btnNewSurvey.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewSurvey.Image = global::Consumer_Survey_System.Properties.Resources.icons8_add_file_16;
-            this.btnNewSurvey.Location = new System.Drawing.Point(13, 12);
+            this.btnNewSurvey.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnNewSurvey.FlatAppearance.BorderSize = 0;
+            this.btnNewSurvey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewSurvey.Font = new System.Drawing.Font("Raleway", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewSurvey.ForeColor = System.Drawing.Color.White;
+            this.btnNewSurvey.Location = new System.Drawing.Point(147, 12);
             this.btnNewSurvey.Name = "btnNewSurvey";
             this.btnNewSurvey.Size = new System.Drawing.Size(122, 27);
             this.btnNewSurvey.TabIndex = 13;
             this.btnNewSurvey.Text = "New Survey";
             this.btnNewSurvey.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnNewSurvey.UseVisualStyleBackColor = true;
+            this.btnNewSurvey.UseVisualStyleBackColor = false;
             this.btnNewSurvey.Click += new System.EventHandler(this.btnNewSurvey_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox3.Image = global::Consumer_Survey_System.Properties.Resources.My_Post__3_;
+            this.pictureBox3.Image = global::Consumer_Survey_System.Properties.Resources.My_Post__3_1;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(254, 96);

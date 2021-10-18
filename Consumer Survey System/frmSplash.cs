@@ -22,9 +22,13 @@ namespace Consumer_Survey_System
             pnlProgressFore.Width += 3;
             if (pnlProgressFore.Width >= 700)
             {
+                // Stop progress timer if progress bar surpasses width of 700
                 tmrProgress.Stop();
+                // Create instance of login form
                 frmLogin flogin = new frmLogin();
+                // Display login form
                 flogin.Show();
+                // Hide Splash Screen form
                 this.Hide();
             }
         }

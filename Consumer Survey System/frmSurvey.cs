@@ -18,6 +18,7 @@ namespace Consumer_Survey_System
             InitializeComponent();
         }
 
+        // Database connection
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dell\source\repos\Consumer Survey System\Consumer Survey System\database.mdf;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter da;
@@ -25,6 +26,7 @@ namespace Consumer_Survey_System
         private DataTable dt = new DataTable();
         private DataSet ds = new DataSet();
 
+        // Strings to store question formats
         public string question_format_1;
         public string question_format_2;
         public string question_format_3;
@@ -36,6 +38,7 @@ namespace Consumer_Survey_System
         public string question_format_9;
         public string question_format_10;
 
+        // Integers to store question IDs
         public int question_id_1;
         public int question_id_2;
         public int question_id_3;
@@ -49,37 +52,49 @@ namespace Consumer_Survey_System
 
         private void frmSurvey_Load(object sender, EventArgs e)
         {
-
+            // Open database connection
             con.Open();
+            // Retrieve selected survey from 'survey' table
             cmd = new SqlCommand("SELECT * FROM survey WHERE id= '" + frmConsumerMain.surveyID + "'", con);
             da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
+            // Store retrived data in datatable
             da.Fill(dt);
             lblSurveyName.Text = dt.Rows[0]["name"].ToString();
+            // Set survey name to upper case
+            lblSurveyName.Text.ToUpper();
+            // Close databse connection
             con.Close();
 
+            // Open database connection
             con.Open();
+            // Retrieve survey question from 'question' table
             cmd = new SqlCommand("SELECT * FROM question WHERE survey_id= '" + frmConsumerMain.surveyID + "'", con);
             da = new SqlDataAdapter(cmd);
             dt = new DataTable();
+            // Store retrived data in datatable
             da.Fill(dt);            
 
+            // Display question 1 details if number of questions retrieved is more than 0
             if (dt.Rows.Count > 0)
             {
                 lblDescription1.Text = dt.Rows[0]["description"].ToString();
 
+                // Display 'Yes or No' panel if question format is 'Yes or No'
                 if (dt.Rows[0]["question_format"].ToString() == "Yes or No")
                 {
                     pnlYesNo1.Visible = true;
                     question_format_1 = dt.Rows[0]["question_format"].ToString();
                     question_id_1 = Convert.ToInt32(dt.Rows[0]["id"]);
                 }
+                // Display '1-10 Rating Scale' panel if question format is '1-10 Rating Scale'
                 if (dt.Rows[0]["question_format"].ToString() == "1-10 Rating Scale")
                 {
                     pnlRatingScale1.Visible = true;
                     question_format_1 = dt.Rows[0]["question_format"].ToString();
                     question_id_1 = Convert.ToInt32(dt.Rows[0]["id"]);
                 }
+                // Display 'Likert Scale' if question format is '5-point Likert Scale'
                 if (dt.Rows[0]["question_format"].ToString() == "Agree/Disagree 5-point Likert Scale")
                 {
                     pnlFivePointLikert1.Visible = true;
@@ -88,24 +103,28 @@ namespace Consumer_Survey_System
                 }
             }
 
+            // Display question 2 details if number of questions retrieved is more than 1
             if (dt.Rows.Count > 1)
             {
                 gbxQuestion2.Visible = true;
 
                 lblDescription2.Text = dt.Rows[1]["description"].ToString();
 
+                // Display 'Yes or No' panel if question format is 'Yes or No'
                 if (dt.Rows[1]["question_format"].ToString() == "Yes or No")
                 {
                     pnlYesNo2.Visible = true;
                     question_format_2 = dt.Rows[1]["question_format"].ToString();
                     question_id_2 = Convert.ToInt32(dt.Rows[1]["id"]);
                 }
+                // Display '1-10 Rating Scale' panel if question format is '1-10 Rating Scale'
                 if (dt.Rows[1]["question_format"].ToString() == "1-10 Rating Scale")
                 {
                     pnlRatingScale2.Visible = true;
                     question_format_2 = dt.Rows[1]["question_format"].ToString();
                     question_id_2 = Convert.ToInt32(dt.Rows[1]["id"]);
                 }
+                // Display 'Likert Scale' if question format is '5-point Likert Scale'
                 if (dt.Rows[1]["question_format"].ToString() == "Agree/Disagree 5-point Likert Scale")
                 {
                     pnlFivePointLikert2.Visible = true;
@@ -114,24 +133,28 @@ namespace Consumer_Survey_System
                 }
             }
 
+            // Display question 3 details if number of questions retrieved is more than 2
             if (dt.Rows.Count > 2)
             {
                 gbxQuestion3.Visible = true;
 
                 lblDescription3.Text = dt.Rows[2]["description"].ToString();
 
+                // Display 'Yes or No' panel if question format is 'Yes or No'
                 if (dt.Rows[2]["question_format"].ToString() == "Yes or No")
                 {
                     pnlYesNo3.Visible = true;
                     question_format_3 = dt.Rows[2]["question_format"].ToString();
                     question_id_3 = Convert.ToInt32(dt.Rows[2]["id"]);
                 }
+                // Display '1-10 Rating Scale' panel if question format is '1-10 Rating Scale'
                 if (dt.Rows[2]["question_format"].ToString() == "1-10 Rating Scale")
                 {
                     pnlRatingScale3.Visible = true;
                     question_format_3 = dt.Rows[2]["question_format"].ToString();
                     question_id_3 = Convert.ToInt32(dt.Rows[2]["id"]);
                 }
+                // Display 'Likert Scale' if question format is '5-point Likert Scale'
                 if (dt.Rows[2]["question_format"].ToString() == "Agree/Disagree 5-point Likert Scale")
                 {
                     pnlFivePointLikert3.Visible = true;
@@ -140,24 +163,28 @@ namespace Consumer_Survey_System
                 }
             }
 
+            // Display question 4 details if number of questions retrieved is more than 3
             if (dt.Rows.Count > 3)
             {
                 gbxQuestion4.Visible = true;
 
                 lblDescription4.Text = dt.Rows[3]["description"].ToString();
 
+                // Display 'Yes or No' panel if question format is 'Yes or No'
                 if (dt.Rows[3]["question_format"].ToString() == "Yes or No")
                 {
                     pnlYesNo4.Visible = true;
                     question_format_4 = dt.Rows[3]["question_format"].ToString();
                     question_id_4 = Convert.ToInt32(dt.Rows[3]["id"]);
                 }
+                // Display '1-10 Rating Scale' panel if question format is '1-10 Rating Scale'
                 if (dt.Rows[3]["question_format"].ToString() == "1-10 Rating Scale")
                 {
                     pnlRatingScale4.Visible = true;
                     question_format_4 = dt.Rows[3]["question_format"].ToString();
                     question_id_4 = Convert.ToInt32(dt.Rows[3]["id"]);
                 }
+                // Display 'Likert Scale' if question format is '5-point Likert Scale'
                 if (dt.Rows[3]["question_format"].ToString() == "Agree/Disagree 5-point Likert Scale")
                 {
                     pnlFivePointLikert4.Visible = true;
@@ -166,24 +193,28 @@ namespace Consumer_Survey_System
                 }
             }
 
+            // Display question 5 details if number of questions retrieved is more than 4
             if (dt.Rows.Count > 4)
             {
                 gbxQuestion5.Visible = true;
 
                 lblDescription5.Text = dt.Rows[4]["description"].ToString();
 
+                // Display 'Yes or No' panel if question format is 'Yes or No'
                 if (dt.Rows[4]["question_format"].ToString() == "Yes or No")
                 {
                     pnlYesNo5.Visible = true;
                     question_format_5 = dt.Rows[4]["question_format"].ToString();
                     question_id_5 = Convert.ToInt32(dt.Rows[4]["id"]);
                 }
+                // Display '1-10 Rating Scale' panel if question format is '1-10 Rating Scale'
                 if (dt.Rows[4]["question_format"].ToString() == "1-10 Rating Scale")
                 {
                     pnlRatingScale5.Visible = true;
                     question_format_5 = dt.Rows[4]["question_format"].ToString();
                     question_id_5 = Convert.ToInt32(dt.Rows[4]["id"]);
                 }
+                // Display 'Likert Scale' if question format is '5-point Likert Scale'
                 if (dt.Rows[4]["question_format"].ToString() == "Agree/Disagree 5-point Likert Scale")
                 {
                     pnlFivePointLikert5.Visible = true;
@@ -192,24 +223,28 @@ namespace Consumer_Survey_System
                 }
             }
 
+            // Display question 6 details if number of questions retrieved is more than 5
             if (dt.Rows.Count > 5)
             {
                 gbxQuestion6.Visible = true;
 
                 lblDescription6.Text = dt.Rows[5]["description"].ToString();
 
+                // Display 'Yes or No' panel if question format is 'Yes or No'
                 if (dt.Rows[5]["question_format"].ToString() == "Yes or No")
                 {
                     pnlYesNo6.Visible = true;
                     question_format_6 = dt.Rows[5]["question_format"].ToString();
                     question_id_6 = Convert.ToInt32(dt.Rows[5]["id"]);
                 }
+                // Display '1-10 Rating Scale' panel if question format is '1-10 Rating Scale'
                 if (dt.Rows[5]["question_format"].ToString() == "1-10 Rating Scale")
                 {
                     pnlRatingScale6.Visible = true;
                     question_format_6 = dt.Rows[5]["question_format"].ToString();
                     question_id_6 = Convert.ToInt32(dt.Rows[5]["id"]);
                 }
+                // Display 'Likert Scale' if question format is '5-point Likert Scale'
                 if (dt.Rows[5]["question_format"].ToString() == "Agree/Disagree 5-point Likert Scale")
                 {
                     pnlFivePointLikert6.Visible = true;
@@ -218,24 +253,28 @@ namespace Consumer_Survey_System
                 }
             }
 
+            // Display question 7 details if number of questions retrieved is more than 6
             if (dt.Rows.Count > 6)
             {
                 gbxQuestion7.Visible = true;
 
                 lblDescription7.Text = dt.Rows[6]["description"].ToString();
 
+                // Display 'Yes or No' panel if question format is 'Yes or No'
                 if (dt.Rows[6]["question_format"].ToString() == "Yes or No")
                 {
                     pnlYesNo7.Visible = true;
                     question_format_7 = dt.Rows[6]["question_format"].ToString();
                     question_id_7 = Convert.ToInt32(dt.Rows[6]["id"]);
                 }
+                // Display '1-10 Rating Scale' panel if question format is '1-10 Rating Scale'
                 if (dt.Rows[6]["question_format"].ToString() == "1-10 Rating Scale")
                 {
                     pnlRatingScale7.Visible = true;
                     question_format_7 = dt.Rows[6]["question_format"].ToString();
                     question_id_7 = Convert.ToInt32(dt.Rows[6]["id"]);
                 }
+                // Display 'Likert Scale' if question format is '5-point Likert Scale'
                 if (dt.Rows[6]["question_format"].ToString() == "Agree/Disagree 5-point Likert Scale")
                 {
                     pnlFivePointLikert7.Visible = true;
@@ -244,24 +283,28 @@ namespace Consumer_Survey_System
                 }
             }
 
+            // Display question 8 details if number of questions retrieved is more than 7
             if (dt.Rows.Count > 7)
             {
                 gbxQuestion8.Visible = true;
 
                 lblDescription8.Text = dt.Rows[7]["description"].ToString();
 
+                // Display 'Yes or No' panel if question format is 'Yes or No'
                 if (dt.Rows[7]["question_format"].ToString() == "Yes or No")
                 {
                     pnlYesNo8.Visible = true;
                     question_format_8 = dt.Rows[7]["question_format"].ToString();
                     question_id_8 = Convert.ToInt32(dt.Rows[7]["id"]);
                 }
+                // Display '1-10 Rating Scale' panel if question format is '1-10 Rating Scale'
                 if (dt.Rows[7]["question_format"].ToString() == "1-10 Rating Scale")
                 {
                     pnlRatingScale8.Visible = true;
                     question_format_8 = dt.Rows[7]["question_format"].ToString();
                     question_id_8 = Convert.ToInt32(dt.Rows[7]["id"]);
                 }
+                // Display 'Likert Scale' if question format is '5-point Likert Scale'
                 if (dt.Rows[7]["question_format"].ToString() == "Agree/Disagree 5-point Likert Scale")
                 {
                     pnlFivePointLikert8.Visible = true;
@@ -270,24 +313,28 @@ namespace Consumer_Survey_System
                 }
             }
 
+            // Display question 9 details if number of questions retrieved is more than 8
             if (dt.Rows.Count > 8)
             {
                 gbxQuestion9.Visible = true;
 
                 lblDescription9.Text = dt.Rows[8]["description"].ToString();
 
+                // Display 'Yes or No' panel if question format is 'Yes or No'
                 if (dt.Rows[8]["question_format"].ToString() == "Yes or No")
                 {
                     pnlYesNo9.Visible = true;
                     question_format_9 = dt.Rows[8]["question_format"].ToString();
                     question_id_9 = Convert.ToInt32(dt.Rows[8]["id"]);
                 }
+                // Display '1-10 Rating Scale' panel if question format is '1-10 Rating Scale'
                 if (dt.Rows[8]["question_format"].ToString() == "1-10 Rating Scale")
                 {
                     pnlRatingScale9.Visible = true;
                     question_format_9 = dt.Rows[8]["question_format"].ToString();
                     question_id_9 = Convert.ToInt32(dt.Rows[8]["id"]);
                 }
+                // Display 'Likert Scale' if question format is '5-point Likert Scale'
                 if (dt.Rows[8]["question_format"].ToString() == "Agree/Disagree 5-point Likert Scale")
                 {
                     pnlFivePointLikert9.Visible = true;
@@ -296,24 +343,28 @@ namespace Consumer_Survey_System
                 }
             }
 
+            // Display question 10 details if number of questions retrieved is more than 9
             if (dt.Rows.Count > 9)
             {
                 gbxQuestion10.Visible = true;
 
                 lblDescription10.Text = dt.Rows[9]["description"].ToString();
 
+                // Display 'Yes or No' panel if question format is 'Yes or No'
                 if (dt.Rows[9]["question_format"].ToString() == "Yes or No")
                 {
                     pnlYesNo10.Visible = true;
                     question_format_10 = dt.Rows[9]["question_format"].ToString();
                     question_id_10 = Convert.ToInt32(dt.Rows[9]["id"]);
                 }
+                // Display '1-10 Rating Scale' panel if question format is '1-10 Rating Scale'
                 if (dt.Rows[9]["question_format"].ToString() == "1-10 Rating Scale")
                 {
                     pnlRatingScale10.Visible = true;
                     question_format_10 = dt.Rows[9]["question_format"].ToString();
                     question_id_10 = Convert.ToInt32(dt.Rows[9]["id"]);
                 }
+                // Display 'Likert Scale' if question format is '5-point Likert Scale'
                 if (dt.Rows[9]["question_format"].ToString() == "Agree/Disagree 5-point Likert Scale")
                 {
                     pnlFivePointLikert10.Visible = true;
@@ -322,19 +373,22 @@ namespace Consumer_Survey_System
                 }
             }
 
+            // Close database connection
             con.Close();
 
         }
 
         private void btnSubmitSurvey_Click(object sender, EventArgs e)
         {
+            // Display confirmation message when user clicks 'Submit' button
             if (MessageBox.Show("Are you sure you want to submit this survey?",
                                "Consumer Survey System",
                                 MessageBoxButtons.OKCancel,
                                 MessageBoxIcon.Information) == DialogResult.OK)
             {
-                // QUESTION 1
-
+                // STORE QUESTION ANSWERS IN 'RESULT' TABLE
+                
+                // Question 1
                 if (question_format_1 == "Yes or No")
                 {
                     if (rbtnYes1.Checked == true)
@@ -479,8 +533,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
-                // QUESTION 2
-
+                // Question 2
                 if (question_format_2 == "Yes or No")
                 {
                     if (rbtnYes2.Checked == true)
@@ -625,8 +678,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
-                // QUESTION 3
-
+                // Question 3
                 if (question_format_3 == "Yes or No")
                 {
                     if (rbtnYes3.Checked == true)
@@ -771,8 +823,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
-                // QUESTION 4
-
+                // Question 4
                 if (question_format_4 == "Yes or No")
                 {
                     if (rbtnYes4.Checked == true)
@@ -917,8 +968,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
-                // QUESTION 5
-
+                // Question 5
                 if (question_format_5 == "Yes or No")
                 {
                     if (rbtnYes5.Checked == true)
@@ -1148,8 +1198,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
-                // QUESTION 6
-
+                // Question 6
                 if (question_format_6 == "Yes or No")
                 {
                     if (rbtnYes6.Checked == true)
@@ -1294,8 +1343,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
-                // QUESTION 7
-
+                // Question 7
                 if (question_format_7 == "Yes or No")
                 {
                     if (rbtnYes7.Checked == true)
@@ -1440,8 +1488,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
-                // QUESTION 8
-
+                // Question 8
                 if (question_format_8 == "Yes or No")
                 {
                     if (rbtnYes8.Checked == true)
@@ -1586,8 +1633,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
-                // QUESTION 9
-
+                // Question 9
                 if (question_format_9 == "Yes or No")
                 {
                     if (rbtnYes9.Checked == true)
@@ -1732,8 +1778,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
-                // QUESTION 10
-
+                // Question 10
                 if (question_format_10 == "Yes or No")
                 {
                     if (rbtnYes10.Checked == true)
@@ -1878,6 +1923,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
+                // Dsiplay success message and return user to home page
                 MessageBox.Show("Thank for participating in this survey.", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
@@ -1888,12 +1934,14 @@ namespace Consumer_Survey_System
 
         }
 
-        // Question 1 Rating
+        // THE FOLLOWING LINES OF CODE HIGHLIGHT THE SELECTED RATING ON THE LIKERT SCALE 
+
+        // Question 1 Likert Scale Highlighting
 
         private void lblScore1Q1_Click(object sender, EventArgs e)
         {
             lblScore1Q1.ForeColor = Color.White;
-            lblScore1Q1.BackColor = Color.Black;
+            lblScore1Q1.BackColor = Color.FromArgb(252, 3, 3);
             lblScore2Q1.ForeColor = SystemColors.ControlText;
             lblScore2Q1.BackColor = SystemColors.Control;
             lblScore3Q1.ForeColor = SystemColors.ControlText;
@@ -1919,7 +1967,7 @@ namespace Consumer_Survey_System
             lblScore1Q1.ForeColor = SystemColors.ControlText;
             lblScore1Q1.BackColor = SystemColors.Control;
             lblScore2Q1.ForeColor = Color.White;
-            lblScore2Q1.BackColor = Color.Black;
+            lblScore2Q1.BackColor = Color.FromArgb(252, 3, 3);
             lblScore3Q1.ForeColor = SystemColors.ControlText;
             lblScore3Q1.BackColor = SystemColors.Control;
             lblScore4Q1.ForeColor = SystemColors.ControlText;
@@ -1945,7 +1993,7 @@ namespace Consumer_Survey_System
             lblScore2Q1.ForeColor = SystemColors.ControlText;
             lblScore2Q1.BackColor = SystemColors.Control;
             lblScore3Q1.ForeColor = Color.White;
-            lblScore3Q1.BackColor = Color.Black;
+            lblScore3Q1.BackColor = Color.FromArgb(252, 78, 3);
             lblScore4Q1.ForeColor = SystemColors.ControlText;
             lblScore4Q1.BackColor = SystemColors.Control;
             lblScore5Q1.ForeColor = SystemColors.ControlText;
@@ -1971,7 +2019,7 @@ namespace Consumer_Survey_System
             lblScore3Q1.ForeColor = SystemColors.ControlText;
             lblScore3Q1.BackColor = SystemColors.Control;
             lblScore4Q1.ForeColor = Color.White;
-            lblScore4Q1.BackColor = Color.Black;
+            lblScore4Q1.BackColor = Color.FromArgb(252, 78, 3);
             lblScore5Q1.ForeColor = SystemColors.ControlText;
             lblScore5Q1.BackColor = SystemColors.Control;
             lblScore6Q1.ForeColor = SystemColors.ControlText;
@@ -1997,7 +2045,7 @@ namespace Consumer_Survey_System
             lblScore4Q1.ForeColor = SystemColors.ControlText;
             lblScore4Q1.BackColor = SystemColors.Control;
             lblScore5Q1.ForeColor = Color.White;
-            lblScore5Q1.BackColor = Color.Black;
+            lblScore5Q1.BackColor = Color.FromArgb(248, 252, 3);
             lblScore6Q1.ForeColor = SystemColors.ControlText;
             lblScore6Q1.BackColor = SystemColors.Control;
             lblScore7Q1.ForeColor = SystemColors.ControlText;
@@ -2023,7 +2071,7 @@ namespace Consumer_Survey_System
             lblScore5Q1.ForeColor = SystemColors.ControlText;
             lblScore5Q1.BackColor = SystemColors.Control;
             lblScore6Q1.ForeColor = Color.White;
-            lblScore6Q1.BackColor = Color.Black;
+            lblScore6Q1.BackColor = Color.FromArgb(248, 252, 3);
             lblScore7Q1.ForeColor = SystemColors.ControlText;
             lblScore7Q1.BackColor = SystemColors.Control;
             lblScore8Q1.ForeColor = SystemColors.ControlText;
@@ -2049,7 +2097,7 @@ namespace Consumer_Survey_System
             lblScore6Q1.ForeColor = SystemColors.ControlText;
             lblScore6Q1.BackColor = SystemColors.Control;
             lblScore7Q1.ForeColor = Color.White;
-            lblScore7Q1.BackColor = Color.Black;
+            lblScore7Q1.BackColor = Color.FromArgb(119, 252, 3);
             lblScore8Q1.ForeColor = SystemColors.ControlText;
             lblScore8Q1.BackColor = SystemColors.Control;
             lblScore9Q1.ForeColor = SystemColors.ControlText;
@@ -2075,7 +2123,7 @@ namespace Consumer_Survey_System
             lblScore7Q1.ForeColor = SystemColors.ControlText;
             lblScore7Q1.BackColor = SystemColors.Control;
             lblScore8Q1.ForeColor = Color.White;
-            lblScore8Q1.BackColor = Color.Black;
+            lblScore8Q1.BackColor = Color.FromArgb(119, 252, 3);
             lblScore9Q1.ForeColor = SystemColors.ControlText;
             lblScore9Q1.BackColor = SystemColors.Control;
             lblScore10Q1.ForeColor = SystemColors.ControlText;
@@ -2101,7 +2149,7 @@ namespace Consumer_Survey_System
             lblScore8Q1.ForeColor = SystemColors.ControlText;
             lblScore8Q1.BackColor = SystemColors.Control;
             lblScore9Q1.ForeColor = Color.White;
-            lblScore9Q1.BackColor = Color.Black;
+            lblScore9Q1.BackColor = Color.FromArgb(3, 252, 20);
             lblScore10Q1.ForeColor = SystemColors.ControlText;
             lblScore10Q1.BackColor = SystemColors.Control;
         }
@@ -2127,15 +2175,15 @@ namespace Consumer_Survey_System
             lblScore9Q1.ForeColor = SystemColors.ControlText;
             lblScore9Q1.BackColor = SystemColors.Control;
             lblScore10Q1.ForeColor = Color.White;
-            lblScore10Q1.BackColor = Color.Black;
+            lblScore10Q1.BackColor = Color.FromArgb(3, 252, 20);
         }
 
-        // Question 2 Rating
+        // Question 2 Likert Scale Highlighting
 
         private void lblScore1Q2_Click(object sender, EventArgs e)
         {
             lblScore1Q2.ForeColor = Color.White;
-            lblScore1Q2.BackColor = Color.Black;
+            lblScore1Q2.BackColor = Color.FromArgb(252, 3, 3);
             lblScore2Q2.ForeColor = SystemColors.ControlText;
             lblScore2Q2.BackColor = SystemColors.Control;
             lblScore3Q2.ForeColor = SystemColors.ControlText;
@@ -2161,7 +2209,7 @@ namespace Consumer_Survey_System
             lblScore1Q2.ForeColor = SystemColors.ControlText;
             lblScore1Q2.BackColor = SystemColors.Control;
             lblScore2Q2.ForeColor = Color.White;
-            lblScore2Q2.BackColor = Color.Black;
+            lblScore2Q2.BackColor = Color.FromArgb(252, 3, 3);
             lblScore3Q2.ForeColor = SystemColors.ControlText;
             lblScore3Q2.BackColor = SystemColors.Control;
             lblScore4Q2.ForeColor = SystemColors.ControlText;
@@ -2187,7 +2235,7 @@ namespace Consumer_Survey_System
             lblScore2Q2.ForeColor = SystemColors.ControlText;
             lblScore2Q2.BackColor = SystemColors.Control;
             lblScore3Q2.ForeColor = Color.White;
-            lblScore3Q2.BackColor = Color.Black;
+            lblScore3Q2.BackColor = Color.FromArgb(252, 78, 3);
             lblScore4Q2.ForeColor = SystemColors.ControlText;
             lblScore4Q2.BackColor = SystemColors.Control;
             lblScore5Q2.ForeColor = SystemColors.ControlText;
@@ -2213,7 +2261,7 @@ namespace Consumer_Survey_System
             lblScore3Q2.ForeColor = SystemColors.ControlText;
             lblScore3Q2.BackColor = SystemColors.Control;
             lblScore4Q2.ForeColor = Color.White;
-            lblScore4Q2.BackColor = Color.Black;
+            lblScore4Q2.BackColor = Color.FromArgb(252, 78, 3);
             lblScore5Q2.ForeColor = SystemColors.ControlText;
             lblScore5Q2.BackColor = SystemColors.Control;
             lblScore6Q2.ForeColor = SystemColors.ControlText;
@@ -2239,7 +2287,7 @@ namespace Consumer_Survey_System
             lblScore4Q2.ForeColor = SystemColors.ControlText;
             lblScore4Q2.BackColor = SystemColors.Control;
             lblScore5Q2.ForeColor = Color.White;
-            lblScore5Q2.BackColor = Color.Black;
+            lblScore5Q2.BackColor = Color.FromArgb(248, 252, 3);
             lblScore6Q2.ForeColor = SystemColors.ControlText;
             lblScore6Q2.BackColor = SystemColors.Control;
             lblScore7Q2.ForeColor = SystemColors.ControlText;
@@ -2265,7 +2313,7 @@ namespace Consumer_Survey_System
             lblScore5Q2.ForeColor = SystemColors.ControlText;
             lblScore5Q2.BackColor = SystemColors.Control;
             lblScore6Q2.ForeColor = Color.White;
-            lblScore6Q2.BackColor = Color.Black;
+            lblScore6Q2.BackColor = Color.FromArgb(248, 252, 3);
             lblScore7Q2.ForeColor = SystemColors.ControlText;
             lblScore7Q2.BackColor = SystemColors.Control;
             lblScore8Q2.ForeColor = SystemColors.ControlText;
@@ -2291,7 +2339,7 @@ namespace Consumer_Survey_System
             lblScore6Q2.ForeColor = SystemColors.ControlText;
             lblScore6Q2.BackColor = SystemColors.Control;
             lblScore7Q2.ForeColor = Color.White;
-            lblScore7Q2.BackColor = Color.Black;
+            lblScore7Q2.BackColor = Color.FromArgb(119, 252, 3);
             lblScore8Q2.ForeColor = SystemColors.ControlText;
             lblScore8Q2.BackColor = SystemColors.Control;
             lblScore9Q2.ForeColor = SystemColors.ControlText;
@@ -2317,7 +2365,7 @@ namespace Consumer_Survey_System
             lblScore7Q2.ForeColor = SystemColors.ControlText;
             lblScore7Q2.BackColor = SystemColors.Control;
             lblScore8Q2.ForeColor = Color.White;
-            lblScore8Q2.BackColor = Color.Black;
+            lblScore8Q2.BackColor = Color.FromArgb(119, 252, 3);
             lblScore9Q2.ForeColor = SystemColors.ControlText;
             lblScore9Q2.BackColor = SystemColors.Control;
             lblScore10Q2.ForeColor = SystemColors.ControlText;
@@ -2343,7 +2391,7 @@ namespace Consumer_Survey_System
             lblScore8Q2.ForeColor = SystemColors.ControlText;
             lblScore8Q2.BackColor = SystemColors.Control;
             lblScore9Q2.ForeColor = Color.White;
-            lblScore9Q2.BackColor = Color.Black;
+            lblScore9Q2.BackColor = Color.FromArgb(3, 252, 20);
             lblScore10Q2.ForeColor = SystemColors.ControlText;
             lblScore10Q2.BackColor = SystemColors.Control;
         }
@@ -2369,15 +2417,15 @@ namespace Consumer_Survey_System
             lblScore9Q2.ForeColor = SystemColors.ControlText;
             lblScore9Q2.BackColor = SystemColors.Control;
             lblScore10Q2.ForeColor = Color.White;
-            lblScore10Q2.BackColor = Color.Black;
+            lblScore10Q2.BackColor = Color.FromArgb(3, 252, 20);
         }
 
-        // Question 3 Rating
+        // Question 3 Likert Scale Highlighting
 
         private void lblScore1Q3_Click(object sender, EventArgs e)
         {
             lblScore1Q3.ForeColor = Color.White;
-            lblScore1Q3.BackColor = Color.Black;
+            lblScore1Q3.BackColor = Color.FromArgb(252, 3, 3);
             lblScore2Q3.ForeColor = SystemColors.ControlText;
             lblScore2Q3.BackColor = SystemColors.Control;
             lblScore3Q3.ForeColor = SystemColors.ControlText;
@@ -2403,7 +2451,7 @@ namespace Consumer_Survey_System
             lblScore1Q3.ForeColor = SystemColors.ControlText;
             lblScore1Q3.BackColor = SystemColors.Control;
             lblScore2Q3.ForeColor = Color.White;
-            lblScore2Q3.BackColor = Color.Black;
+            lblScore2Q3.BackColor = Color.FromArgb(252, 3, 3);
             lblScore3Q3.ForeColor = SystemColors.ControlText;
             lblScore3Q3.BackColor = SystemColors.Control;
             lblScore4Q3.ForeColor = SystemColors.ControlText;
@@ -2429,7 +2477,7 @@ namespace Consumer_Survey_System
             lblScore2Q3.ForeColor = SystemColors.ControlText;
             lblScore2Q3.BackColor = SystemColors.Control;
             lblScore3Q3.ForeColor = Color.White;
-            lblScore3Q3.BackColor = Color.Black;
+            lblScore3Q3.BackColor = Color.FromArgb(252, 78, 3);
             lblScore4Q3.ForeColor = SystemColors.ControlText;
             lblScore4Q3.BackColor = SystemColors.Control;
             lblScore5Q3.ForeColor = SystemColors.ControlText;
@@ -2455,7 +2503,7 @@ namespace Consumer_Survey_System
             lblScore3Q3.ForeColor = SystemColors.ControlText;
             lblScore3Q3.BackColor = SystemColors.Control;
             lblScore4Q3.ForeColor = Color.White;
-            lblScore4Q3.BackColor = Color.Black;
+            lblScore4Q3.BackColor = Color.FromArgb(252, 78, 3);
             lblScore5Q3.ForeColor = SystemColors.ControlText;
             lblScore5Q3.BackColor = SystemColors.Control;
             lblScore6Q3.ForeColor = SystemColors.ControlText;
@@ -2481,7 +2529,7 @@ namespace Consumer_Survey_System
             lblScore4Q3.ForeColor = SystemColors.ControlText;
             lblScore4Q3.BackColor = SystemColors.Control;
             lblScore5Q3.ForeColor = Color.White;
-            lblScore5Q3.BackColor = Color.Black;
+            lblScore5Q3.BackColor = Color.FromArgb(248, 252, 3);
             lblScore6Q3.ForeColor = SystemColors.ControlText;
             lblScore6Q3.BackColor = SystemColors.Control;
             lblScore7Q3.ForeColor = SystemColors.ControlText;
@@ -2507,7 +2555,7 @@ namespace Consumer_Survey_System
             lblScore5Q3.ForeColor = SystemColors.ControlText;
             lblScore5Q3.BackColor = SystemColors.Control;
             lblScore6Q3.ForeColor = Color.White;
-            lblScore6Q3.BackColor = Color.Black;
+            lblScore6Q3.BackColor = Color.FromArgb(248, 252, 3);
             lblScore7Q3.ForeColor = SystemColors.ControlText;
             lblScore7Q3.BackColor = SystemColors.Control;
             lblScore8Q3.ForeColor = SystemColors.ControlText;
@@ -2533,7 +2581,7 @@ namespace Consumer_Survey_System
             lblScore6Q3.ForeColor = SystemColors.ControlText;
             lblScore6Q3.BackColor = SystemColors.Control;
             lblScore7Q3.ForeColor = Color.White;
-            lblScore7Q3.BackColor = Color.Black;
+            lblScore7Q3.BackColor = Color.FromArgb(119, 252, 3);
             lblScore8Q3.ForeColor = SystemColors.ControlText;
             lblScore8Q3.BackColor = SystemColors.Control;
             lblScore9Q3.ForeColor = SystemColors.ControlText;
@@ -2559,7 +2607,7 @@ namespace Consumer_Survey_System
             lblScore7Q3.ForeColor = SystemColors.ControlText;
             lblScore7Q3.BackColor = SystemColors.Control;
             lblScore8Q3.ForeColor = Color.White;
-            lblScore8Q3.BackColor = Color.Black;
+            lblScore8Q3.BackColor = Color.FromArgb(119, 252, 3);
             lblScore9Q3.ForeColor = SystemColors.ControlText;
             lblScore9Q3.BackColor = SystemColors.Control;
             lblScore10Q3.ForeColor = SystemColors.ControlText;
@@ -2585,7 +2633,7 @@ namespace Consumer_Survey_System
             lblScore8Q3.ForeColor = SystemColors.ControlText;
             lblScore8Q3.BackColor = SystemColors.Control;
             lblScore9Q3.ForeColor = Color.White;
-            lblScore9Q3.BackColor = Color.Black;
+            lblScore9Q3.BackColor = Color.FromArgb(3, 252, 20);
             lblScore10Q3.ForeColor = SystemColors.ControlText;
             lblScore10Q3.BackColor = SystemColors.Control;
         }
@@ -2611,15 +2659,15 @@ namespace Consumer_Survey_System
             lblScore9Q3.ForeColor = SystemColors.ControlText;
             lblScore9Q3.BackColor = SystemColors.Control;
             lblScore10Q3.ForeColor = Color.White;
-            lblScore10Q3.BackColor = Color.Black;
+            lblScore10Q3.BackColor = Color.FromArgb(3, 252, 20);
         }
 
-        // Question 4 Rating
+        // Question 4 Likert Scale Highlighting
 
         private void lblScore1Q4_Click(object sender, EventArgs e)
         {
             lblScore1Q4.ForeColor = Color.White;
-            lblScore1Q4.BackColor = Color.Black;
+            lblScore1Q4.BackColor = Color.FromArgb(252, 3, 3);
             lblScore2Q4.ForeColor = SystemColors.ControlText;
             lblScore2Q4.BackColor = SystemColors.Control;
             lblScore3Q4.ForeColor = SystemColors.ControlText;
@@ -2645,7 +2693,7 @@ namespace Consumer_Survey_System
             lblScore1Q4.ForeColor = SystemColors.ControlText;
             lblScore1Q4.BackColor = SystemColors.Control;
             lblScore2Q4.ForeColor = Color.White;
-            lblScore2Q4.BackColor = Color.Black;
+            lblScore2Q4.BackColor = Color.FromArgb(252, 3, 3);
             lblScore3Q4.ForeColor = SystemColors.ControlText;
             lblScore3Q4.BackColor = SystemColors.Control;
             lblScore4Q4.ForeColor = SystemColors.ControlText;
@@ -2671,7 +2719,7 @@ namespace Consumer_Survey_System
             lblScore2Q4.ForeColor = SystemColors.ControlText;
             lblScore2Q4.BackColor = SystemColors.Control;
             lblScore3Q4.ForeColor = Color.White;
-            lblScore3Q4.BackColor = Color.Black;
+            lblScore3Q4.BackColor = Color.FromArgb(252, 78, 3);
             lblScore4Q4.ForeColor = SystemColors.ControlText;
             lblScore4Q4.BackColor = SystemColors.Control;
             lblScore5Q4.ForeColor = SystemColors.ControlText;
@@ -2697,7 +2745,7 @@ namespace Consumer_Survey_System
             lblScore3Q4.ForeColor = SystemColors.ControlText;
             lblScore3Q4.BackColor = SystemColors.Control;
             lblScore4Q4.ForeColor = Color.White;
-            lblScore4Q4.BackColor = Color.Black;
+            lblScore4Q4.BackColor = Color.FromArgb(252, 78, 3);
             lblScore5Q4.ForeColor = SystemColors.ControlText;
             lblScore5Q4.BackColor = SystemColors.Control;
             lblScore6Q4.ForeColor = SystemColors.ControlText;
@@ -2723,7 +2771,7 @@ namespace Consumer_Survey_System
             lblScore4Q4.ForeColor = SystemColors.ControlText;
             lblScore4Q4.BackColor = SystemColors.Control;
             lblScore5Q4.ForeColor = Color.White;
-            lblScore5Q4.BackColor = Color.Black;
+            lblScore5Q4.BackColor = Color.FromArgb(248, 252, 3);
             lblScore6Q4.ForeColor = SystemColors.ControlText;
             lblScore6Q4.BackColor = SystemColors.Control;
             lblScore7Q4.ForeColor = SystemColors.ControlText;
@@ -2749,7 +2797,7 @@ namespace Consumer_Survey_System
             lblScore5Q4.ForeColor = SystemColors.ControlText;
             lblScore5Q4.BackColor = SystemColors.Control;
             lblScore6Q4.ForeColor = Color.White;
-            lblScore6Q4.BackColor = Color.Black;
+            lblScore6Q4.BackColor = Color.FromArgb(248, 252, 3);
             lblScore7Q4.ForeColor = SystemColors.ControlText;
             lblScore7Q4.BackColor = SystemColors.Control;
             lblScore8Q4.ForeColor = SystemColors.ControlText;
@@ -2775,7 +2823,7 @@ namespace Consumer_Survey_System
             lblScore6Q4.ForeColor = SystemColors.ControlText;
             lblScore6Q4.BackColor = SystemColors.Control;
             lblScore7Q4.ForeColor = Color.White;
-            lblScore7Q4.BackColor = Color.Black;
+            lblScore7Q4.BackColor = Color.FromArgb(119, 252, 3);
             lblScore8Q4.ForeColor = SystemColors.ControlText;
             lblScore8Q4.BackColor = SystemColors.Control;
             lblScore9Q4.ForeColor = SystemColors.ControlText;
@@ -2801,7 +2849,7 @@ namespace Consumer_Survey_System
             lblScore7Q4.ForeColor = SystemColors.ControlText;
             lblScore7Q4.BackColor = SystemColors.Control;
             lblScore8Q4.ForeColor = Color.White;
-            lblScore8Q4.BackColor = Color.Black;
+            lblScore8Q4.BackColor = Color.FromArgb(119, 252, 3);
             lblScore9Q4.ForeColor = SystemColors.ControlText;
             lblScore9Q4.BackColor = SystemColors.Control;
             lblScore10Q4.ForeColor = SystemColors.ControlText;
@@ -2827,7 +2875,7 @@ namespace Consumer_Survey_System
             lblScore8Q4.ForeColor = SystemColors.ControlText;
             lblScore8Q4.BackColor = SystemColors.Control;
             lblScore9Q4.ForeColor = Color.White;
-            lblScore9Q4.BackColor = Color.Black;
+            lblScore9Q4.BackColor = Color.FromArgb(3, 252, 20);
             lblScore10Q4.ForeColor = SystemColors.ControlText;
             lblScore10Q4.BackColor = SystemColors.Control;
         }
@@ -2853,15 +2901,15 @@ namespace Consumer_Survey_System
             lblScore9Q4.ForeColor = SystemColors.ControlText;
             lblScore9Q4.BackColor = SystemColors.Control;
             lblScore10Q4.ForeColor = Color.White;
-            lblScore10Q4.BackColor = Color.Black;
+            lblScore10Q4.BackColor = Color.FromArgb(3, 252, 20);
         }
 
-        // Question 5 Rating
+        // Question 5 Likert Scale Highlighting
 
         private void lblScore1Q5_Click(object sender, EventArgs e)
         {
             lblScore1Q5.ForeColor = Color.White;
-            lblScore1Q5.BackColor = Color.Black;
+            lblScore1Q5.BackColor = Color.FromArgb(252, 3, 3);
             lblScore2Q5.ForeColor = SystemColors.ControlText;
             lblScore2Q5.BackColor = SystemColors.Control;
             lblScore3Q5.ForeColor = SystemColors.ControlText;
@@ -2887,7 +2935,7 @@ namespace Consumer_Survey_System
             lblScore1Q5.ForeColor = SystemColors.ControlText;
             lblScore1Q5.BackColor = SystemColors.Control;
             lblScore2Q5.ForeColor = Color.White;
-            lblScore2Q5.BackColor = Color.Black;
+            lblScore2Q5.BackColor = Color.FromArgb(252, 3, 3);
             lblScore3Q5.ForeColor = SystemColors.ControlText;
             lblScore3Q5.BackColor = SystemColors.Control;
             lblScore4Q5.ForeColor = SystemColors.ControlText;
@@ -2913,7 +2961,7 @@ namespace Consumer_Survey_System
             lblScore2Q5.ForeColor = SystemColors.ControlText;
             lblScore2Q5.BackColor = SystemColors.Control;
             lblScore3Q5.ForeColor = Color.White;
-            lblScore3Q5.BackColor = Color.Black;
+            lblScore3Q5.BackColor = Color.FromArgb(252, 78, 3);
             lblScore4Q5.ForeColor = SystemColors.ControlText;
             lblScore4Q5.BackColor = SystemColors.Control;
             lblScore5Q5.ForeColor = SystemColors.ControlText;
@@ -2939,7 +2987,7 @@ namespace Consumer_Survey_System
             lblScore3Q5.ForeColor = SystemColors.ControlText;
             lblScore3Q5.BackColor = SystemColors.Control;
             lblScore4Q5.ForeColor = Color.White;
-            lblScore4Q5.BackColor = Color.Black;
+            lblScore4Q5.BackColor = Color.FromArgb(252, 78, 3);
             lblScore5Q5.ForeColor = SystemColors.ControlText;
             lblScore5Q5.BackColor = SystemColors.Control;
             lblScore6Q5.ForeColor = SystemColors.ControlText;
@@ -2965,7 +3013,7 @@ namespace Consumer_Survey_System
             lblScore4Q5.ForeColor = SystemColors.ControlText;
             lblScore4Q5.BackColor = SystemColors.Control;
             lblScore5Q5.ForeColor = Color.White;
-            lblScore5Q5.BackColor = Color.Black;
+            lblScore5Q5.BackColor = Color.FromArgb(248, 252, 3);
             lblScore6Q5.ForeColor = SystemColors.ControlText;
             lblScore6Q5.BackColor = SystemColors.Control;
             lblScore7Q5.ForeColor = SystemColors.ControlText;
@@ -2991,7 +3039,7 @@ namespace Consumer_Survey_System
             lblScore5Q5.ForeColor = SystemColors.ControlText;
             lblScore5Q5.BackColor = SystemColors.Control;
             lblScore6Q5.ForeColor = Color.White;
-            lblScore6Q5.BackColor = Color.Black;
+            lblScore6Q5.BackColor = Color.FromArgb(248, 252, 3);
             lblScore7Q5.ForeColor = SystemColors.ControlText;
             lblScore7Q5.BackColor = SystemColors.Control;
             lblScore8Q5.ForeColor = SystemColors.ControlText;
@@ -3017,7 +3065,7 @@ namespace Consumer_Survey_System
             lblScore6Q5.ForeColor = SystemColors.ControlText;
             lblScore6Q5.BackColor = SystemColors.Control;
             lblScore7Q5.ForeColor = Color.White;
-            lblScore7Q5.BackColor = Color.Black;
+            lblScore7Q5.BackColor = Color.FromArgb(119, 252, 3);
             lblScore8Q5.ForeColor = SystemColors.ControlText;
             lblScore8Q5.BackColor = SystemColors.Control;
             lblScore9Q5.ForeColor = SystemColors.ControlText;
@@ -3043,7 +3091,7 @@ namespace Consumer_Survey_System
             lblScore7Q5.ForeColor = SystemColors.ControlText;
             lblScore7Q5.BackColor = SystemColors.Control;
             lblScore8Q5.ForeColor = Color.White;
-            lblScore8Q5.BackColor = Color.Black;
+            lblScore8Q5.BackColor = Color.FromArgb(119, 252, 3);
             lblScore9Q5.ForeColor = SystemColors.ControlText;
             lblScore9Q5.BackColor = SystemColors.Control;
             lblScore10Q5.ForeColor = SystemColors.ControlText;
@@ -3069,7 +3117,7 @@ namespace Consumer_Survey_System
             lblScore8Q5.ForeColor = SystemColors.ControlText;
             lblScore8Q5.BackColor = SystemColors.Control;
             lblScore9Q5.ForeColor = Color.White;
-            lblScore9Q5.BackColor = Color.Black;
+            lblScore9Q5.BackColor = Color.FromArgb(3, 252, 20);
             lblScore10Q5.ForeColor = SystemColors.ControlText;
             lblScore10Q5.BackColor = SystemColors.Control;
         }
@@ -3095,15 +3143,15 @@ namespace Consumer_Survey_System
             lblScore9Q5.ForeColor = SystemColors.ControlText;
             lblScore9Q5.BackColor = SystemColors.Control;
             lblScore10Q5.ForeColor = Color.White;
-            lblScore10Q5.BackColor = Color.Black;
+            lblScore10Q5.BackColor = Color.FromArgb(3, 252, 20);
         }
 
-        // Question 6 Rating
+        // Question 6 Likert Scale Highlighting
 
         private void lblScore1Q6_Click(object sender, EventArgs e)
         {
             lblScore1Q6.ForeColor = Color.White;
-            lblScore1Q6.BackColor = Color.Black;
+            lblScore1Q6.BackColor = Color.FromArgb(252, 3, 3);
             lblScore2Q6.ForeColor = SystemColors.ControlText;
             lblScore2Q6.BackColor = SystemColors.Control;
             lblScore3Q6.ForeColor = SystemColors.ControlText;
@@ -3129,7 +3177,7 @@ namespace Consumer_Survey_System
             lblScore1Q6.ForeColor = SystemColors.ControlText;
             lblScore1Q6.BackColor = SystemColors.Control;
             lblScore2Q6.ForeColor = Color.White;
-            lblScore2Q6.BackColor = Color.Black;
+            lblScore2Q6.BackColor = Color.FromArgb(252, 3, 3);
             lblScore3Q6.ForeColor = SystemColors.ControlText;
             lblScore3Q6.BackColor = SystemColors.Control;
             lblScore4Q6.ForeColor = SystemColors.ControlText;
@@ -3155,7 +3203,7 @@ namespace Consumer_Survey_System
             lblScore2Q6.ForeColor = SystemColors.ControlText;
             lblScore2Q6.BackColor = SystemColors.Control;
             lblScore3Q6.ForeColor = Color.White;
-            lblScore3Q6.BackColor = Color.Black;
+            lblScore3Q6.BackColor = Color.FromArgb(252, 78, 3);
             lblScore4Q6.ForeColor = SystemColors.ControlText;
             lblScore4Q6.BackColor = SystemColors.Control;
             lblScore5Q6.ForeColor = SystemColors.ControlText;
@@ -3181,7 +3229,7 @@ namespace Consumer_Survey_System
             lblScore3Q6.ForeColor = SystemColors.ControlText;
             lblScore3Q6.BackColor = SystemColors.Control;
             lblScore4Q6.ForeColor = Color.White;
-            lblScore4Q6.BackColor = Color.Black;
+            lblScore4Q6.BackColor = Color.FromArgb(252, 78, 3);
             lblScore5Q6.ForeColor = SystemColors.ControlText;
             lblScore5Q6.BackColor = SystemColors.Control;
             lblScore6Q6.ForeColor = SystemColors.ControlText;
@@ -3207,7 +3255,7 @@ namespace Consumer_Survey_System
             lblScore4Q6.ForeColor = SystemColors.ControlText;
             lblScore4Q6.BackColor = SystemColors.Control;
             lblScore5Q6.ForeColor = Color.White;
-            lblScore5Q6.BackColor = Color.Black;
+            lblScore5Q6.BackColor = Color.FromArgb(248, 252, 3);
             lblScore6Q6.ForeColor = SystemColors.ControlText;
             lblScore6Q6.BackColor = SystemColors.Control;
             lblScore7Q6.ForeColor = SystemColors.ControlText;
@@ -3233,7 +3281,7 @@ namespace Consumer_Survey_System
             lblScore5Q6.ForeColor = SystemColors.ControlText;
             lblScore5Q6.BackColor = SystemColors.Control;
             lblScore6Q6.ForeColor = Color.White;
-            lblScore6Q6.BackColor = Color.Black;
+            lblScore6Q6.BackColor = Color.FromArgb(248, 252, 3);
             lblScore7Q6.ForeColor = SystemColors.ControlText;
             lblScore7Q6.BackColor = SystemColors.Control;
             lblScore8Q6.ForeColor = SystemColors.ControlText;
@@ -3259,7 +3307,7 @@ namespace Consumer_Survey_System
             lblScore6Q6.ForeColor = SystemColors.ControlText;
             lblScore6Q6.BackColor = SystemColors.Control;
             lblScore7Q6.ForeColor = Color.White;
-            lblScore7Q6.BackColor = Color.Black;
+            lblScore7Q6.BackColor = Color.FromArgb(119, 252, 3);
             lblScore8Q6.ForeColor = SystemColors.ControlText;
             lblScore8Q6.BackColor = SystemColors.Control;
             lblScore9Q6.ForeColor = SystemColors.ControlText;
@@ -3285,7 +3333,7 @@ namespace Consumer_Survey_System
             lblScore7Q6.ForeColor = SystemColors.ControlText;
             lblScore7Q6.BackColor = SystemColors.Control;
             lblScore8Q6.ForeColor = Color.White;
-            lblScore8Q6.BackColor = Color.Black;
+            lblScore8Q6.BackColor = Color.FromArgb(119, 252, 3);
             lblScore9Q6.ForeColor = SystemColors.ControlText;
             lblScore9Q6.BackColor = SystemColors.Control;
             lblScore10Q6.ForeColor = SystemColors.ControlText;
@@ -3311,7 +3359,7 @@ namespace Consumer_Survey_System
             lblScore8Q6.ForeColor = SystemColors.ControlText;
             lblScore8Q6.BackColor = SystemColors.Control;
             lblScore9Q6.ForeColor = Color.White;
-            lblScore9Q6.BackColor = Color.Black;
+            lblScore9Q6.BackColor = Color.FromArgb(3, 252, 20);
             lblScore10Q6.ForeColor = SystemColors.ControlText;
             lblScore10Q6.BackColor = SystemColors.Control;
         }
@@ -3337,15 +3385,15 @@ namespace Consumer_Survey_System
             lblScore9Q6.ForeColor = SystemColors.ControlText;
             lblScore9Q6.BackColor = SystemColors.Control;
             lblScore10Q6.ForeColor = Color.White;
-            lblScore10Q6.BackColor = Color.Black;
+            lblScore10Q6.BackColor = Color.FromArgb(3, 252, 20);
         }
 
-        // Question 7 Rating
+        // Question 7 Likert Scale Highlighting
 
         private void lblScore1Q7_Click(object sender, EventArgs e)
         {
             lblScore1Q7.ForeColor = Color.White;
-            lblScore1Q7.BackColor = Color.Black;
+            lblScore1Q7.BackColor = Color.FromArgb(252, 3, 3);
             lblScore2Q7.ForeColor = SystemColors.ControlText;
             lblScore2Q7.BackColor = SystemColors.Control;
             lblScore3Q7.ForeColor = SystemColors.ControlText;
@@ -3371,7 +3419,7 @@ namespace Consumer_Survey_System
             lblScore1Q7.ForeColor = SystemColors.ControlText;
             lblScore1Q7.BackColor = SystemColors.Control;
             lblScore2Q7.ForeColor = Color.White;
-            lblScore2Q7.BackColor = Color.Black;
+            lblScore2Q7.BackColor = Color.FromArgb(252, 3, 3);
             lblScore3Q7.ForeColor = SystemColors.ControlText;
             lblScore3Q7.BackColor = SystemColors.Control;
             lblScore4Q7.ForeColor = SystemColors.ControlText;
@@ -3397,7 +3445,7 @@ namespace Consumer_Survey_System
             lblScore2Q7.ForeColor = SystemColors.ControlText;
             lblScore2Q7.BackColor = SystemColors.Control;
             lblScore3Q7.ForeColor = Color.White;
-            lblScore3Q7.BackColor = Color.Black;
+            lblScore3Q7.BackColor = Color.FromArgb(252, 78, 3);
             lblScore4Q7.ForeColor = SystemColors.ControlText;
             lblScore4Q7.BackColor = SystemColors.Control;
             lblScore5Q7.ForeColor = SystemColors.ControlText;
@@ -3423,7 +3471,7 @@ namespace Consumer_Survey_System
             lblScore3Q7.ForeColor = SystemColors.ControlText;
             lblScore3Q7.BackColor = SystemColors.Control;
             lblScore4Q7.ForeColor = Color.White;
-            lblScore4Q7.BackColor = Color.Black;
+            lblScore4Q7.BackColor = Color.FromArgb(252, 78, 3);
             lblScore5Q7.ForeColor = SystemColors.ControlText;
             lblScore5Q7.BackColor = SystemColors.Control;
             lblScore6Q7.ForeColor = SystemColors.ControlText;
@@ -3449,7 +3497,7 @@ namespace Consumer_Survey_System
             lblScore4Q7.ForeColor = SystemColors.ControlText;
             lblScore4Q7.BackColor = SystemColors.Control;
             lblScore5Q7.ForeColor = Color.White;
-            lblScore5Q7.BackColor = Color.Black;
+            lblScore5Q7.BackColor = Color.FromArgb(248, 252, 3);
             lblScore6Q7.ForeColor = SystemColors.ControlText;
             lblScore6Q7.BackColor = SystemColors.Control;
             lblScore7Q7.ForeColor = SystemColors.ControlText;
@@ -3475,7 +3523,7 @@ namespace Consumer_Survey_System
             lblScore5Q7.ForeColor = SystemColors.ControlText;
             lblScore5Q7.BackColor = SystemColors.Control;
             lblScore6Q7.ForeColor = Color.White;
-            lblScore6Q7.BackColor = Color.Black;
+            lblScore6Q7.BackColor = Color.FromArgb(248, 252, 3);
             lblScore7Q7.ForeColor = SystemColors.ControlText;
             lblScore7Q7.BackColor = SystemColors.Control;
             lblScore8Q7.ForeColor = SystemColors.ControlText;
@@ -3501,7 +3549,7 @@ namespace Consumer_Survey_System
             lblScore6Q7.ForeColor = SystemColors.ControlText;
             lblScore6Q7.BackColor = SystemColors.Control;
             lblScore7Q7.ForeColor = Color.White;
-            lblScore7Q7.BackColor = Color.Black;
+            lblScore7Q7.BackColor = Color.FromArgb(119, 252, 3);
             lblScore8Q7.ForeColor = SystemColors.ControlText;
             lblScore8Q7.BackColor = SystemColors.Control;
             lblScore9Q7.ForeColor = SystemColors.ControlText;
@@ -3527,7 +3575,7 @@ namespace Consumer_Survey_System
             lblScore7Q7.ForeColor = SystemColors.ControlText;
             lblScore7Q7.BackColor = SystemColors.Control;
             lblScore8Q7.ForeColor = Color.White;
-            lblScore8Q7.BackColor = Color.Black;
+            lblScore8Q7.BackColor = Color.FromArgb(119, 252, 3);
             lblScore9Q7.ForeColor = SystemColors.ControlText;
             lblScore9Q7.BackColor = SystemColors.Control;
             lblScore10Q7.ForeColor = SystemColors.ControlText;
@@ -3553,7 +3601,7 @@ namespace Consumer_Survey_System
             lblScore8Q7.ForeColor = SystemColors.ControlText;
             lblScore8Q7.BackColor = SystemColors.Control;
             lblScore9Q7.ForeColor = Color.White;
-            lblScore9Q7.BackColor = Color.Black;
+            lblScore9Q7.BackColor = Color.FromArgb(3, 252, 20);
             lblScore10Q7.ForeColor = SystemColors.ControlText;
             lblScore10Q7.BackColor = SystemColors.Control;
         }
@@ -3579,15 +3627,14 @@ namespace Consumer_Survey_System
             lblScore9Q7.ForeColor = SystemColors.ControlText;
             lblScore9Q7.BackColor = SystemColors.Control;
             lblScore10Q7.ForeColor = Color.White;
-            lblScore10Q7.BackColor = Color.Black;
+            lblScore10Q7.BackColor = Color.FromArgb(3, 252, 20);
         }
 
-        // Question 8 Rating
-
+        // Question 8 Likert Scale Highlighting
         private void lblScore1Q8_Click(object sender, EventArgs e)
         {
             lblScore1Q8.ForeColor = Color.White;
-            lblScore1Q8.BackColor = Color.Black;
+            lblScore1Q8.BackColor = Color.FromArgb(252, 3, 3);
             lblScore2Q8.ForeColor = SystemColors.ControlText;
             lblScore2Q8.BackColor = SystemColors.Control;
             lblScore3Q8.ForeColor = SystemColors.ControlText;
@@ -3613,7 +3660,7 @@ namespace Consumer_Survey_System
             lblScore1Q8.ForeColor = SystemColors.ControlText;
             lblScore1Q8.BackColor = SystemColors.Control;
             lblScore2Q8.ForeColor = Color.White;
-            lblScore2Q8.BackColor = Color.Black;
+            lblScore2Q8.BackColor = Color.FromArgb(252, 3, 3);
             lblScore3Q8.ForeColor = SystemColors.ControlText;
             lblScore3Q8.BackColor = SystemColors.Control;
             lblScore4Q8.ForeColor = SystemColors.ControlText;
@@ -3639,7 +3686,7 @@ namespace Consumer_Survey_System
             lblScore2Q8.ForeColor = SystemColors.ControlText;
             lblScore2Q8.BackColor = SystemColors.Control;
             lblScore3Q8.ForeColor = Color.White;
-            lblScore3Q8.BackColor = Color.Black;
+            lblScore3Q8.BackColor = Color.FromArgb(252, 78, 3);
             lblScore4Q8.ForeColor = SystemColors.ControlText;
             lblScore4Q8.BackColor = SystemColors.Control;
             lblScore5Q8.ForeColor = SystemColors.ControlText;
@@ -3665,7 +3712,7 @@ namespace Consumer_Survey_System
             lblScore3Q8.ForeColor = SystemColors.ControlText;
             lblScore3Q8.BackColor = SystemColors.Control;
             lblScore4Q8.ForeColor = Color.White;
-            lblScore4Q8.BackColor = Color.Black;
+            lblScore4Q8.BackColor = Color.FromArgb(252, 78, 3);
             lblScore5Q8.ForeColor = SystemColors.ControlText;
             lblScore5Q8.BackColor = SystemColors.Control;
             lblScore6Q8.ForeColor = SystemColors.ControlText;
@@ -3691,7 +3738,7 @@ namespace Consumer_Survey_System
             lblScore4Q8.ForeColor = SystemColors.ControlText;
             lblScore4Q8.BackColor = SystemColors.Control;
             lblScore5Q8.ForeColor = Color.White;
-            lblScore5Q8.BackColor = Color.Black;
+            lblScore5Q8.BackColor = Color.FromArgb(248, 252, 3);
             lblScore6Q8.ForeColor = SystemColors.ControlText;
             lblScore6Q8.BackColor = SystemColors.Control;
             lblScore7Q8.ForeColor = SystemColors.ControlText;
@@ -3717,7 +3764,7 @@ namespace Consumer_Survey_System
             lblScore5Q8.ForeColor = SystemColors.ControlText;
             lblScore5Q8.BackColor = SystemColors.Control;
             lblScore6Q8.ForeColor = Color.White;
-            lblScore6Q8.BackColor = Color.Black;
+            lblScore6Q8.BackColor = Color.FromArgb(248, 252, 3);
             lblScore7Q8.ForeColor = SystemColors.ControlText;
             lblScore7Q8.BackColor = SystemColors.Control;
             lblScore8Q8.ForeColor = SystemColors.ControlText;
@@ -3743,7 +3790,7 @@ namespace Consumer_Survey_System
             lblScore6Q8.ForeColor = SystemColors.ControlText;
             lblScore6Q8.BackColor = SystemColors.Control;
             lblScore7Q8.ForeColor = Color.White;
-            lblScore7Q8.BackColor = Color.Black;
+            lblScore7Q8.BackColor = Color.FromArgb(119, 252, 3);
             lblScore8Q8.ForeColor = SystemColors.ControlText;
             lblScore8Q8.BackColor = SystemColors.Control;
             lblScore9Q8.ForeColor = SystemColors.ControlText;
@@ -3769,7 +3816,7 @@ namespace Consumer_Survey_System
             lblScore7Q8.ForeColor = SystemColors.ControlText;
             lblScore7Q8.BackColor = SystemColors.Control;
             lblScore8Q8.ForeColor = Color.White;
-            lblScore8Q8.BackColor = Color.Black;
+            lblScore8Q8.BackColor = Color.FromArgb(119, 252, 3);
             lblScore9Q8.ForeColor = SystemColors.ControlText;
             lblScore9Q8.BackColor = SystemColors.Control;
             lblScore10Q8.ForeColor = SystemColors.ControlText;
@@ -3795,7 +3842,7 @@ namespace Consumer_Survey_System
             lblScore8Q8.ForeColor = SystemColors.ControlText;
             lblScore8Q8.BackColor = SystemColors.Control;
             lblScore9Q8.ForeColor = Color.White;
-            lblScore9Q8.BackColor = Color.Black;
+            lblScore9Q8.BackColor = Color.FromArgb(3, 252, 20);
             lblScore10Q8.ForeColor = SystemColors.ControlText;
             lblScore10Q8.BackColor = SystemColors.Control;
         }
@@ -3821,15 +3868,15 @@ namespace Consumer_Survey_System
             lblScore9Q8.ForeColor = SystemColors.ControlText;
             lblScore9Q8.BackColor = SystemColors.Control;
             lblScore10Q8.ForeColor = Color.White;
-            lblScore10Q8.BackColor = Color.Black;
+            lblScore10Q8.BackColor = Color.FromArgb(3, 252, 20);
         }
 
-        // Question 9 Rating
+        // Question 9 Likert Scale Highlighting
 
         private void lblScore1Q9_Click(object sender, EventArgs e)
         {
             lblScore1Q9.ForeColor = Color.White;
-            lblScore1Q9.BackColor = Color.Black;
+            lblScore1Q9.BackColor = Color.FromArgb(252, 3, 3);
             lblScore2Q9.ForeColor = SystemColors.ControlText;
             lblScore2Q9.BackColor = SystemColors.Control;
             lblScore3Q9.ForeColor = SystemColors.ControlText;
@@ -3855,7 +3902,7 @@ namespace Consumer_Survey_System
             lblScore1Q9.ForeColor = SystemColors.ControlText;
             lblScore1Q9.BackColor = SystemColors.Control;
             lblScore2Q9.ForeColor = Color.White;
-            lblScore2Q9.BackColor = Color.Black;
+            lblScore2Q9.BackColor = Color.FromArgb(252, 3, 3);
             lblScore3Q9.ForeColor = SystemColors.ControlText;
             lblScore3Q9.BackColor = SystemColors.Control;
             lblScore4Q9.ForeColor = SystemColors.ControlText;
@@ -3881,7 +3928,7 @@ namespace Consumer_Survey_System
             lblScore2Q9.ForeColor = SystemColors.ControlText;
             lblScore2Q9.BackColor = SystemColors.Control;
             lblScore3Q9.ForeColor = Color.White;
-            lblScore3Q9.BackColor = Color.Black;
+            lblScore3Q9.BackColor = Color.FromArgb(252, 78, 3);
             lblScore4Q9.ForeColor = SystemColors.ControlText;
             lblScore4Q9.BackColor = SystemColors.Control;
             lblScore5Q9.ForeColor = SystemColors.ControlText;
@@ -3907,7 +3954,7 @@ namespace Consumer_Survey_System
             lblScore3Q9.ForeColor = SystemColors.ControlText;
             lblScore3Q9.BackColor = SystemColors.Control;
             lblScore4Q9.ForeColor = Color.White;
-            lblScore4Q9.BackColor = Color.Black;
+            lblScore4Q9.BackColor = Color.FromArgb(252, 78, 3);
             lblScore5Q9.ForeColor = SystemColors.ControlText;
             lblScore5Q9.BackColor = SystemColors.Control;
             lblScore6Q9.ForeColor = SystemColors.ControlText;
@@ -3933,7 +3980,7 @@ namespace Consumer_Survey_System
             lblScore4Q9.ForeColor = SystemColors.ControlText;
             lblScore4Q9.BackColor = SystemColors.Control;
             lblScore5Q9.ForeColor = Color.White;
-            lblScore5Q9.BackColor = Color.Black;
+            lblScore5Q9.BackColor = Color.FromArgb(248, 252, 3);
             lblScore6Q9.ForeColor = SystemColors.ControlText;
             lblScore6Q9.BackColor = SystemColors.Control;
             lblScore7Q9.ForeColor = SystemColors.ControlText;
@@ -3959,7 +4006,7 @@ namespace Consumer_Survey_System
             lblScore5Q9.ForeColor = SystemColors.ControlText;
             lblScore5Q9.BackColor = SystemColors.Control;
             lblScore6Q9.ForeColor = Color.White;
-            lblScore6Q9.BackColor = Color.Black;
+            lblScore6Q9.BackColor = Color.FromArgb(248, 252, 3);
             lblScore7Q9.ForeColor = SystemColors.ControlText;
             lblScore7Q9.BackColor = SystemColors.Control;
             lblScore8Q9.ForeColor = SystemColors.ControlText;
@@ -3985,7 +4032,7 @@ namespace Consumer_Survey_System
             lblScore6Q9.ForeColor = SystemColors.ControlText;
             lblScore6Q9.BackColor = SystemColors.Control;
             lblScore7Q9.ForeColor = Color.White;
-            lblScore7Q9.BackColor = Color.Black;
+            lblScore7Q9.BackColor = Color.FromArgb(119, 252, 3);
             lblScore8Q9.ForeColor = SystemColors.ControlText;
             lblScore8Q9.BackColor = SystemColors.Control;
             lblScore9Q9.ForeColor = SystemColors.ControlText;
@@ -4011,7 +4058,7 @@ namespace Consumer_Survey_System
             lblScore7Q9.ForeColor = SystemColors.ControlText;
             lblScore7Q9.BackColor = SystemColors.Control;
             lblScore8Q9.ForeColor = Color.White;
-            lblScore8Q9.BackColor = Color.Black;
+            lblScore8Q9.BackColor = Color.FromArgb(119, 252, 3);
             lblScore9Q9.ForeColor = SystemColors.ControlText;
             lblScore9Q9.BackColor = SystemColors.Control;
             lblScore10Q9.ForeColor = SystemColors.ControlText;
@@ -4037,7 +4084,7 @@ namespace Consumer_Survey_System
             lblScore8Q9.ForeColor = SystemColors.ControlText;
             lblScore8Q9.BackColor = SystemColors.Control;
             lblScore9Q9.ForeColor = Color.White;
-            lblScore9Q9.BackColor = Color.Black;
+            lblScore9Q9.BackColor = Color.FromArgb(3, 252, 20);
             lblScore10Q9.ForeColor = SystemColors.ControlText;
             lblScore10Q9.BackColor = SystemColors.Control;
         }
@@ -4063,15 +4110,15 @@ namespace Consumer_Survey_System
             lblScore9Q9.ForeColor = SystemColors.ControlText;
             lblScore9Q9.BackColor = SystemColors.Control;
             lblScore10Q9.ForeColor = Color.White;
-            lblScore10Q9.BackColor = Color.Black;
+            lblScore10Q9.BackColor = Color.FromArgb(3, 252, 20);
         }
 
-        // Question 10 Rating
+        // Question 10 Likert Scale Highlighting
 
         private void lblScore1Q10_Click(object sender, EventArgs e)
         {
             lblScore1Q10.ForeColor = Color.White;
-            lblScore1Q10.BackColor = Color.Black;
+            lblScore1Q10.BackColor = Color.FromArgb(252, 3, 3);
             lblScore2Q10.ForeColor = SystemColors.ControlText;
             lblScore2Q10.BackColor = SystemColors.Control;
             lblScore3Q10.ForeColor = SystemColors.ControlText;
@@ -4097,7 +4144,7 @@ namespace Consumer_Survey_System
             lblScore1Q10.ForeColor = SystemColors.ControlText;
             lblScore1Q10.BackColor = SystemColors.Control;
             lblScore2Q10.ForeColor = Color.White;
-            lblScore2Q10.BackColor = Color.Black;
+            lblScore2Q10.BackColor = Color.FromArgb(252, 3, 3);
             lblScore3Q10.ForeColor = SystemColors.ControlText;
             lblScore3Q10.BackColor = SystemColors.Control;
             lblScore4Q10.ForeColor = SystemColors.ControlText;
@@ -4123,7 +4170,7 @@ namespace Consumer_Survey_System
             lblScore2Q10.ForeColor = SystemColors.ControlText;
             lblScore2Q10.BackColor = SystemColors.Control;
             lblScore3Q10.ForeColor = Color.White;
-            lblScore3Q10.BackColor = Color.Black;
+            lblScore3Q10.BackColor = Color.FromArgb(252, 78, 3);
             lblScore4Q10.ForeColor = SystemColors.ControlText;
             lblScore4Q10.BackColor = SystemColors.Control;
             lblScore5Q10.ForeColor = SystemColors.ControlText;
@@ -4149,7 +4196,7 @@ namespace Consumer_Survey_System
             lblScore3Q10.ForeColor = SystemColors.ControlText;
             lblScore3Q10.BackColor = SystemColors.Control;
             lblScore4Q10.ForeColor = Color.White;
-            lblScore4Q10.BackColor = Color.Black;
+            lblScore4Q10.BackColor = Color.FromArgb(252, 78, 3);
             lblScore5Q10.ForeColor = SystemColors.ControlText;
             lblScore5Q10.BackColor = SystemColors.Control;
             lblScore6Q10.ForeColor = SystemColors.ControlText;
@@ -4175,7 +4222,7 @@ namespace Consumer_Survey_System
             lblScore4Q10.ForeColor = SystemColors.ControlText;
             lblScore4Q10.BackColor = SystemColors.Control;
             lblScore5Q10.ForeColor = Color.White;
-            lblScore5Q10.BackColor = Color.Black;
+            lblScore5Q10.BackColor = Color.FromArgb(248, 252, 3);
             lblScore6Q10.ForeColor = SystemColors.ControlText;
             lblScore6Q10.BackColor = SystemColors.Control;
             lblScore7Q10.ForeColor = SystemColors.ControlText;
@@ -4201,7 +4248,7 @@ namespace Consumer_Survey_System
             lblScore5Q10.ForeColor = SystemColors.ControlText;
             lblScore5Q10.BackColor = SystemColors.Control;
             lblScore6Q10.ForeColor = Color.White;
-            lblScore6Q10.BackColor = Color.Black;
+            lblScore6Q10.BackColor = Color.FromArgb(248, 252, 3);
             lblScore7Q10.ForeColor = SystemColors.ControlText;
             lblScore7Q10.BackColor = SystemColors.Control;
             lblScore8Q10.ForeColor = SystemColors.ControlText;
@@ -4227,7 +4274,7 @@ namespace Consumer_Survey_System
             lblScore6Q10.ForeColor = SystemColors.ControlText;
             lblScore6Q10.BackColor = SystemColors.Control;
             lblScore7Q10.ForeColor = Color.White;
-            lblScore7Q10.BackColor = Color.Black;
+            lblScore7Q10.BackColor = Color.FromArgb(119, 252, 3);
             lblScore8Q10.ForeColor = SystemColors.ControlText;
             lblScore8Q10.BackColor = SystemColors.Control;
             lblScore9Q10.ForeColor = SystemColors.ControlText;
@@ -4253,7 +4300,7 @@ namespace Consumer_Survey_System
             lblScore7Q10.ForeColor = SystemColors.ControlText;
             lblScore7Q10.BackColor = SystemColors.Control;
             lblScore8Q10.ForeColor = Color.White;
-            lblScore8Q10.BackColor = Color.Black;
+            lblScore8Q10.BackColor = Color.FromArgb(119, 252, 3);
             lblScore9Q10.ForeColor = SystemColors.ControlText;
             lblScore9Q10.BackColor = SystemColors.Control;
             lblScore10Q10.ForeColor = SystemColors.ControlText;
@@ -4279,7 +4326,7 @@ namespace Consumer_Survey_System
             lblScore8Q10.ForeColor = SystemColors.ControlText;
             lblScore8Q10.BackColor = SystemColors.Control;
             lblScore9Q10.ForeColor = Color.White;
-            lblScore9Q10.BackColor = Color.Black;
+            lblScore9Q10.BackColor = Color.FromArgb(3, 252, 20);
             lblScore10Q10.ForeColor = SystemColors.ControlText;
             lblScore10Q10.BackColor = SystemColors.Control;
         }
@@ -4305,11 +4352,13 @@ namespace Consumer_Survey_System
             lblScore9Q10.ForeColor = SystemColors.ControlText;
             lblScore9Q10.BackColor = SystemColors.Control;
             lblScore10Q10.ForeColor = Color.White;
-            lblScore10Q10.BackColor = Color.Black;
+            lblScore10Q10.BackColor = Color.FromArgb(3, 252, 20);
         }
 
+        // Back button
         private void btnBack_Click(object sender, EventArgs e)
         {
+            // Return to home page
             this.Close();
         }
     }

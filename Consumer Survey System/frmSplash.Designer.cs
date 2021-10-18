@@ -46,7 +46,7 @@
             // 
             // pnlProgressFore
             // 
-            this.pnlProgressFore.BackColor = System.Drawing.Color.Lime;
+            this.pnlProgressFore.BackColor = System.Drawing.Color.MediumTurquoise;
             this.pnlProgressFore.Location = new System.Drawing.Point(0, 0);
             this.pnlProgressFore.Name = "pnlProgressFore";
             this.pnlProgressFore.Size = new System.Drawing.Size(33, 21);
@@ -54,7 +54,7 @@
             // 
             // pnlProgressBack
             // 
-            this.pnlProgressBack.BackColor = System.Drawing.Color.ForestGreen;
+            this.pnlProgressBack.BackColor = System.Drawing.Color.MidnightBlue;
             this.pnlProgressBack.Controls.Add(this.pnlProgressFore);
             this.pnlProgressBack.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlProgressBack.Location = new System.Drawing.Point(0, 281);
@@ -73,7 +73,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Consumer_Survey_System.Properties.Resources.My_Post;
+            this.pictureBox1.Image = global::Consumer_Survey_System.Properties.Resources.splash_screen_banner;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(529, 281);

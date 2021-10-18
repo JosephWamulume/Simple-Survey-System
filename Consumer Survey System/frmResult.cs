@@ -18,6 +18,7 @@ namespace Consumer_Survey_System
             InitializeComponent();
         }
 
+        // Database connection string
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dell\source\repos\Consumer Survey System\Consumer Survey System\database.mdf;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter da;
@@ -27,34 +28,52 @@ namespace Consumer_Survey_System
 
         private void frmResult_Load(object sender, EventArgs e)
         {
+            // Open database connection
             con.Open();
+            // Retrieve selected survey from 'survey table
             cmd = new SqlCommand("SELECT * FROM survey WHERE id= '" + frmAdminMain.surveyID + "'", con);
             da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
+            // Store retrieved results in datatable
             da.Fill(dt);
+            // Retrieve survey name
             lblSurveyName.Text = dt.Rows[0]["name"].ToString();
+            // Set survey name to upper case
+            lblSurveyName.Text.ToUpper();
+            // Close database connection
             con.Close();
 
+            // Open database connection
             con.Open();
+            // Retrieve results of selected survey
             cmd = new SqlCommand("SELECT * FROM result WHERE survey_id= '" + frmAdminMain.surveyID + "'", con);
             da = new SqlDataAdapter(cmd);
             ds = new DataSet();
+            // Store results in dataset
             da.Fill(ds);
+            // Close connection string
             con.Close();
 
+            // If dataset does not contain any row (data)
             if (ds.Tables[0].Rows.Count == 0)
             {
+                // Display error message
                 MessageBox.Show("There are currently no results for this survey. Please select a different survey.", "Consumer Survey System", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
+                // Open database connection
                 con.Open();
+                // Retrieve questions for selected survey
                 cmd = new SqlCommand("SELECT * FROM question WHERE survey_id= '" + frmAdminMain.surveyID + "'", con);
                 da = new SqlDataAdapter(cmd);
                 dt = new DataTable();
+                // Store retrieved results in dataset
                 da.Fill(dt);
+                // Close connection string
                 con.Close();
 
+                // Show results for question 1
                 if (dt.Rows.Count > 0)
                 {
                     lblDescription1.Text = dt.Rows[0]["description"].ToString();
@@ -461,6 +480,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
+                // Show results for question 2
                 if (dt.Rows.Count > 1)
                 {
                     gbxQuestion2.Visible = true;
@@ -867,6 +887,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
+                // Show results for question 3
                 if (dt.Rows.Count > 2)
                 {
                     gbxQuestion3.Visible = true;
@@ -1273,6 +1294,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
+                // Show results for question 4
                 if (dt.Rows.Count > 3)
                 {
                     gbxQuestion4.Visible = true;
@@ -1679,6 +1701,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
+                // Show results for question 5
                 if (dt.Rows.Count > 4)
                 {
                     gbxQuestion5.Visible = true;
@@ -2085,6 +2108,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
+                // Show results for question 6
                 if (dt.Rows.Count > 5)
                 {
                     gbxQuestion6.Visible = true;
@@ -2491,6 +2515,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
+                // Show results for question 7
                 if (dt.Rows.Count > 6)
                 {
                     gbxQuestion7.Visible = true;
@@ -2897,6 +2922,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
+                // Show results for question 8
                 if (dt.Rows.Count > 7)
                 {
                     gbxQuestion8.Visible = true;
@@ -3303,6 +3329,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
+                // Show results for question 9
                 if (dt.Rows.Count > 8)
                 {
                     gbxQuestion9.Visible = true;
@@ -3709,6 +3736,7 @@ namespace Consumer_Survey_System
                     }
                 }
 
+                // Show results for question 10
                 if (dt.Rows.Count > 9)
                 {
                     gbxQuestion10.Visible = true;
@@ -4115,13 +4143,12 @@ namespace Consumer_Survey_System
                     }
                 }
             }
-
-            
-
         }
 
+        // When 'Back' button is clicked
         private void btnBack_Click(object sender, EventArgs e)
         {
+            // Close current form to display main form
             this.Close();
         }
 

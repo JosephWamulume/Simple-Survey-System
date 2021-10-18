@@ -238,12 +238,6 @@
             this.lblYes9 = new System.Windows.Forms.Label();
             this.lblDescription9 = new System.Windows.Forms.Label();
             this.gbxQuestion10 = new System.Windows.Forms.GroupBox();
-            this.pnlFivePointLikert10 = new System.Windows.Forms.Panel();
-            this.lblNeutral10 = new System.Windows.Forms.Label();
-            this.lblDisagree10 = new System.Windows.Forms.Label();
-            this.lblAgree10 = new System.Windows.Forms.Label();
-            this.lblStronglyAgree10 = new System.Windows.Forms.Label();
-            this.lblStronglyDisagree10 = new System.Windows.Forms.Label();
             this.pnlRatingScale10 = new System.Windows.Forms.Panel();
             this.lblScore2Q10 = new System.Windows.Forms.Label();
             this.lblScore10Q10 = new System.Windows.Forms.Label();
@@ -260,6 +254,12 @@
             this.lblNo10 = new System.Windows.Forms.Label();
             this.lblYes10 = new System.Windows.Forms.Label();
             this.lblDescription10 = new System.Windows.Forms.Label();
+            this.pnlFivePointLikert10 = new System.Windows.Forms.Panel();
+            this.lblNeutral10 = new System.Windows.Forms.Label();
+            this.lblDisagree10 = new System.Windows.Forms.Label();
+            this.lblAgree10 = new System.Windows.Forms.Label();
+            this.lblStronglyAgree10 = new System.Windows.Forms.Label();
+            this.lblStronglyDisagree10 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.gbxQuestion1.SuspendLayout();
             this.pnlRatingScale1.SuspendLayout();
@@ -298,9 +298,9 @@
             this.pnlFivePointLikert9.SuspendLayout();
             this.pnlYesNo9.SuspendLayout();
             this.gbxQuestion10.SuspendLayout();
-            this.pnlFivePointLikert10.SuspendLayout();
             this.pnlRatingScale10.SuspendLayout();
             this.pnlYesNo10.SuspendLayout();
+            this.pnlFivePointLikert10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -350,9 +350,9 @@
             this.lblScore2Q1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore2Q1.Location = new System.Drawing.Point(16, 50);
             this.lblScore2Q1.Name = "lblScore2Q1";
-            this.lblScore2Q1.Size = new System.Drawing.Size(14, 15);
+            this.lblScore2Q1.Size = new System.Drawing.Size(33, 15);
             this.lblScore2Q1.TabIndex = 11;
-            this.lblScore2Q1.Text = "2";
+            this.lblScore2Q1.Text = "2/10";
             this.lblScore2Q1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore10Q1
@@ -361,9 +361,9 @@
             this.lblScore10Q1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore10Q1.Location = new System.Drawing.Point(485, 21);
             this.lblScore10Q1.Name = "lblScore10Q1";
-            this.lblScore10Q1.Size = new System.Drawing.Size(21, 15);
+            this.lblScore10Q1.Size = new System.Drawing.Size(40, 15);
             this.lblScore10Q1.TabIndex = 19;
-            this.lblScore10Q1.Text = "10";
+            this.lblScore10Q1.Text = "10/10";
             this.lblScore10Q1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore9Q1
@@ -372,9 +372,9 @@
             this.lblScore9Q1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore9Q1.Location = new System.Drawing.Point(323, 80);
             this.lblScore9Q1.Name = "lblScore9Q1";
-            this.lblScore9Q1.Size = new System.Drawing.Size(14, 15);
+            this.lblScore9Q1.Size = new System.Drawing.Size(33, 15);
             this.lblScore9Q1.TabIndex = 18;
-            this.lblScore9Q1.Text = "9";
+            this.lblScore9Q1.Text = "9/10";
             this.lblScore9Q1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore8Q1
@@ -383,9 +383,9 @@
             this.lblScore8Q1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore8Q1.Location = new System.Drawing.Point(323, 50);
             this.lblScore8Q1.Name = "lblScore8Q1";
-            this.lblScore8Q1.Size = new System.Drawing.Size(14, 15);
+            this.lblScore8Q1.Size = new System.Drawing.Size(33, 15);
             this.lblScore8Q1.TabIndex = 17;
-            this.lblScore8Q1.Text = "8";
+            this.lblScore8Q1.Text = "8/10";
             this.lblScore8Q1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore7Q1
@@ -394,9 +394,9 @@
             this.lblScore7Q1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore7Q1.Location = new System.Drawing.Point(323, 21);
             this.lblScore7Q1.Name = "lblScore7Q1";
-            this.lblScore7Q1.Size = new System.Drawing.Size(14, 15);
+            this.lblScore7Q1.Size = new System.Drawing.Size(33, 15);
             this.lblScore7Q1.TabIndex = 16;
-            this.lblScore7Q1.Text = "7";
+            this.lblScore7Q1.Text = "7/10";
             this.lblScore7Q1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore1Q1
@@ -405,9 +405,9 @@
             this.lblScore1Q1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore1Q1.Location = new System.Drawing.Point(16, 21);
             this.lblScore1Q1.Name = "lblScore1Q1";
-            this.lblScore1Q1.Size = new System.Drawing.Size(14, 15);
+            this.lblScore1Q1.Size = new System.Drawing.Size(33, 15);
             this.lblScore1Q1.TabIndex = 10;
-            this.lblScore1Q1.Text = "1";
+            this.lblScore1Q1.Text = "1/10";
             this.lblScore1Q1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore6Q1
@@ -416,9 +416,9 @@
             this.lblScore6Q1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore6Q1.Location = new System.Drawing.Point(156, 80);
             this.lblScore6Q1.Name = "lblScore6Q1";
-            this.lblScore6Q1.Size = new System.Drawing.Size(14, 15);
+            this.lblScore6Q1.Size = new System.Drawing.Size(33, 15);
             this.lblScore6Q1.TabIndex = 15;
-            this.lblScore6Q1.Text = "6";
+            this.lblScore6Q1.Text = "6/10";
             this.lblScore6Q1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore5Q1
@@ -427,9 +427,9 @@
             this.lblScore5Q1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore5Q1.Location = new System.Drawing.Point(156, 50);
             this.lblScore5Q1.Name = "lblScore5Q1";
-            this.lblScore5Q1.Size = new System.Drawing.Size(14, 15);
+            this.lblScore5Q1.Size = new System.Drawing.Size(33, 15);
             this.lblScore5Q1.TabIndex = 14;
-            this.lblScore5Q1.Text = "5";
+            this.lblScore5Q1.Text = "5/10";
             this.lblScore5Q1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore4Q1
@@ -438,9 +438,9 @@
             this.lblScore4Q1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore4Q1.Location = new System.Drawing.Point(156, 21);
             this.lblScore4Q1.Name = "lblScore4Q1";
-            this.lblScore4Q1.Size = new System.Drawing.Size(14, 15);
+            this.lblScore4Q1.Size = new System.Drawing.Size(33, 15);
             this.lblScore4Q1.TabIndex = 13;
-            this.lblScore4Q1.Text = "4";
+            this.lblScore4Q1.Text = "4/10";
             this.lblScore4Q1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore3Q1
@@ -449,9 +449,9 @@
             this.lblScore3Q1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore3Q1.Location = new System.Drawing.Point(16, 80);
             this.lblScore3Q1.Name = "lblScore3Q1";
-            this.lblScore3Q1.Size = new System.Drawing.Size(14, 15);
+            this.lblScore3Q1.Size = new System.Drawing.Size(33, 15);
             this.lblScore3Q1.TabIndex = 12;
-            this.lblScore3Q1.Text = "3";
+            this.lblScore3Q1.Text = "3/10";
             this.lblScore3Q1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblResults1
@@ -570,10 +570,10 @@
             // lblSurveyName
             // 
             this.lblSurveyName.AutoSize = true;
-            this.lblSurveyName.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSurveyName.Location = new System.Drawing.Point(281, 10);
+            this.lblSurveyName.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurveyName.Location = new System.Drawing.Point(328, 16);
             this.lblSurveyName.Name = "lblSurveyName";
-            this.lblSurveyName.Size = new System.Drawing.Size(124, 23);
+            this.lblSurveyName.Size = new System.Drawing.Size(131, 22);
             this.lblSurveyName.TabIndex = 72;
             this.lblSurveyName.Text = "Survey Name";
             // 
@@ -617,9 +617,9 @@
             this.lblScore2Q2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore2Q2.Location = new System.Drawing.Point(16, 50);
             this.lblScore2Q2.Name = "lblScore2Q2";
-            this.lblScore2Q2.Size = new System.Drawing.Size(14, 15);
+            this.lblScore2Q2.Size = new System.Drawing.Size(33, 15);
             this.lblScore2Q2.TabIndex = 11;
-            this.lblScore2Q2.Text = "2";
+            this.lblScore2Q2.Text = "2/10";
             this.lblScore2Q2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore10Q2
@@ -628,9 +628,9 @@
             this.lblScore10Q2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore10Q2.Location = new System.Drawing.Point(485, 21);
             this.lblScore10Q2.Name = "lblScore10Q2";
-            this.lblScore10Q2.Size = new System.Drawing.Size(21, 15);
+            this.lblScore10Q2.Size = new System.Drawing.Size(40, 15);
             this.lblScore10Q2.TabIndex = 19;
-            this.lblScore10Q2.Text = "10";
+            this.lblScore10Q2.Text = "10/10";
             this.lblScore10Q2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore9Q2
@@ -639,9 +639,9 @@
             this.lblScore9Q2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore9Q2.Location = new System.Drawing.Point(323, 80);
             this.lblScore9Q2.Name = "lblScore9Q2";
-            this.lblScore9Q2.Size = new System.Drawing.Size(14, 15);
+            this.lblScore9Q2.Size = new System.Drawing.Size(33, 15);
             this.lblScore9Q2.TabIndex = 18;
-            this.lblScore9Q2.Text = "9";
+            this.lblScore9Q2.Text = "9/10";
             this.lblScore9Q2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore8Q2
@@ -650,9 +650,9 @@
             this.lblScore8Q2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore8Q2.Location = new System.Drawing.Point(323, 50);
             this.lblScore8Q2.Name = "lblScore8Q2";
-            this.lblScore8Q2.Size = new System.Drawing.Size(14, 15);
+            this.lblScore8Q2.Size = new System.Drawing.Size(33, 15);
             this.lblScore8Q2.TabIndex = 17;
-            this.lblScore8Q2.Text = "8";
+            this.lblScore8Q2.Text = "8/10";
             this.lblScore8Q2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore7Q2
@@ -661,9 +661,9 @@
             this.lblScore7Q2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore7Q2.Location = new System.Drawing.Point(323, 21);
             this.lblScore7Q2.Name = "lblScore7Q2";
-            this.lblScore7Q2.Size = new System.Drawing.Size(14, 15);
+            this.lblScore7Q2.Size = new System.Drawing.Size(33, 15);
             this.lblScore7Q2.TabIndex = 16;
-            this.lblScore7Q2.Text = "7";
+            this.lblScore7Q2.Text = "7/10";
             this.lblScore7Q2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore1Q2
@@ -672,9 +672,9 @@
             this.lblScore1Q2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore1Q2.Location = new System.Drawing.Point(16, 21);
             this.lblScore1Q2.Name = "lblScore1Q2";
-            this.lblScore1Q2.Size = new System.Drawing.Size(14, 15);
+            this.lblScore1Q2.Size = new System.Drawing.Size(33, 15);
             this.lblScore1Q2.TabIndex = 10;
-            this.lblScore1Q2.Text = "1";
+            this.lblScore1Q2.Text = "1/10";
             this.lblScore1Q2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore6Q2
@@ -683,9 +683,9 @@
             this.lblScore6Q2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore6Q2.Location = new System.Drawing.Point(156, 80);
             this.lblScore6Q2.Name = "lblScore6Q2";
-            this.lblScore6Q2.Size = new System.Drawing.Size(14, 15);
+            this.lblScore6Q2.Size = new System.Drawing.Size(33, 15);
             this.lblScore6Q2.TabIndex = 15;
-            this.lblScore6Q2.Text = "6";
+            this.lblScore6Q2.Text = "6/10";
             this.lblScore6Q2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore5Q2
@@ -694,9 +694,9 @@
             this.lblScore5Q2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore5Q2.Location = new System.Drawing.Point(156, 50);
             this.lblScore5Q2.Name = "lblScore5Q2";
-            this.lblScore5Q2.Size = new System.Drawing.Size(14, 15);
+            this.lblScore5Q2.Size = new System.Drawing.Size(33, 15);
             this.lblScore5Q2.TabIndex = 14;
-            this.lblScore5Q2.Text = "5";
+            this.lblScore5Q2.Text = "5/10";
             this.lblScore5Q2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore4Q2
@@ -705,9 +705,9 @@
             this.lblScore4Q2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore4Q2.Location = new System.Drawing.Point(156, 21);
             this.lblScore4Q2.Name = "lblScore4Q2";
-            this.lblScore4Q2.Size = new System.Drawing.Size(14, 15);
+            this.lblScore4Q2.Size = new System.Drawing.Size(33, 15);
             this.lblScore4Q2.TabIndex = 13;
-            this.lblScore4Q2.Text = "4";
+            this.lblScore4Q2.Text = "4/10";
             this.lblScore4Q2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore3Q2
@@ -716,9 +716,9 @@
             this.lblScore3Q2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore3Q2.Location = new System.Drawing.Point(16, 80);
             this.lblScore3Q2.Name = "lblScore3Q2";
-            this.lblScore3Q2.Size = new System.Drawing.Size(14, 15);
+            this.lblScore3Q2.Size = new System.Drawing.Size(33, 15);
             this.lblScore3Q2.TabIndex = 12;
-            this.lblScore3Q2.Text = "3";
+            this.lblScore3Q2.Text = "3/10";
             this.lblScore3Q2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlFivePointLikert2
@@ -874,9 +874,9 @@
             this.lblScore2Q3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore2Q3.Location = new System.Drawing.Point(16, 50);
             this.lblScore2Q3.Name = "lblScore2Q3";
-            this.lblScore2Q3.Size = new System.Drawing.Size(14, 15);
+            this.lblScore2Q3.Size = new System.Drawing.Size(33, 15);
             this.lblScore2Q3.TabIndex = 11;
-            this.lblScore2Q3.Text = "2";
+            this.lblScore2Q3.Text = "2/10";
             this.lblScore2Q3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore10Q3
@@ -885,9 +885,9 @@
             this.lblScore10Q3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore10Q3.Location = new System.Drawing.Point(485, 21);
             this.lblScore10Q3.Name = "lblScore10Q3";
-            this.lblScore10Q3.Size = new System.Drawing.Size(21, 15);
+            this.lblScore10Q3.Size = new System.Drawing.Size(40, 15);
             this.lblScore10Q3.TabIndex = 19;
-            this.lblScore10Q3.Text = "10";
+            this.lblScore10Q3.Text = "10/10";
             this.lblScore10Q3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore9Q3
@@ -896,9 +896,9 @@
             this.lblScore9Q3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore9Q3.Location = new System.Drawing.Point(323, 80);
             this.lblScore9Q3.Name = "lblScore9Q3";
-            this.lblScore9Q3.Size = new System.Drawing.Size(14, 15);
+            this.lblScore9Q3.Size = new System.Drawing.Size(33, 15);
             this.lblScore9Q3.TabIndex = 18;
-            this.lblScore9Q3.Text = "9";
+            this.lblScore9Q3.Text = "9/10";
             this.lblScore9Q3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore8Q3
@@ -907,9 +907,9 @@
             this.lblScore8Q3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore8Q3.Location = new System.Drawing.Point(323, 50);
             this.lblScore8Q3.Name = "lblScore8Q3";
-            this.lblScore8Q3.Size = new System.Drawing.Size(14, 15);
+            this.lblScore8Q3.Size = new System.Drawing.Size(33, 15);
             this.lblScore8Q3.TabIndex = 17;
-            this.lblScore8Q3.Text = "8";
+            this.lblScore8Q3.Text = "8/10";
             this.lblScore8Q3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore7Q3
@@ -918,9 +918,9 @@
             this.lblScore7Q3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore7Q3.Location = new System.Drawing.Point(323, 21);
             this.lblScore7Q3.Name = "lblScore7Q3";
-            this.lblScore7Q3.Size = new System.Drawing.Size(14, 15);
+            this.lblScore7Q3.Size = new System.Drawing.Size(33, 15);
             this.lblScore7Q3.TabIndex = 16;
-            this.lblScore7Q3.Text = "7";
+            this.lblScore7Q3.Text = "7/10";
             this.lblScore7Q3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore1Q3
@@ -929,9 +929,9 @@
             this.lblScore1Q3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore1Q3.Location = new System.Drawing.Point(16, 21);
             this.lblScore1Q3.Name = "lblScore1Q3";
-            this.lblScore1Q3.Size = new System.Drawing.Size(14, 15);
+            this.lblScore1Q3.Size = new System.Drawing.Size(33, 15);
             this.lblScore1Q3.TabIndex = 10;
-            this.lblScore1Q3.Text = "1";
+            this.lblScore1Q3.Text = "1/10";
             this.lblScore1Q3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore6Q3
@@ -940,9 +940,9 @@
             this.lblScore6Q3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore6Q3.Location = new System.Drawing.Point(156, 80);
             this.lblScore6Q3.Name = "lblScore6Q3";
-            this.lblScore6Q3.Size = new System.Drawing.Size(14, 15);
+            this.lblScore6Q3.Size = new System.Drawing.Size(33, 15);
             this.lblScore6Q3.TabIndex = 15;
-            this.lblScore6Q3.Text = "6";
+            this.lblScore6Q3.Text = "6/10";
             this.lblScore6Q3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore5Q3
@@ -951,9 +951,9 @@
             this.lblScore5Q3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore5Q3.Location = new System.Drawing.Point(156, 50);
             this.lblScore5Q3.Name = "lblScore5Q3";
-            this.lblScore5Q3.Size = new System.Drawing.Size(14, 15);
+            this.lblScore5Q3.Size = new System.Drawing.Size(33, 15);
             this.lblScore5Q3.TabIndex = 14;
-            this.lblScore5Q3.Text = "5";
+            this.lblScore5Q3.Text = "5/10";
             this.lblScore5Q3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore4Q3
@@ -962,9 +962,9 @@
             this.lblScore4Q3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore4Q3.Location = new System.Drawing.Point(156, 21);
             this.lblScore4Q3.Name = "lblScore4Q3";
-            this.lblScore4Q3.Size = new System.Drawing.Size(14, 15);
+            this.lblScore4Q3.Size = new System.Drawing.Size(33, 15);
             this.lblScore4Q3.TabIndex = 13;
-            this.lblScore4Q3.Text = "4";
+            this.lblScore4Q3.Text = "4/10";
             this.lblScore4Q3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore3Q3
@@ -973,9 +973,9 @@
             this.lblScore3Q3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore3Q3.Location = new System.Drawing.Point(16, 80);
             this.lblScore3Q3.Name = "lblScore3Q3";
-            this.lblScore3Q3.Size = new System.Drawing.Size(14, 15);
+            this.lblScore3Q3.Size = new System.Drawing.Size(33, 15);
             this.lblScore3Q3.TabIndex = 12;
-            this.lblScore3Q3.Text = "3";
+            this.lblScore3Q3.Text = "3/10";
             this.lblScore3Q3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlFivePointLikert3
@@ -1131,9 +1131,9 @@
             this.lblScore2Q4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore2Q4.Location = new System.Drawing.Point(16, 50);
             this.lblScore2Q4.Name = "lblScore2Q4";
-            this.lblScore2Q4.Size = new System.Drawing.Size(14, 15);
+            this.lblScore2Q4.Size = new System.Drawing.Size(33, 15);
             this.lblScore2Q4.TabIndex = 11;
-            this.lblScore2Q4.Text = "2";
+            this.lblScore2Q4.Text = "2/10";
             this.lblScore2Q4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore10Q4
@@ -1142,9 +1142,9 @@
             this.lblScore10Q4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore10Q4.Location = new System.Drawing.Point(485, 21);
             this.lblScore10Q4.Name = "lblScore10Q4";
-            this.lblScore10Q4.Size = new System.Drawing.Size(21, 15);
+            this.lblScore10Q4.Size = new System.Drawing.Size(40, 15);
             this.lblScore10Q4.TabIndex = 19;
-            this.lblScore10Q4.Text = "10";
+            this.lblScore10Q4.Text = "10/10";
             this.lblScore10Q4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore9Q4
@@ -1153,9 +1153,9 @@
             this.lblScore9Q4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore9Q4.Location = new System.Drawing.Point(323, 80);
             this.lblScore9Q4.Name = "lblScore9Q4";
-            this.lblScore9Q4.Size = new System.Drawing.Size(14, 15);
+            this.lblScore9Q4.Size = new System.Drawing.Size(33, 15);
             this.lblScore9Q4.TabIndex = 18;
-            this.lblScore9Q4.Text = "9";
+            this.lblScore9Q4.Text = "9/10";
             this.lblScore9Q4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore8Q4
@@ -1164,9 +1164,9 @@
             this.lblScore8Q4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore8Q4.Location = new System.Drawing.Point(323, 50);
             this.lblScore8Q4.Name = "lblScore8Q4";
-            this.lblScore8Q4.Size = new System.Drawing.Size(14, 15);
+            this.lblScore8Q4.Size = new System.Drawing.Size(33, 15);
             this.lblScore8Q4.TabIndex = 17;
-            this.lblScore8Q4.Text = "8";
+            this.lblScore8Q4.Text = "8/10";
             this.lblScore8Q4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore7Q4
@@ -1175,9 +1175,9 @@
             this.lblScore7Q4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore7Q4.Location = new System.Drawing.Point(323, 21);
             this.lblScore7Q4.Name = "lblScore7Q4";
-            this.lblScore7Q4.Size = new System.Drawing.Size(14, 15);
+            this.lblScore7Q4.Size = new System.Drawing.Size(33, 15);
             this.lblScore7Q4.TabIndex = 16;
-            this.lblScore7Q4.Text = "7";
+            this.lblScore7Q4.Text = "7/10";
             this.lblScore7Q4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore1Q4
@@ -1186,9 +1186,9 @@
             this.lblScore1Q4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore1Q4.Location = new System.Drawing.Point(16, 21);
             this.lblScore1Q4.Name = "lblScore1Q4";
-            this.lblScore1Q4.Size = new System.Drawing.Size(14, 15);
+            this.lblScore1Q4.Size = new System.Drawing.Size(33, 15);
             this.lblScore1Q4.TabIndex = 10;
-            this.lblScore1Q4.Text = "1";
+            this.lblScore1Q4.Text = "1/10";
             this.lblScore1Q4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore6Q4
@@ -1197,9 +1197,9 @@
             this.lblScore6Q4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore6Q4.Location = new System.Drawing.Point(156, 80);
             this.lblScore6Q4.Name = "lblScore6Q4";
-            this.lblScore6Q4.Size = new System.Drawing.Size(14, 15);
+            this.lblScore6Q4.Size = new System.Drawing.Size(33, 15);
             this.lblScore6Q4.TabIndex = 15;
-            this.lblScore6Q4.Text = "6";
+            this.lblScore6Q4.Text = "6/10";
             this.lblScore6Q4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore5Q4
@@ -1208,9 +1208,9 @@
             this.lblScore5Q4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore5Q4.Location = new System.Drawing.Point(156, 50);
             this.lblScore5Q4.Name = "lblScore5Q4";
-            this.lblScore5Q4.Size = new System.Drawing.Size(14, 15);
+            this.lblScore5Q4.Size = new System.Drawing.Size(33, 15);
             this.lblScore5Q4.TabIndex = 14;
-            this.lblScore5Q4.Text = "5";
+            this.lblScore5Q4.Text = "5/10";
             this.lblScore5Q4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore4Q4
@@ -1219,9 +1219,9 @@
             this.lblScore4Q4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore4Q4.Location = new System.Drawing.Point(156, 21);
             this.lblScore4Q4.Name = "lblScore4Q4";
-            this.lblScore4Q4.Size = new System.Drawing.Size(14, 15);
+            this.lblScore4Q4.Size = new System.Drawing.Size(33, 15);
             this.lblScore4Q4.TabIndex = 13;
-            this.lblScore4Q4.Text = "4";
+            this.lblScore4Q4.Text = "4/10";
             this.lblScore4Q4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore3Q4
@@ -1230,9 +1230,9 @@
             this.lblScore3Q4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore3Q4.Location = new System.Drawing.Point(16, 80);
             this.lblScore3Q4.Name = "lblScore3Q4";
-            this.lblScore3Q4.Size = new System.Drawing.Size(14, 15);
+            this.lblScore3Q4.Size = new System.Drawing.Size(33, 15);
             this.lblScore3Q4.TabIndex = 12;
-            this.lblScore3Q4.Text = "3";
+            this.lblScore3Q4.Text = "3/10";
             this.lblScore3Q4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlFivePointLikert4
@@ -1388,9 +1388,9 @@
             this.lblScore2Q5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore2Q5.Location = new System.Drawing.Point(16, 50);
             this.lblScore2Q5.Name = "lblScore2Q5";
-            this.lblScore2Q5.Size = new System.Drawing.Size(14, 15);
+            this.lblScore2Q5.Size = new System.Drawing.Size(33, 15);
             this.lblScore2Q5.TabIndex = 11;
-            this.lblScore2Q5.Text = "2";
+            this.lblScore2Q5.Text = "2/10";
             this.lblScore2Q5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore10Q5
@@ -1399,9 +1399,9 @@
             this.lblScore10Q5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore10Q5.Location = new System.Drawing.Point(485, 21);
             this.lblScore10Q5.Name = "lblScore10Q5";
-            this.lblScore10Q5.Size = new System.Drawing.Size(21, 15);
+            this.lblScore10Q5.Size = new System.Drawing.Size(40, 15);
             this.lblScore10Q5.TabIndex = 19;
-            this.lblScore10Q5.Text = "10";
+            this.lblScore10Q5.Text = "10/10";
             this.lblScore10Q5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore9Q5
@@ -1410,9 +1410,9 @@
             this.lblScore9Q5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore9Q5.Location = new System.Drawing.Point(323, 80);
             this.lblScore9Q5.Name = "lblScore9Q5";
-            this.lblScore9Q5.Size = new System.Drawing.Size(14, 15);
+            this.lblScore9Q5.Size = new System.Drawing.Size(33, 15);
             this.lblScore9Q5.TabIndex = 18;
-            this.lblScore9Q5.Text = "9";
+            this.lblScore9Q5.Text = "9/10";
             this.lblScore9Q5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore8Q5
@@ -1421,9 +1421,9 @@
             this.lblScore8Q5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore8Q5.Location = new System.Drawing.Point(323, 50);
             this.lblScore8Q5.Name = "lblScore8Q5";
-            this.lblScore8Q5.Size = new System.Drawing.Size(14, 15);
+            this.lblScore8Q5.Size = new System.Drawing.Size(33, 15);
             this.lblScore8Q5.TabIndex = 17;
-            this.lblScore8Q5.Text = "8";
+            this.lblScore8Q5.Text = "8/10";
             this.lblScore8Q5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore7Q5
@@ -1432,9 +1432,9 @@
             this.lblScore7Q5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore7Q5.Location = new System.Drawing.Point(323, 21);
             this.lblScore7Q5.Name = "lblScore7Q5";
-            this.lblScore7Q5.Size = new System.Drawing.Size(14, 15);
+            this.lblScore7Q5.Size = new System.Drawing.Size(33, 15);
             this.lblScore7Q5.TabIndex = 16;
-            this.lblScore7Q5.Text = "7";
+            this.lblScore7Q5.Text = "7/10";
             this.lblScore7Q5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore1Q5
@@ -1443,9 +1443,9 @@
             this.lblScore1Q5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore1Q5.Location = new System.Drawing.Point(16, 21);
             this.lblScore1Q5.Name = "lblScore1Q5";
-            this.lblScore1Q5.Size = new System.Drawing.Size(14, 15);
+            this.lblScore1Q5.Size = new System.Drawing.Size(33, 15);
             this.lblScore1Q5.TabIndex = 10;
-            this.lblScore1Q5.Text = "1";
+            this.lblScore1Q5.Text = "1/10";
             this.lblScore1Q5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore6Q5
@@ -1454,9 +1454,9 @@
             this.lblScore6Q5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore6Q5.Location = new System.Drawing.Point(156, 80);
             this.lblScore6Q5.Name = "lblScore6Q5";
-            this.lblScore6Q5.Size = new System.Drawing.Size(14, 15);
+            this.lblScore6Q5.Size = new System.Drawing.Size(33, 15);
             this.lblScore6Q5.TabIndex = 15;
-            this.lblScore6Q5.Text = "6";
+            this.lblScore6Q5.Text = "6/10";
             this.lblScore6Q5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore5Q5
@@ -1465,9 +1465,9 @@
             this.lblScore5Q5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore5Q5.Location = new System.Drawing.Point(156, 50);
             this.lblScore5Q5.Name = "lblScore5Q5";
-            this.lblScore5Q5.Size = new System.Drawing.Size(14, 15);
+            this.lblScore5Q5.Size = new System.Drawing.Size(33, 15);
             this.lblScore5Q5.TabIndex = 14;
-            this.lblScore5Q5.Text = "5";
+            this.lblScore5Q5.Text = "5/10";
             this.lblScore5Q5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore4Q5
@@ -1476,9 +1476,9 @@
             this.lblScore4Q5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore4Q5.Location = new System.Drawing.Point(156, 21);
             this.lblScore4Q5.Name = "lblScore4Q5";
-            this.lblScore4Q5.Size = new System.Drawing.Size(14, 15);
+            this.lblScore4Q5.Size = new System.Drawing.Size(33, 15);
             this.lblScore4Q5.TabIndex = 13;
-            this.lblScore4Q5.Text = "4";
+            this.lblScore4Q5.Text = "4/10";
             this.lblScore4Q5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore3Q5
@@ -1487,9 +1487,9 @@
             this.lblScore3Q5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore3Q5.Location = new System.Drawing.Point(16, 80);
             this.lblScore3Q5.Name = "lblScore3Q5";
-            this.lblScore3Q5.Size = new System.Drawing.Size(14, 15);
+            this.lblScore3Q5.Size = new System.Drawing.Size(33, 15);
             this.lblScore3Q5.TabIndex = 12;
-            this.lblScore3Q5.Text = "3";
+            this.lblScore3Q5.Text = "3/10";
             this.lblScore3Q5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlFivePointLikert5
@@ -1645,9 +1645,9 @@
             this.lblScore2Q6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore2Q6.Location = new System.Drawing.Point(16, 50);
             this.lblScore2Q6.Name = "lblScore2Q6";
-            this.lblScore2Q6.Size = new System.Drawing.Size(14, 15);
+            this.lblScore2Q6.Size = new System.Drawing.Size(33, 15);
             this.lblScore2Q6.TabIndex = 11;
-            this.lblScore2Q6.Text = "2";
+            this.lblScore2Q6.Text = "2/10";
             this.lblScore2Q6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore10Q6
@@ -1656,9 +1656,9 @@
             this.lblScore10Q6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore10Q6.Location = new System.Drawing.Point(485, 21);
             this.lblScore10Q6.Name = "lblScore10Q6";
-            this.lblScore10Q6.Size = new System.Drawing.Size(21, 15);
+            this.lblScore10Q6.Size = new System.Drawing.Size(40, 15);
             this.lblScore10Q6.TabIndex = 19;
-            this.lblScore10Q6.Text = "10";
+            this.lblScore10Q6.Text = "10/10";
             this.lblScore10Q6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore9Q6
@@ -1667,9 +1667,9 @@
             this.lblScore9Q6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore9Q6.Location = new System.Drawing.Point(323, 80);
             this.lblScore9Q6.Name = "lblScore9Q6";
-            this.lblScore9Q6.Size = new System.Drawing.Size(14, 15);
+            this.lblScore9Q6.Size = new System.Drawing.Size(33, 15);
             this.lblScore9Q6.TabIndex = 18;
-            this.lblScore9Q6.Text = "9";
+            this.lblScore9Q6.Text = "9/10";
             this.lblScore9Q6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore8Q6
@@ -1678,9 +1678,9 @@
             this.lblScore8Q6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore8Q6.Location = new System.Drawing.Point(323, 50);
             this.lblScore8Q6.Name = "lblScore8Q6";
-            this.lblScore8Q6.Size = new System.Drawing.Size(14, 15);
+            this.lblScore8Q6.Size = new System.Drawing.Size(33, 15);
             this.lblScore8Q6.TabIndex = 17;
-            this.lblScore8Q6.Text = "8";
+            this.lblScore8Q6.Text = "8/10";
             this.lblScore8Q6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore7Q6
@@ -1689,9 +1689,9 @@
             this.lblScore7Q6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore7Q6.Location = new System.Drawing.Point(323, 21);
             this.lblScore7Q6.Name = "lblScore7Q6";
-            this.lblScore7Q6.Size = new System.Drawing.Size(14, 15);
+            this.lblScore7Q6.Size = new System.Drawing.Size(33, 15);
             this.lblScore7Q6.TabIndex = 16;
-            this.lblScore7Q6.Text = "7";
+            this.lblScore7Q6.Text = "7/10";
             this.lblScore7Q6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore1Q6
@@ -1700,9 +1700,9 @@
             this.lblScore1Q6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore1Q6.Location = new System.Drawing.Point(16, 21);
             this.lblScore1Q6.Name = "lblScore1Q6";
-            this.lblScore1Q6.Size = new System.Drawing.Size(14, 15);
+            this.lblScore1Q6.Size = new System.Drawing.Size(33, 15);
             this.lblScore1Q6.TabIndex = 10;
-            this.lblScore1Q6.Text = "1";
+            this.lblScore1Q6.Text = "1/10";
             this.lblScore1Q6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore6Q6
@@ -1711,9 +1711,9 @@
             this.lblScore6Q6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore6Q6.Location = new System.Drawing.Point(156, 80);
             this.lblScore6Q6.Name = "lblScore6Q6";
-            this.lblScore6Q6.Size = new System.Drawing.Size(14, 15);
+            this.lblScore6Q6.Size = new System.Drawing.Size(33, 15);
             this.lblScore6Q6.TabIndex = 15;
-            this.lblScore6Q6.Text = "6";
+            this.lblScore6Q6.Text = "6/10";
             this.lblScore6Q6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore5Q6
@@ -1722,9 +1722,9 @@
             this.lblScore5Q6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore5Q6.Location = new System.Drawing.Point(156, 50);
             this.lblScore5Q6.Name = "lblScore5Q6";
-            this.lblScore5Q6.Size = new System.Drawing.Size(14, 15);
+            this.lblScore5Q6.Size = new System.Drawing.Size(33, 15);
             this.lblScore5Q6.TabIndex = 14;
-            this.lblScore5Q6.Text = "5";
+            this.lblScore5Q6.Text = "5/10";
             this.lblScore5Q6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore4Q6
@@ -1733,9 +1733,9 @@
             this.lblScore4Q6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore4Q6.Location = new System.Drawing.Point(156, 21);
             this.lblScore4Q6.Name = "lblScore4Q6";
-            this.lblScore4Q6.Size = new System.Drawing.Size(14, 15);
+            this.lblScore4Q6.Size = new System.Drawing.Size(33, 15);
             this.lblScore4Q6.TabIndex = 13;
-            this.lblScore4Q6.Text = "4";
+            this.lblScore4Q6.Text = "4/10";
             this.lblScore4Q6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore3Q6
@@ -1744,9 +1744,9 @@
             this.lblScore3Q6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore3Q6.Location = new System.Drawing.Point(16, 80);
             this.lblScore3Q6.Name = "lblScore3Q6";
-            this.lblScore3Q6.Size = new System.Drawing.Size(14, 15);
+            this.lblScore3Q6.Size = new System.Drawing.Size(33, 15);
             this.lblScore3Q6.TabIndex = 12;
-            this.lblScore3Q6.Text = "3";
+            this.lblScore3Q6.Text = "3/10";
             this.lblScore3Q6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlFivePointLikert6
@@ -2159,9 +2159,9 @@
             this.lblScore2Q8.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore2Q8.Location = new System.Drawing.Point(16, 50);
             this.lblScore2Q8.Name = "lblScore2Q8";
-            this.lblScore2Q8.Size = new System.Drawing.Size(14, 15);
+            this.lblScore2Q8.Size = new System.Drawing.Size(33, 15);
             this.lblScore2Q8.TabIndex = 11;
-            this.lblScore2Q8.Text = "2";
+            this.lblScore2Q8.Text = "2/10";
             this.lblScore2Q8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore10Q8
@@ -2170,9 +2170,9 @@
             this.lblScore10Q8.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore10Q8.Location = new System.Drawing.Point(485, 21);
             this.lblScore10Q8.Name = "lblScore10Q8";
-            this.lblScore10Q8.Size = new System.Drawing.Size(21, 15);
+            this.lblScore10Q8.Size = new System.Drawing.Size(40, 15);
             this.lblScore10Q8.TabIndex = 19;
-            this.lblScore10Q8.Text = "10";
+            this.lblScore10Q8.Text = "10/10";
             this.lblScore10Q8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore9Q8
@@ -2181,9 +2181,9 @@
             this.lblScore9Q8.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore9Q8.Location = new System.Drawing.Point(323, 80);
             this.lblScore9Q8.Name = "lblScore9Q8";
-            this.lblScore9Q8.Size = new System.Drawing.Size(14, 15);
+            this.lblScore9Q8.Size = new System.Drawing.Size(33, 15);
             this.lblScore9Q8.TabIndex = 18;
-            this.lblScore9Q8.Text = "9";
+            this.lblScore9Q8.Text = "9/10";
             this.lblScore9Q8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore8Q8
@@ -2192,9 +2192,9 @@
             this.lblScore8Q8.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore8Q8.Location = new System.Drawing.Point(323, 50);
             this.lblScore8Q8.Name = "lblScore8Q8";
-            this.lblScore8Q8.Size = new System.Drawing.Size(14, 15);
+            this.lblScore8Q8.Size = new System.Drawing.Size(33, 15);
             this.lblScore8Q8.TabIndex = 17;
-            this.lblScore8Q8.Text = "8";
+            this.lblScore8Q8.Text = "8/10";
             this.lblScore8Q8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore7Q8
@@ -2203,9 +2203,9 @@
             this.lblScore7Q8.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore7Q8.Location = new System.Drawing.Point(323, 21);
             this.lblScore7Q8.Name = "lblScore7Q8";
-            this.lblScore7Q8.Size = new System.Drawing.Size(14, 15);
+            this.lblScore7Q8.Size = new System.Drawing.Size(33, 15);
             this.lblScore7Q8.TabIndex = 16;
-            this.lblScore7Q8.Text = "7";
+            this.lblScore7Q8.Text = "7/10";
             this.lblScore7Q8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore1Q8
@@ -2214,9 +2214,9 @@
             this.lblScore1Q8.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore1Q8.Location = new System.Drawing.Point(16, 21);
             this.lblScore1Q8.Name = "lblScore1Q8";
-            this.lblScore1Q8.Size = new System.Drawing.Size(14, 15);
+            this.lblScore1Q8.Size = new System.Drawing.Size(33, 15);
             this.lblScore1Q8.TabIndex = 10;
-            this.lblScore1Q8.Text = "1";
+            this.lblScore1Q8.Text = "1/10";
             this.lblScore1Q8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore6Q8
@@ -2225,9 +2225,9 @@
             this.lblScore6Q8.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore6Q8.Location = new System.Drawing.Point(156, 80);
             this.lblScore6Q8.Name = "lblScore6Q8";
-            this.lblScore6Q8.Size = new System.Drawing.Size(14, 15);
+            this.lblScore6Q8.Size = new System.Drawing.Size(33, 15);
             this.lblScore6Q8.TabIndex = 15;
-            this.lblScore6Q8.Text = "6";
+            this.lblScore6Q8.Text = "6/10";
             this.lblScore6Q8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore5Q8
@@ -2236,9 +2236,9 @@
             this.lblScore5Q8.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore5Q8.Location = new System.Drawing.Point(156, 50);
             this.lblScore5Q8.Name = "lblScore5Q8";
-            this.lblScore5Q8.Size = new System.Drawing.Size(14, 15);
+            this.lblScore5Q8.Size = new System.Drawing.Size(33, 15);
             this.lblScore5Q8.TabIndex = 14;
-            this.lblScore5Q8.Text = "5";
+            this.lblScore5Q8.Text = "5/10";
             this.lblScore5Q8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore4Q8
@@ -2247,9 +2247,9 @@
             this.lblScore4Q8.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore4Q8.Location = new System.Drawing.Point(156, 21);
             this.lblScore4Q8.Name = "lblScore4Q8";
-            this.lblScore4Q8.Size = new System.Drawing.Size(14, 15);
+            this.lblScore4Q8.Size = new System.Drawing.Size(33, 15);
             this.lblScore4Q8.TabIndex = 13;
-            this.lblScore4Q8.Text = "4";
+            this.lblScore4Q8.Text = "4/10";
             this.lblScore4Q8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore3Q8
@@ -2258,9 +2258,9 @@
             this.lblScore3Q8.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore3Q8.Location = new System.Drawing.Point(16, 80);
             this.lblScore3Q8.Name = "lblScore3Q8";
-            this.lblScore3Q8.Size = new System.Drawing.Size(14, 15);
+            this.lblScore3Q8.Size = new System.Drawing.Size(33, 15);
             this.lblScore3Q8.TabIndex = 12;
-            this.lblScore3Q8.Text = "3";
+            this.lblScore3Q8.Text = "3/10";
             this.lblScore3Q8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlFivePointLikert8
@@ -2416,9 +2416,9 @@
             this.lblScore2Q9.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore2Q9.Location = new System.Drawing.Point(16, 50);
             this.lblScore2Q9.Name = "lblScore2Q9";
-            this.lblScore2Q9.Size = new System.Drawing.Size(14, 15);
+            this.lblScore2Q9.Size = new System.Drawing.Size(33, 15);
             this.lblScore2Q9.TabIndex = 11;
-            this.lblScore2Q9.Text = "2";
+            this.lblScore2Q9.Text = "2/10";
             this.lblScore2Q9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore10Q9
@@ -2427,9 +2427,9 @@
             this.lblScore10Q9.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore10Q9.Location = new System.Drawing.Point(485, 21);
             this.lblScore10Q9.Name = "lblScore10Q9";
-            this.lblScore10Q9.Size = new System.Drawing.Size(21, 15);
+            this.lblScore10Q9.Size = new System.Drawing.Size(40, 15);
             this.lblScore10Q9.TabIndex = 19;
-            this.lblScore10Q9.Text = "10";
+            this.lblScore10Q9.Text = "10/10";
             this.lblScore10Q9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore9Q9
@@ -2438,9 +2438,9 @@
             this.lblScore9Q9.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore9Q9.Location = new System.Drawing.Point(323, 80);
             this.lblScore9Q9.Name = "lblScore9Q9";
-            this.lblScore9Q9.Size = new System.Drawing.Size(14, 15);
+            this.lblScore9Q9.Size = new System.Drawing.Size(33, 15);
             this.lblScore9Q9.TabIndex = 18;
-            this.lblScore9Q9.Text = "9";
+            this.lblScore9Q9.Text = "9/10";
             this.lblScore9Q9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore8Q9
@@ -2449,9 +2449,9 @@
             this.lblScore8Q9.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore8Q9.Location = new System.Drawing.Point(323, 50);
             this.lblScore8Q9.Name = "lblScore8Q9";
-            this.lblScore8Q9.Size = new System.Drawing.Size(14, 15);
+            this.lblScore8Q9.Size = new System.Drawing.Size(33, 15);
             this.lblScore8Q9.TabIndex = 17;
-            this.lblScore8Q9.Text = "8";
+            this.lblScore8Q9.Text = "8/10";
             this.lblScore8Q9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore7Q9
@@ -2460,9 +2460,9 @@
             this.lblScore7Q9.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore7Q9.Location = new System.Drawing.Point(323, 21);
             this.lblScore7Q9.Name = "lblScore7Q9";
-            this.lblScore7Q9.Size = new System.Drawing.Size(14, 15);
+            this.lblScore7Q9.Size = new System.Drawing.Size(33, 15);
             this.lblScore7Q9.TabIndex = 16;
-            this.lblScore7Q9.Text = "7";
+            this.lblScore7Q9.Text = "7/10";
             this.lblScore7Q9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore1Q9
@@ -2471,9 +2471,9 @@
             this.lblScore1Q9.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore1Q9.Location = new System.Drawing.Point(16, 21);
             this.lblScore1Q9.Name = "lblScore1Q9";
-            this.lblScore1Q9.Size = new System.Drawing.Size(14, 15);
+            this.lblScore1Q9.Size = new System.Drawing.Size(33, 15);
             this.lblScore1Q9.TabIndex = 10;
-            this.lblScore1Q9.Text = "1";
+            this.lblScore1Q9.Text = "1/10";
             this.lblScore1Q9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore6Q9
@@ -2482,9 +2482,9 @@
             this.lblScore6Q9.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore6Q9.Location = new System.Drawing.Point(156, 80);
             this.lblScore6Q9.Name = "lblScore6Q9";
-            this.lblScore6Q9.Size = new System.Drawing.Size(14, 15);
+            this.lblScore6Q9.Size = new System.Drawing.Size(33, 15);
             this.lblScore6Q9.TabIndex = 15;
-            this.lblScore6Q9.Text = "6";
+            this.lblScore6Q9.Text = "6/10";
             this.lblScore6Q9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore5Q9
@@ -2493,9 +2493,9 @@
             this.lblScore5Q9.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore5Q9.Location = new System.Drawing.Point(156, 50);
             this.lblScore5Q9.Name = "lblScore5Q9";
-            this.lblScore5Q9.Size = new System.Drawing.Size(14, 15);
+            this.lblScore5Q9.Size = new System.Drawing.Size(33, 15);
             this.lblScore5Q9.TabIndex = 14;
-            this.lblScore5Q9.Text = "5";
+            this.lblScore5Q9.Text = "5/10";
             this.lblScore5Q9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore4Q9
@@ -2504,9 +2504,9 @@
             this.lblScore4Q9.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore4Q9.Location = new System.Drawing.Point(156, 21);
             this.lblScore4Q9.Name = "lblScore4Q9";
-            this.lblScore4Q9.Size = new System.Drawing.Size(14, 15);
+            this.lblScore4Q9.Size = new System.Drawing.Size(33, 15);
             this.lblScore4Q9.TabIndex = 13;
-            this.lblScore4Q9.Text = "4";
+            this.lblScore4Q9.Text = "4/10";
             this.lblScore4Q9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblScore3Q9
@@ -2515,9 +2515,9 @@
             this.lblScore3Q9.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore3Q9.Location = new System.Drawing.Point(16, 80);
             this.lblScore3Q9.Name = "lblScore3Q9";
-            this.lblScore3Q9.Size = new System.Drawing.Size(14, 15);
+            this.lblScore3Q9.Size = new System.Drawing.Size(33, 15);
             this.lblScore3Q9.TabIndex = 12;
-            this.lblScore3Q9.Text = "3";
+            this.lblScore3Q9.Text = "3/10";
             this.lblScore3Q9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlFivePointLikert9
@@ -2635,11 +2635,11 @@
             // 
             // gbxQuestion10
             // 
-            this.gbxQuestion10.Controls.Add(this.pnlFivePointLikert10);
             this.gbxQuestion10.Controls.Add(this.pnlRatingScale10);
             this.gbxQuestion10.Controls.Add(this.lblResults10);
             this.gbxQuestion10.Controls.Add(this.pnlYesNo10);
             this.gbxQuestion10.Controls.Add(this.lblDescription10);
+            this.gbxQuestion10.Controls.Add(this.pnlFivePointLikert10);
             this.gbxQuestion10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxQuestion10.Location = new System.Drawing.Point(12, 2284);
             this.gbxQuestion10.Name = "gbxQuestion10";
@@ -2648,6 +2648,184 @@
             this.gbxQuestion10.TabStop = false;
             this.gbxQuestion10.Text = "Question 10";
             this.gbxQuestion10.Visible = false;
+            // 
+            // pnlRatingScale10
+            // 
+            this.pnlRatingScale10.Controls.Add(this.lblScore2Q10);
+            this.pnlRatingScale10.Controls.Add(this.lblScore10Q10);
+            this.pnlRatingScale10.Controls.Add(this.lblScore9Q10);
+            this.pnlRatingScale10.Controls.Add(this.lblScore8Q10);
+            this.pnlRatingScale10.Controls.Add(this.lblScore7Q10);
+            this.pnlRatingScale10.Controls.Add(this.lblScore1Q10);
+            this.pnlRatingScale10.Controls.Add(this.lblScore6Q10);
+            this.pnlRatingScale10.Controls.Add(this.lblScore5Q10);
+            this.pnlRatingScale10.Controls.Add(this.lblScore4Q10);
+            this.pnlRatingScale10.Controls.Add(this.lblScore3Q10);
+            this.pnlRatingScale10.Location = new System.Drawing.Point(6, 110);
+            this.pnlRatingScale10.Name = "pnlRatingScale10";
+            this.pnlRatingScale10.Size = new System.Drawing.Size(656, 114);
+            this.pnlRatingScale10.TabIndex = 4;
+            this.pnlRatingScale10.Visible = false;
+            // 
+            // lblScore2Q10
+            // 
+            this.lblScore2Q10.AutoSize = true;
+            this.lblScore2Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore2Q10.Location = new System.Drawing.Point(16, 50);
+            this.lblScore2Q10.Name = "lblScore2Q10";
+            this.lblScore2Q10.Size = new System.Drawing.Size(33, 15);
+            this.lblScore2Q10.TabIndex = 11;
+            this.lblScore2Q10.Text = "2/10";
+            this.lblScore2Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblScore10Q10
+            // 
+            this.lblScore10Q10.AutoSize = true;
+            this.lblScore10Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore10Q10.Location = new System.Drawing.Point(485, 21);
+            this.lblScore10Q10.Name = "lblScore10Q10";
+            this.lblScore10Q10.Size = new System.Drawing.Size(40, 15);
+            this.lblScore10Q10.TabIndex = 19;
+            this.lblScore10Q10.Text = "10/10";
+            this.lblScore10Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblScore9Q10
+            // 
+            this.lblScore9Q10.AutoSize = true;
+            this.lblScore9Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore9Q10.Location = new System.Drawing.Point(323, 80);
+            this.lblScore9Q10.Name = "lblScore9Q10";
+            this.lblScore9Q10.Size = new System.Drawing.Size(33, 15);
+            this.lblScore9Q10.TabIndex = 18;
+            this.lblScore9Q10.Text = "9/10";
+            this.lblScore9Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblScore8Q10
+            // 
+            this.lblScore8Q10.AutoSize = true;
+            this.lblScore8Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore8Q10.Location = new System.Drawing.Point(323, 50);
+            this.lblScore8Q10.Name = "lblScore8Q10";
+            this.lblScore8Q10.Size = new System.Drawing.Size(33, 15);
+            this.lblScore8Q10.TabIndex = 17;
+            this.lblScore8Q10.Text = "8/10";
+            this.lblScore8Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblScore7Q10
+            // 
+            this.lblScore7Q10.AutoSize = true;
+            this.lblScore7Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore7Q10.Location = new System.Drawing.Point(323, 21);
+            this.lblScore7Q10.Name = "lblScore7Q10";
+            this.lblScore7Q10.Size = new System.Drawing.Size(33, 15);
+            this.lblScore7Q10.TabIndex = 16;
+            this.lblScore7Q10.Text = "7/10";
+            this.lblScore7Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblScore1Q10
+            // 
+            this.lblScore1Q10.AutoSize = true;
+            this.lblScore1Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore1Q10.Location = new System.Drawing.Point(16, 21);
+            this.lblScore1Q10.Name = "lblScore1Q10";
+            this.lblScore1Q10.Size = new System.Drawing.Size(33, 15);
+            this.lblScore1Q10.TabIndex = 10;
+            this.lblScore1Q10.Text = "1/10";
+            this.lblScore1Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblScore6Q10
+            // 
+            this.lblScore6Q10.AutoSize = true;
+            this.lblScore6Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore6Q10.Location = new System.Drawing.Point(156, 80);
+            this.lblScore6Q10.Name = "lblScore6Q10";
+            this.lblScore6Q10.Size = new System.Drawing.Size(33, 15);
+            this.lblScore6Q10.TabIndex = 15;
+            this.lblScore6Q10.Text = "6/10";
+            this.lblScore6Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblScore5Q10
+            // 
+            this.lblScore5Q10.AutoSize = true;
+            this.lblScore5Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore5Q10.Location = new System.Drawing.Point(156, 50);
+            this.lblScore5Q10.Name = "lblScore5Q10";
+            this.lblScore5Q10.Size = new System.Drawing.Size(33, 15);
+            this.lblScore5Q10.TabIndex = 14;
+            this.lblScore5Q10.Text = "5/10";
+            this.lblScore5Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblScore4Q10
+            // 
+            this.lblScore4Q10.AutoSize = true;
+            this.lblScore4Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore4Q10.Location = new System.Drawing.Point(156, 21);
+            this.lblScore4Q10.Name = "lblScore4Q10";
+            this.lblScore4Q10.Size = new System.Drawing.Size(33, 15);
+            this.lblScore4Q10.TabIndex = 13;
+            this.lblScore4Q10.Text = "4/10";
+            this.lblScore4Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblScore3Q10
+            // 
+            this.lblScore3Q10.AutoSize = true;
+            this.lblScore3Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore3Q10.Location = new System.Drawing.Point(16, 80);
+            this.lblScore3Q10.Name = "lblScore3Q10";
+            this.lblScore3Q10.Size = new System.Drawing.Size(33, 15);
+            this.lblScore3Q10.TabIndex = 12;
+            this.lblScore3Q10.Text = "3/10";
+            this.lblScore3Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblResults10
+            // 
+            this.lblResults10.AutoSize = true;
+            this.lblResults10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResults10.Location = new System.Drawing.Point(9, 77);
+            this.lblResults10.Name = "lblResults10";
+            this.lblResults10.Size = new System.Drawing.Size(96, 13);
+            this.lblResults10.TabIndex = 1;
+            this.lblResults10.Text = "Question Results:";
+            // 
+            // pnlYesNo10
+            // 
+            this.pnlYesNo10.Controls.Add(this.lblNo10);
+            this.pnlYesNo10.Controls.Add(this.lblYes10);
+            this.pnlYesNo10.Location = new System.Drawing.Point(6, 110);
+            this.pnlYesNo10.Name = "pnlYesNo10";
+            this.pnlYesNo10.Size = new System.Drawing.Size(656, 114);
+            this.pnlYesNo10.TabIndex = 1;
+            this.pnlYesNo10.Visible = false;
+            // 
+            // lblNo10
+            // 
+            this.lblNo10.AutoSize = true;
+            this.lblNo10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNo10.Location = new System.Drawing.Point(10, 54);
+            this.lblNo10.Name = "lblNo10";
+            this.lblNo10.Size = new System.Drawing.Size(24, 13);
+            this.lblNo10.TabIndex = 1;
+            this.lblNo10.Text = "No:";
+            // 
+            // lblYes10
+            // 
+            this.lblYes10.AutoSize = true;
+            this.lblYes10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYes10.Location = new System.Drawing.Point(10, 10);
+            this.lblYes10.Name = "lblYes10";
+            this.lblYes10.Size = new System.Drawing.Size(29, 13);
+            this.lblYes10.TabIndex = 0;
+            this.lblYes10.Text = "Yes:";
+            // 
+            // lblDescription10
+            // 
+            this.lblDescription10.AutoSize = true;
+            this.lblDescription10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription10.Location = new System.Drawing.Point(7, 25);
+            this.lblDescription10.Name = "lblDescription10";
+            this.lblDescription10.Size = new System.Drawing.Size(64, 13);
+            this.lblDescription10.TabIndex = 0;
+            this.lblDescription10.Text = "Description";
             // 
             // pnlFivePointLikert10
             // 
@@ -2712,195 +2890,20 @@
             this.lblStronglyDisagree10.TabIndex = 2;
             this.lblStronglyDisagree10.Text = "Strongly Disagree:";
             // 
-            // pnlRatingScale10
-            // 
-            this.pnlRatingScale10.Controls.Add(this.lblScore2Q10);
-            this.pnlRatingScale10.Controls.Add(this.lblScore10Q10);
-            this.pnlRatingScale10.Controls.Add(this.lblScore9Q10);
-            this.pnlRatingScale10.Controls.Add(this.lblScore8Q10);
-            this.pnlRatingScale10.Controls.Add(this.lblScore7Q10);
-            this.pnlRatingScale10.Controls.Add(this.lblScore1Q10);
-            this.pnlRatingScale10.Controls.Add(this.lblScore6Q10);
-            this.pnlRatingScale10.Controls.Add(this.lblScore5Q10);
-            this.pnlRatingScale10.Controls.Add(this.lblScore4Q10);
-            this.pnlRatingScale10.Controls.Add(this.lblScore3Q10);
-            this.pnlRatingScale10.Location = new System.Drawing.Point(6, 110);
-            this.pnlRatingScale10.Name = "pnlRatingScale10";
-            this.pnlRatingScale10.Size = new System.Drawing.Size(656, 114);
-            this.pnlRatingScale10.TabIndex = 4;
-            this.pnlRatingScale10.Visible = false;
-            // 
-            // lblScore2Q10
-            // 
-            this.lblScore2Q10.AutoSize = true;
-            this.lblScore2Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore2Q10.Location = new System.Drawing.Point(16, 50);
-            this.lblScore2Q10.Name = "lblScore2Q10";
-            this.lblScore2Q10.Size = new System.Drawing.Size(14, 15);
-            this.lblScore2Q10.TabIndex = 11;
-            this.lblScore2Q10.Text = "2";
-            this.lblScore2Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScore10Q10
-            // 
-            this.lblScore10Q10.AutoSize = true;
-            this.lblScore10Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore10Q10.Location = new System.Drawing.Point(485, 21);
-            this.lblScore10Q10.Name = "lblScore10Q10";
-            this.lblScore10Q10.Size = new System.Drawing.Size(21, 15);
-            this.lblScore10Q10.TabIndex = 19;
-            this.lblScore10Q10.Text = "10";
-            this.lblScore10Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScore9Q10
-            // 
-            this.lblScore9Q10.AutoSize = true;
-            this.lblScore9Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore9Q10.Location = new System.Drawing.Point(323, 80);
-            this.lblScore9Q10.Name = "lblScore9Q10";
-            this.lblScore9Q10.Size = new System.Drawing.Size(14, 15);
-            this.lblScore9Q10.TabIndex = 18;
-            this.lblScore9Q10.Text = "9";
-            this.lblScore9Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScore8Q10
-            // 
-            this.lblScore8Q10.AutoSize = true;
-            this.lblScore8Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore8Q10.Location = new System.Drawing.Point(323, 50);
-            this.lblScore8Q10.Name = "lblScore8Q10";
-            this.lblScore8Q10.Size = new System.Drawing.Size(14, 15);
-            this.lblScore8Q10.TabIndex = 17;
-            this.lblScore8Q10.Text = "8";
-            this.lblScore8Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScore7Q10
-            // 
-            this.lblScore7Q10.AutoSize = true;
-            this.lblScore7Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore7Q10.Location = new System.Drawing.Point(323, 21);
-            this.lblScore7Q10.Name = "lblScore7Q10";
-            this.lblScore7Q10.Size = new System.Drawing.Size(14, 15);
-            this.lblScore7Q10.TabIndex = 16;
-            this.lblScore7Q10.Text = "7";
-            this.lblScore7Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScore1Q10
-            // 
-            this.lblScore1Q10.AutoSize = true;
-            this.lblScore1Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore1Q10.Location = new System.Drawing.Point(16, 21);
-            this.lblScore1Q10.Name = "lblScore1Q10";
-            this.lblScore1Q10.Size = new System.Drawing.Size(14, 15);
-            this.lblScore1Q10.TabIndex = 10;
-            this.lblScore1Q10.Text = "1";
-            this.lblScore1Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScore6Q10
-            // 
-            this.lblScore6Q10.AutoSize = true;
-            this.lblScore6Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore6Q10.Location = new System.Drawing.Point(156, 80);
-            this.lblScore6Q10.Name = "lblScore6Q10";
-            this.lblScore6Q10.Size = new System.Drawing.Size(14, 15);
-            this.lblScore6Q10.TabIndex = 15;
-            this.lblScore6Q10.Text = "6";
-            this.lblScore6Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScore5Q10
-            // 
-            this.lblScore5Q10.AutoSize = true;
-            this.lblScore5Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore5Q10.Location = new System.Drawing.Point(156, 50);
-            this.lblScore5Q10.Name = "lblScore5Q10";
-            this.lblScore5Q10.Size = new System.Drawing.Size(14, 15);
-            this.lblScore5Q10.TabIndex = 14;
-            this.lblScore5Q10.Text = "5";
-            this.lblScore5Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScore4Q10
-            // 
-            this.lblScore4Q10.AutoSize = true;
-            this.lblScore4Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore4Q10.Location = new System.Drawing.Point(156, 21);
-            this.lblScore4Q10.Name = "lblScore4Q10";
-            this.lblScore4Q10.Size = new System.Drawing.Size(14, 15);
-            this.lblScore4Q10.TabIndex = 13;
-            this.lblScore4Q10.Text = "4";
-            this.lblScore4Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblScore3Q10
-            // 
-            this.lblScore3Q10.AutoSize = true;
-            this.lblScore3Q10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore3Q10.Location = new System.Drawing.Point(16, 80);
-            this.lblScore3Q10.Name = "lblScore3Q10";
-            this.lblScore3Q10.Size = new System.Drawing.Size(14, 15);
-            this.lblScore3Q10.TabIndex = 12;
-            this.lblScore3Q10.Text = "3";
-            this.lblScore3Q10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblResults10
-            // 
-            this.lblResults10.AutoSize = true;
-            this.lblResults10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResults10.Location = new System.Drawing.Point(9, 77);
-            this.lblResults10.Name = "lblResults10";
-            this.lblResults10.Size = new System.Drawing.Size(96, 13);
-            this.lblResults10.TabIndex = 1;
-            this.lblResults10.Text = "Question Results:";
-            // 
-            // pnlYesNo10
-            // 
-            this.pnlYesNo10.Controls.Add(this.lblNo10);
-            this.pnlYesNo10.Controls.Add(this.lblYes10);
-            this.pnlYesNo10.Location = new System.Drawing.Point(6, 110);
-            this.pnlYesNo10.Name = "pnlYesNo10";
-            this.pnlYesNo10.Size = new System.Drawing.Size(656, 114);
-            this.pnlYesNo10.TabIndex = 1;
-            this.pnlYesNo10.Visible = false;
-            // 
-            // lblNo10
-            // 
-            this.lblNo10.AutoSize = true;
-            this.lblNo10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNo10.Location = new System.Drawing.Point(10, 54);
-            this.lblNo10.Name = "lblNo10";
-            this.lblNo10.Size = new System.Drawing.Size(24, 13);
-            this.lblNo10.TabIndex = 1;
-            this.lblNo10.Text = "No:";
-            // 
-            // lblYes10
-            // 
-            this.lblYes10.AutoSize = true;
-            this.lblYes10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYes10.Location = new System.Drawing.Point(10, 10);
-            this.lblYes10.Name = "lblYes10";
-            this.lblYes10.Size = new System.Drawing.Size(29, 13);
-            this.lblYes10.TabIndex = 0;
-            this.lblYes10.Text = "Yes:";
-            // 
-            // lblDescription10
-            // 
-            this.lblDescription10.AutoSize = true;
-            this.lblDescription10.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription10.Location = new System.Drawing.Point(7, 25);
-            this.lblDescription10.Name = "lblDescription10";
-            this.lblDescription10.Size = new System.Drawing.Size(64, 13);
-            this.lblDescription10.TabIndex = 0;
-            this.lblDescription10.Text = "Description";
-            // 
             // btnBack
             // 
-            this.btnBack.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Image = global::Consumer_Survey_System.Properties.Resources.icons8_return_20;
+            this.btnBack.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBack.Location = new System.Drawing.Point(12, 10);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(105, 30);
             this.btnBack.TabIndex = 87;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmResult
@@ -2999,12 +3002,12 @@
             this.pnlYesNo9.PerformLayout();
             this.gbxQuestion10.ResumeLayout(false);
             this.gbxQuestion10.PerformLayout();
-            this.pnlFivePointLikert10.ResumeLayout(false);
-            this.pnlFivePointLikert10.PerformLayout();
             this.pnlRatingScale10.ResumeLayout(false);
             this.pnlRatingScale10.PerformLayout();
             this.pnlYesNo10.ResumeLayout(false);
             this.pnlYesNo10.PerformLayout();
+            this.pnlFivePointLikert10.ResumeLayout(false);
+            this.pnlFivePointLikert10.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

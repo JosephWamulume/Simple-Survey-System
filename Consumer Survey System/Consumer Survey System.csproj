@@ -73,6 +73,12 @@
     <Compile Include="frmEditSurvey.Designer.cs">
       <DependentUpon>frmEditSurvey.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgotPassword.Designer.cs">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditSurvey.resx">
       <DependentUpon>frmEditSurvey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgotPassword.resx">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -205,6 +214,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\My Post %283%291.png" />
+    <None Include="Resources\My Post %282%291.png" />
+    <None Include="Resources\icons8-pencil-16 %282%29.png" />
+    <None Include="Resources\icons8-pencil-16 %281%29.png" />
+    <None Include="Resources\icons8-pencil-24.png" />
+    <None Include="Resources\icons8-pencil-16.png" />
+    <None Include="Resources\My Post %281%291.png" />
+    <None Include="Resources\icons8-hide-24.png" />
+    <None Include="Resources\icons8-eye-24.png" />
+    <None Include="Resources\icons8-user-20.png" />
+    <None Include="Resources\splash_screen_banner.png" />
+    <None Include="Resources\My Post1.png" />
     <None Include="Resources\My Post %284%29.png" />
     <None Include="Resources\icons8-return-20.png" />
     <None Include="Resources\icons8-bar-chart-16.png" />
